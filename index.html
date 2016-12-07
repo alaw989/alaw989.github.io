@@ -8,7 +8,7 @@ var app = document.createElement('form');
 app.action = "https://formspree.io/alaw989@gmail.com"
 app.method = "POST"
 document.body.appendChild(app);
-app.style.cssText = "background-color: white; width: 640px; height: 1250px; font-size: 28px; padding: 30px 0px 0px 0px; margin: 0 auto; margin-top: 100px; margin-bottom: 100px; box-shadow: 3px 3px 3px #888888; outline: black solid 1px";
+app.style.cssText = "background-color: white; width: 640px; height: 1200px; font-size: 28px; padding: 30px 0px 0px 0px; margin: 0 auto; margin-top: 100px; margin-bottom: 100px; box-shadow: 3px 3px 3px #888888; outline: black solid 1px";
 
 var header = document.createElement('div');
 header.innerHTML = "IT Daily Morning Checks";
@@ -28,7 +28,7 @@ email.style.cssText = "padding-top: 30px; padding-left: 20px; font-size: 20px;"
 var emailInput = document.createElement('input');
 emailInput.placeholder = 'Your E-mail';
 app.appendChild(emailInput)
-emailInput.style.cssText = "margin: 10px 0px 0px 20px;";
+emailInput.style.cssText = "margin: 10px 0px 0px 20px; height: 25px; padding-left: 10px;"
 emailInput.name = "Email"
 
 var note = document.createElement('div');
@@ -42,24 +42,26 @@ task1.textContent = 'Backup M1 Checked, errors and notifications cleared *'
 app.appendChild(task1);
 task1.style.cssText = 'font-size: 18px; margin-top: 30px; padding: 5px 10px 5px 25px; width: 550px;'
 
-var radio1a = document.createElement("INPUT");
+var radio1a = document.createElement("input");
 radio1a.setAttribute("type", "radio");
 app.appendChild(radio1a)
 radio1a.style.cssText = 'margin-left: 30px;'
-radio1a.value = "Yes";
+radio1a.value = 'Yes'
+radio1a.id = 'radio1a'
 radio1a.name = "Backup M1 Checked, errors and notifications cleared"
 
-var yes1a = document.createElement('label');
-yes1a.innerHTML = " Yes";
-app.appendChild(yes1a);
-yes1a.style.cssText = 'font-size: 16px; margin-bottom: 5px;'
+var yes2a = document.createElement('label');
+yes2a.innerHTML = " Yes";
+app.appendChild(yes2a);
+yes2a.style.cssText = 'font-size: 16px; margin-bottom: 5px;'
 
-var radio1b = document.createElement("INPUT");
+var radio1b = document.createElement("input");
 radio1b.setAttribute("type", "radio");
 app.appendChild(radio1b)
 radio1b.style.cssText = 'margin-left: 30px;'
-radio1b.value = 'No';
-radio1b.name = "Backup M1 Checked, errors and notifications cleared *"
+radio1b.name = 'Backup M1 Checked, errors and notifications cleared'
+radio1b.id = 'radio1b'
+radio1b.value = 'Yes'
 
 var no2a = document.createElement('label');
 no2a.innerHTML = " No";
@@ -75,8 +77,8 @@ var radio2a = document.createElement("INPUT");
 radio2a.setAttribute("type", "radio");
 app.appendChild(radio2a)
 radio2a.style.cssText = 'margin-left: 30px;'
-radio2a.name = "Backup N2 Checked, errors and notifications cleared"
 radio2a.value = 'Yes'
+radio2a.name = "Backup N2 Checked, errors and notifications cleared"
 
 var yes2a = document.createElement('label');
 yes2a.innerHTML = " Yes";
@@ -125,7 +127,7 @@ app.appendChild(no3a);
 no3a.style.cssText = 'font-size: 16px; margin-bottom: 5px;'
 
 var task4 = document.createElement('div');
-task4.textContent = 'Alien Vault- All 3 Reports have run successfully in the last week, if not you have rerun the report *'
+task4.textContent = 'Alien Vault - All 3 Reports have run successfully in the last week, if not you have rerun the report *'
 app.appendChild(task4);
 task4.style.cssText = 'font-size: 18px; margin-top: 30px; padding: 5px 10px 5px 25px; width: 550px;'
 
@@ -133,7 +135,7 @@ var radio4a = document.createElement("INPUT");
 radio4a.setAttribute("type", "radio");
 app.appendChild(radio4a)
 radio4a.style.cssText = 'margin-left: 30px;'
-radio4a.name = 'Alien Vault- All 3 Reports have run successfully in the last week, if not you have rerun the report'
+radio4a.name = 'Alien Vault - All 3 Reports have run successfully in the last week, if not you have rerun the report'
 radio4a.value = 'Yes'
 
 var yes4a = document.createElement('label');
@@ -145,7 +147,7 @@ var radio4b = document.createElement("input");
 radio4b.setAttribute("type", "radio");
 app.appendChild(radio4b)
 radio4b.style.cssText = 'margin-left: 30px;'
-radio4b.name = 'Alien Vault- All 3 Reports have run successfully in the last week, if not you have rerun the report'
+radio4b.name = 'Alien Vault - All 3 Reports have run successfully in the last week, if not you have rerun the report'
 radio4b.value = 'No'
 
 var no4a = document.createElement('label');
@@ -154,7 +156,7 @@ app.appendChild(no4a);
 no4a.style.cssText = 'font-size: 16px; margin-bottom: 5px;'
 
 var task5 = document.createElement('div');
-task5.textContent = 'Alien Vault-The Raw Logs have an update in the last 24 hours *'
+task5.textContent = 'Alien Vault - The Raw Logs have an update in the last 24 hours *'
 app.appendChild(task5);
 task5.style.cssText = 'font-size: 18px; margin-top: 30px; padding: 5px 10px 5px 25px; width: 550px;'
 
@@ -174,7 +176,7 @@ var radio5b = document.createElement("input");
 radio5b.setAttribute("type", "radio");
 app.appendChild(radio5b)
 radio5b.style.cssText = 'margin-left: 30px;'
-radio5b.name = 'Alien Vault-The Raw Logs have an update in the last 24 hours'
+radio5b.name = 'Alien Vault - The Raw Logs have an update in the last 24 hours'
 radio5b.value = 'No'
 
 var no5a = document.createElement('label');
@@ -183,7 +185,7 @@ app.appendChild(no5a);
 no5a.style.cssText = 'font-size: 16px; margin-bottom: 5px;'
 
 var task6 = document.createElement('div');
-task6.textContent = 'Alien Vault- You have closed out at least 20 tickets *'
+task6.textContent = 'Alien Vault - You have closed out at least 20 tickets *'
 app.appendChild(task6);
 task6.style.cssText = 'font-size: 18px; margin-top: 30px; padding: 5px 10px 5px 25px; width: 550px;'
 
@@ -191,7 +193,7 @@ var radio6a = document.createElement("INPUT");
 radio6a.setAttribute("type", "radio");
 app.appendChild(radio6a)
 radio6a.style.cssText = 'margin-left: 30px;'
-radio6a.name = 'Alien Vault- You have closed out at least 20 tickets'
+radio6a.name = 'Alien Vault - You have closed out at least 20 tickets'
 radio6a.value = 'Yes'
 
 var yes6a = document.createElement('label');
@@ -203,7 +205,7 @@ var radio6b = document.createElement("input");
 radio6b.setAttribute("type", "radio");
 app.appendChild(radio6b)
 radio6b.style.cssText = 'margin-left: 30px;'
-radio6b.name = 'Alien Vault- You have closed out at least 20 tickets'
+radio6b.name = 'Alien Vault - You have closed out at least 20 tickets'
 radio6b.value = 'No'
 
 var no6a = document.createElement('label');
@@ -218,7 +220,7 @@ task7.style.cssText = "padding-top: 30px; padding-left: 20px; font-size: 18px"
 
 var input1 = document.createElement('input');
 app.appendChild(input1)
-input1.style.cssText = "margin: 10px 0px 0px 20px; width: 550px; height: 50px;";
+input1.style.cssText = "margin: 10px 0px 0px 20px; width: 550px; height: 25px; padding-left: 10px; ";
 input1.name = 'For Any Questions with a No response please explain.'
 
 var task8 = document.createElement('div');
@@ -228,29 +230,38 @@ task8.style.cssText = "padding-top: 30px; padding-left: 20px; font-size: 18px"
 
 var input2 = document.createElement('input');
 app.appendChild(input2)
-input2.style.cssText = "margin: 10px 0px 0px 20px; width: 550px; height: 50px;";
+input2.style.cssText = "margin: 10px 0px 0px 20px; width: 550px; height: 25px; padding-left: 10px; ";
 input2.name = 'Note any questions or concerns observed by the technician.';
 
 var submit = document.createElement('button'); 
 submit.textContent = 'Submit'
 app.appendChild(submit)
-submit.style.cssText = "display: block; margin: 40px 0px 0px 20px;"
+submit.style.cssText = "display: block; margin: 40px 0px 0px 20px; background-color: #1DA2F5; border: none; color: white; padding: 16px 32px; text-decoration: none; cursor: pointer;"
 submit.type = "submit"
 submit.value = "Send"
 
-var obj =  {
-  ans1: ''
-}
 submit.addEventListener('click', function() {
-  var answers1 = [radio1a, radio2a]; 
-  for (var i = 0; i <= answers1.length; i++) {
-    if (answers1[i].checked) {
-        alert(answers1[i].value);
-        alert(answers1[1].value);
-        obj.ans1 = answers1[i].value
+  var radios = document.getElementsByTagName('input');
+  var value;
+  for (var i = 0; i < radios.length; i++) {
+    if (radios[i].type === 'radio' && radios[i].checked) {
+        return true;      
     }
   }
+  return false;
+});
+
+submit.addEventListener('click', function validateForm() {
+    var x = emailInput.value;
+    var atpos = x.indexOf("@");
+    var dotpos = x.lastIndexOf(".");
+    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+        alert("Not a valid e-mail address");
+        return false;
+    }
 });   
+
+
 
 function a() { 
   var arr = [task1.textContent, task2.textContent, task3.textContent]
