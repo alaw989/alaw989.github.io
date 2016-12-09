@@ -5,6 +5,7 @@
     <script>
 document.body.style.cssText = "textDecoration: none; font-family: Tahoma; background-color: #e8ecf2"
 var app = document.createElement('form');
+app.name = 'formIT'
 app.action = "https://formspree.io/alaw989@gmail.com"
 app.method = "POST"
 document.body.appendChild(app);
@@ -242,28 +243,55 @@ submit.value = "Send"
 
 
 submit.addEventListener('click', function() {
-  var yes1 = document.getElementById('radio1a')
-  var yes2 = document.getElementById('radio1b')
-  var arr1 = [yes1, yes2]; 
-  var formValid1 = false;
-
-    var i = 0;
-    while (!formValid1 && i < arr1.length) {
-        if (arr1[i].checked) {
-          formValid1 = true;
-          i++;     
-        } 
-    }
-
-    if (!formValid1) alert("Must check option for question 1");
-    
-  
    var x = emailInput.value;
    var atpos = x.indexOf("@");
    var dotpos = x.lastIndexOf(".");
      if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
         alert("Not a valid e-mail address");
     }
+  
+  var yes1 = radio1a.checked;
+  var no1 = radio1b.checked;
+  
+  if (yes1 == "" && no1 == "") {
+    alert("Please answer question 1")
+  }
+
+  var yes2 = radio2a.checked;
+  var no2 = radio2b.checked;
+  
+  if (yes2 == "" && no2 == "") {
+    alert("Please answer question 2")    
+  }
+  
+  var yes3 = radio3a.checked;
+  var no3 = radio3b.checked;
+  
+  if (yes3 == "" && no3 == "") {
+    alert("Please answer question 3")    
+  }
+  
+  var yes4 = radio4a.checked;
+  var no4 = radio4b.checked;
+  
+  if (yes4 == "" && no4 == "") {
+    alert("Please answer question 4")    
+  }
+  
+  var yes5 = radio5a.checked;
+  var no5 = radio5b.checked;
+  
+  if (yes5 == "" && no5 == "") {
+    alert("Please answer question 5")    
+  }
+  
+  var yes6 = radio6a.checked;
+  var no6 = radio6b.checked;
+  
+  if (yes6 == "" && no6 == "") {
+    alert("Please answer question 6")    
+  }
+
    var a = input1.value
    var b = input2.value
    if (a === "") {
@@ -272,36 +300,9 @@ submit.addEventListener('click', function() {
    if (b === "") {
      alert("Missing Question 8")
    }
-  
-  var radios = document.getElementsByTagName('input');
-  var value;
-  for (var i = 0; i < radios.length; i++) {
-    if (radios[i].type === 'radio' && radios[i].checked) {
-        return true;      
-    }
-  }
-  return false;
 });
 
 
-function a() { 
-  var arr = [task1.textContent, task2.textContent, task3.textContent]
-  
-  var asterisk = document.createElement('p');
-  asterisk.innerHTML = '*';
-  asterisk.style.cssText = 'color: red';
-  
-   t1 = arr[0].split('');
-   t2 = arr[1].split('');
-   t3 = arr[2].split(''); 
-  
-  for (var i = 0; i < t1.length; i++) {
-    if (t1[i] === "*") {
-      t1[i] = asterisk;
-    } 
-  }
-}
-a();
     </script>
 </body>
 </html>
