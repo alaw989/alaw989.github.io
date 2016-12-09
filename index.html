@@ -61,7 +61,7 @@ app.appendChild(radio1b)
 radio1b.style.cssText = 'margin-left: 30px;'
 radio1b.name = 'Backup M1 Checked, errors and notifications cleared'
 radio1b.id = 'radio1b'
-radio1b.value = 'Yes'
+radio1b.value = 'No'
 
 var no2a = document.createElement('label');
 no2a.innerHTML = " No";
@@ -90,7 +90,7 @@ radio2b.setAttribute("type", "radio");
 app.appendChild(radio2b)
 radio2b.style.cssText = 'margin-left: 30px;'
 radio2b.name = 'Backup N2 Checked, errors and notifications cleared'
-radio2b.value = 'Yes'
+radio2b.value = 'No'
 
 var no2a = document.createElement('label');
 no2a.innerHTML = " No";
@@ -164,7 +164,7 @@ var radio5a = document.createElement("INPUT");
 radio5a.setAttribute("type", "radio");
 app.appendChild(radio5a)
 radio5a.style.cssText = 'margin-left: 30px;'
-radio5a.name = 'Alien Vault-The Raw Logs have an update in the last 24 hours'
+radio5a.name = 'Alien Vault - The Raw Logs have an update in the last 24 hours *'
 radio5a.value = 'Yes'
 
 var yes5a = document.createElement('label');
@@ -176,7 +176,7 @@ var radio5b = document.createElement("input");
 radio5b.setAttribute("type", "radio");
 app.appendChild(radio5b)
 radio5b.style.cssText = 'margin-left: 30px;'
-radio5b.name = 'Alien Vault - The Raw Logs have an update in the last 24 hours'
+radio5b.name = 'Alien Vault - The Raw Logs have an update in the last 24 hours *'
 radio5b.value = 'No'
 
 var no5a = document.createElement('label');
@@ -240,7 +240,39 @@ submit.style.cssText = "display: block; margin: 40px 0px 0px 20px; background-co
 submit.type = "submit"
 submit.value = "Send"
 
+
 submit.addEventListener('click', function() {
+  var yes1 = document.getElementById('radio1a')
+  var yes2 = document.getElementById('radio1b')
+  var arr1 = [yes1, yes2]; 
+  var formValid1 = false;
+
+    var i = 0;
+    while (!formValid1 && i < arr1.length) {
+        if (arr1[i].checked) {
+          formValid1 = true;
+          i++;     
+        } 
+    }
+
+    if (!formValid1) alert("Must check option for question 1");
+    
+  
+   var x = emailInput.value;
+   var atpos = x.indexOf("@");
+   var dotpos = x.lastIndexOf(".");
+     if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+        alert("Not a valid e-mail address");
+    }
+   var a = input1.value
+   var b = input2.value
+   if (a === "") {
+    alert("Missing Question 7")
+   }
+   if (b === "") {
+     alert("Missing Question 8")
+   }
+  
   var radios = document.getElementsByTagName('input');
   var value;
   for (var i = 0; i < radios.length; i++) {
@@ -250,17 +282,6 @@ submit.addEventListener('click', function() {
   }
   return false;
 });
-
-submit.addEventListener('click', function validateForm() {
-    var x = emailInput.value;
-    var atpos = x.indexOf("@");
-    var dotpos = x.lastIndexOf(".");
-    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
-        alert("Not a valid e-mail address");
-        return false;
-    }
-});   
-
 
 
 function a() { 
