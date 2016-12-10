@@ -5,11 +5,17 @@
     <script>
 document.body.style.cssText = "textDecoration: none; font-family: Tahoma; background-color: #e8ecf2"
 var app = document.createElement('form');
-app.name = 'formIT'
+//app.name = 'formIT'
 app.action = "https://formspree.io/alaw989@gmail.com"
 app.method = "POST"
 document.body.appendChild(app);
 app.style.cssText = "background-color: white; width: 640px; height: 1200px; font-size: 28px; padding: 30px 0px 0px 0px; margin: 0 auto; margin-top: 100px; margin-bottom: 100px; box-shadow: 3px 3px 3px #888888; outline: black solid 1px";
+
+var hidden = document.createElement('input')
+hidden.type = "hidden"
+hidden.name = "_cc"
+hidden.value = "austinlaw424@yahoo.com"
+app.appendChild(hidden)
 
 var header = document.createElement('div');
 header.innerHTML = "IT Daily Morning Checks";
@@ -27,6 +33,7 @@ app.appendChild(email);
 email.style.cssText = "padding-top: 30px; padding-left: 20px; font-size: 20px;"
 
 var emailInput = document.createElement('input');
+emailInput.required = true;
 emailInput.placeholder = 'Your E-mail';
 app.appendChild(emailInput)
 emailInput.style.cssText = "margin: 10px 0px 0px 20px; height: 25px; padding-left: 10px;"
@@ -232,7 +239,7 @@ app.appendChild(task7);
 task7.style.cssText = "padding-top: 30px; padding-left: 20px; font-size: 18px"
 
 var input1 = document.createElement('input');
-input1.required = true; 
+input1.required = true;
 app.appendChild(input1)
 input1.style.cssText = "margin: 10px 0px 0px 20px; width: 550px; height: 25px; padding-left: 10px; ";
 input1.name = 'For Any Questions with a No response please explain.'
@@ -255,7 +262,10 @@ submit.style.cssText = "display: block; margin: 40px 0px 0px 20px; background-co
 submit.type = "submit"
 submit.value = "Send"
 
+
+
 submit.addEventListener('click', function() {
+   
    var x = emailInput.value;
    var atpos = x.indexOf("@");
    var dotpos = x.lastIndexOf(".");
@@ -308,13 +318,16 @@ submit.addEventListener('click', function() {
    var a = input1.value
    var b = input2.value
    if (a === "") {
-    alert("Missing Question 7")
+    alert("Please answer question 7")
    }
    if (b === "") {
-     alert("Missing Question 8")
+     alert("Please answer question 8")
    }
   
 });
+
+
+
 
 
     </script>
