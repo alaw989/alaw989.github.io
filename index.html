@@ -44,6 +44,7 @@ app.appendChild(task1);
 task1.style.cssText = 'font-size: 18px; margin-top: 30px; padding: 5px 10px 5px 25px; width: 550px;'
 
 var radio1a = document.createElement("input");
+radio1a.required = true;
 radio1a.setAttribute("type", "radio");
 app.appendChild(radio1a)
 radio1a.style.cssText = 'margin-left: 30px;'
@@ -57,6 +58,7 @@ app.appendChild(yes2a);
 yes2a.style.cssText = 'font-size: 16px; margin-bottom: 5px;'
 
 var radio1b = document.createElement("input");
+radio1b.required = true;
 radio1b.setAttribute("type", "radio");
 app.appendChild(radio1b)
 radio1b.style.cssText = 'margin-left: 30px;'
@@ -75,6 +77,7 @@ app.appendChild(task2);
 task2.style.cssText = 'font-size: 18px; margin-top: 30px; padding: 5px 10px 5px 25px; width: 550px;'
 
 var radio2a = document.createElement("INPUT");
+radio2a.required = true;
 radio2a.setAttribute("type", "radio");
 app.appendChild(radio2a)
 radio2a.style.cssText = 'margin-left: 30px;'
@@ -87,6 +90,7 @@ app.appendChild(yes2a);
 yes2a.style.cssText = 'font-size: 16px; margin-bottom: 5px;'
 
 var radio2b = document.createElement("input");
+radio2b.required = true;
 radio2b.setAttribute("type", "radio");
 app.appendChild(radio2b)
 radio2b.style.cssText = 'margin-left: 30px;'
@@ -104,6 +108,7 @@ app.appendChild(task3);
 task3.style.cssText = 'font-size: 18px; margin-top: 30px; padding: 5px 10px 5px 25px; width: 550px;'
 
 var radio3a = document.createElement("INPUT");
+radio3a.required = true;
 radio3a.setAttribute("type", "radio");
 app.appendChild(radio3a)
 radio3a.style.cssText = 'margin-left: 30px;'
@@ -116,6 +121,7 @@ app.appendChild(yes3a);
 yes3a.style.cssText = 'font-size: 16px; margin-bottom: 5px;'
 
 var radio3b = document.createElement("input");
+radio3b.required = true;
 radio3b.setAttribute("type", "radio");
 app.appendChild(radio3b)
 radio3b.style.cssText = 'margin-left: 30px;'
@@ -133,6 +139,7 @@ app.appendChild(task4);
 task4.style.cssText = 'font-size: 18px; margin-top: 30px; padding: 5px 10px 5px 25px; width: 550px;'
 
 var radio4a = document.createElement("INPUT");
+radio4a.required = true;
 radio4a.setAttribute("type", "radio");
 app.appendChild(radio4a)
 radio4a.style.cssText = 'margin-left: 30px;'
@@ -145,6 +152,7 @@ app.appendChild(yes4a);
 yes4a.style.cssText = 'font-size: 16px; margin-bottom: 5px;'
 
 var radio4b = document.createElement("input");
+radio4b.required = true; 
 radio4b.setAttribute("type", "radio");
 app.appendChild(radio4b)
 radio4b.style.cssText = 'margin-left: 30px;'
@@ -162,6 +170,7 @@ app.appendChild(task5);
 task5.style.cssText = 'font-size: 18px; margin-top: 30px; padding: 5px 10px 5px 25px; width: 550px;'
 
 var radio5a = document.createElement("INPUT");
+radio5a.required = true; 
 radio5a.setAttribute("type", "radio");
 app.appendChild(radio5a)
 radio5a.style.cssText = 'margin-left: 30px;'
@@ -174,6 +183,7 @@ app.appendChild(yes5a);
 yes5a.style.cssText = 'font-size: 16px; margin-bottom: 5px;'
 
 var radio5b = document.createElement("input");
+radio5b.required = true; 
 radio5b.setAttribute("type", "radio");
 app.appendChild(radio5b)
 radio5b.style.cssText = 'margin-left: 30px;'
@@ -191,6 +201,7 @@ app.appendChild(task6);
 task6.style.cssText = 'font-size: 18px; margin-top: 30px; padding: 5px 10px 5px 25px; width: 550px;'
 
 var radio6a = document.createElement("INPUT");
+radio6a.required = true; 
 radio6a.setAttribute("type", "radio");
 app.appendChild(radio6a)
 radio6a.style.cssText = 'margin-left: 30px;'
@@ -203,6 +214,7 @@ app.appendChild(yes6a);
 yes6a.style.cssText = 'font-size: 16px; margin-bottom: 5px;'
 
 var radio6b = document.createElement("input");
+radio6b.required = true; 
 radio6b.setAttribute("type", "radio");
 app.appendChild(radio6b)
 radio6b.style.cssText = 'margin-left: 30px;'
@@ -240,7 +252,6 @@ app.appendChild(submit)
 submit.style.cssText = "display: block; margin: 40px 0px 0px 20px; background-color: #1DA2F5; border: none; color: white; padding: 16px 32px; text-decoration: none; cursor: pointer;"
 submit.type = "submit"
 submit.value = "Send"
-
 
 submit.addEventListener('click', function() {
    var x = emailInput.value;
@@ -300,6 +311,7 @@ submit.addEventListener('click', function() {
    if (b === "") {
      alert("Missing Question 8")
    }
+  
 });
 
 
