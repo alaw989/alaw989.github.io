@@ -1,0 +1,310 @@
+/* SPACING UNITS
+========================================================================== */
+/*
+* Try and use only these values to set typography spacing (margins) across site for consistency.
+*
+* $spacingBase is the same as default line height above. This value is then increased/decreased by halves.
+*
+* These values can be used in classes for tweaking spacing and are used in _base/helper-classes.scss
+* styles for one-off use cases where an entire new class is not necessary
+*/
+/*
+ * Headings sizes (in pixels).
+ */
+/*
+ * Ancillary sizes (in pixels).
+ */
+/* ============================================================================================== */
+/* ============================================================================================== */
+/*
+ * Monochrome colors
+ */
+/*
+ * Text elements
+ */
+/*
+ * Generic border color for consistency
+ */
+/* FONT-SIZE
+========================================================================== */
+/*
+ * Create a fully formed type style (sizing and vertical rhythm) by passing in a
+ * single value, e.g.:
+ *
+   `@include font-size(10px);`
+ *
+ * Thanks to @redclov3r for the `line-height` Sass:
+ * twitter.com/redclov3r/status/250301539321798657
+ *
+ * Basically what this does is add font size (in rems) and if no line-height is declared
+ * in the style you are creating, this mixin will create one that matches the
+ * line-height applied to the body.
+ */
+/* SPACING UNITS
+========================================================================== */
+/*
+* Try and use only these values to set typography spacing (margins) across site for consistency.
+*
+* $spacingBase is the same as default line height above. This value is then increased/decreased by halves.
+*
+* These values can be used in classes for tweaking spacing and are used in _base/helper-classes.scss
+* styles for one-off use cases where an entire new class is not necessary
+*/
+/*
+ * Headings sizes (in pixels).
+ */
+/*
+ * Ancillary sizes (in pixels).
+ */
+/* ============================================================================================== */
+/* ============================================================================================== */
+/*
+ * Monochrome colors
+ */
+/*
+ * Text elements
+ */
+/*
+ * Generic border color for consistency
+ */
+/* FONT-SIZE
+========================================================================== */
+/*
+ * Create a fully formed type style (sizing and vertical rhythm) by passing in a
+ * single value, e.g.:
+ *
+   `@include font-size(10px);`
+ *
+ * Thanks to @redclov3r for the `line-height` Sass:
+ * twitter.com/redclov3r/status/250301539321798657
+ *
+ * Basically what this does is add font size (in rems) and if no line-height is declared
+ * in the style you are creating, this mixin will create one that matches the
+ * line-height applied to the body.
+ */
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
+.mapFeature {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%; }
+  @media (min-width: 1px) and (max-width: 1250px) {
+    .mapFeature {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; } }
+  .mapFeature .spotLight-Heading {
+    color: #334d66; }
+  .mapFeature .formwrapper {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 50%;
+    flex: 0 1 50%; }
+    .mapFeature .formwrapper .spotlight-content .spotlight-heading {
+      padding: 0 0 12px 12px; }
+    .mapFeature .formwrapper .spotlight-content p {
+      margin: 0;
+      padding: 0 0 12px 12px; }
+
+.mapwrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative; }
+  .mapwrapper iframe {
+    pointer-events: none;
+    position: relative;
+    width: 100%; }
+    .mapwrapper iframe.clicked {
+      pointer-events: auto; }
+  .mapwrapper .mapoverlay {
+    position: absolute;
+    top: 5%;
+    left: 70%;
+    background-color: white;
+    width: 25%;
+    min-width: 175px; }
+    .mapwrapper .mapoverlay h2 {
+      margin-left: 12px;
+      font-family: 'Roboto Condensed', sans-serif;
+      color: #3f444a; }
+    .mapwrapper .mapoverlay h5 {
+      font-size: 18px;
+      font-size: 1.125rem;
+      line-height: 1.33333;
+      background-color: #6699cc;
+      color: #fff;
+      margin: 0 0 12px 12px;
+      max-width: 20%;
+      padding: 6px;
+      min-width: 75px;
+      font-family: 'Roboto Condensed', sans-serif;
+      text-align: center; }
+    .mapwrapper .mapoverlay p {
+      margin: 0 0 12px 12px;
+      font-family: 'Roboto Condensed', sans-serif; }
+    .mapwrapper .mapoverlay figure {
+      margin: 0 0 12px 12px; }
+      .mapwrapper .mapoverlay figure img {
+        width: 50%; }
+
+.formFeature {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("/images/sunset.jpg");
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/sunset.jpg");
+  background-attachment: fixed;
+  padding: 48px;
+  background-size: cover;
+  height: 900px; }
+  .formFeature .container .mapFeature .formwrapper .spotlight-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 24px;
+    border-radius: 4px; }
+    .formFeature .container .mapFeature .formwrapper .spotlight-content form {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+      flex: 0 1 50%;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      padding-left: 24px; }
+      .formFeature .container .mapFeature .formwrapper .spotlight-content form .formsplit1 {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+        flex: 0 1 50%; }
+      .formFeature .container .mapFeature .formwrapper .spotlight-content form .formsplit2 {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+        flex: 0 1 50%; }
+      .formFeature .container .mapFeature .formwrapper .spotlight-content form .formsplit3 {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column; }
+        .formFeature .container .mapFeature .formwrapper .spotlight-content form .formsplit3 textarea {
+          width: 100%; }
+    .formFeature .container .mapFeature .formwrapper .spotlight-content form:nth-child(2) {
+      margin-bottom: 48px; }
+
+.formelement {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+  .formelement label {
+    text-align: left;
+    margin: 12px 0;
+    padding-right: 6px;
+    padding-left: 6px;
+    font-weight: 600;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 1.2; }
+  .formelement input[type=text],
+  .formelement select {
+    width: 95%;
+    padding: 12px 12px;
+    margin: 8px 0;
+    border: 2px solid #6699cc;
+    border-radius: 4px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 1.2; }
+  .formelement input::-webkit-input-placeholder {
+    color: white;
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 1.2; }
+  .formelement input:-ms-input-placeholder {
+    color: white;
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 1.2; }
+  .formelement input::placeholder {
+    color: white;
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 1.2; }
+  .formelement input[type=submit] {
+    width: 25%;
+    min-width: 150px;
+    background: #6699cc;
+    border: 2px solid #6699cc;
+    color: white;
+    padding: 14px 20px;
+    margin: 24px 0;
+    font-size: 20px;
+    cursor: pointer; }
+    .formelement input[type=submit]:hover {
+      background: #334d66;
+      color: white; }
+  .formelement textarea {
+    background-color: transparent;
+    margin: 4px 0;
+    border: 2px solid #6699cc;
+    border-radius: 4px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 1.2; }
+    .formelement textarea::-webkit-input-placeholder {
+      color: white;
+      font-size: 16px;
+      font-size: 1rem;
+      line-height: 1.5;
+      padding: 0 12px;
+      font-family: arial; }
+    .formelement textarea:-ms-input-placeholder {
+      color: white;
+      font-size: 16px;
+      font-size: 1rem;
+      line-height: 1.5;
+      padding: 0 12px;
+      font-family: arial; }
+    .formelement textarea::placeholder {
+      color: white;
+      font-size: 16px;
+      font-size: 1rem;
+      line-height: 1.5;
+      padding: 0 12px;
+      font-family: arial; }

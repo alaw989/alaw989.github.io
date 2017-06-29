@@ -1,0 +1,432 @@
+@import "spacingUnits";
+@import "colors";
+@import "fontSize";
+@import "mediaQueries";
+@import "bourbon/bourbon";
+
+/*fonts*/
+@import url('https://fonts.googleapis.com/css?family=Ropa+Sans');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+
+
+
+/*general styles and resets*/
+/*border box*/
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+
+
+/*clearfix*/
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+
+ul li {
+   margin: 0;
+   padding: 0;
+}
+
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0px;
+  height: 100%;
+}
+
+
+#content {
+   a {
+      text-decoration: none;
+   }
+   p {
+      font-family: 'Poppins', sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      color: #000;
+   }
+}
+
+
+h1 h2 h3 h4 h5 {
+   line-height: 1.2;
+   margin-bottom: 12px;
+   padding: 0;
+}
+
+h1 {
+  font-size: 35px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 28px;
+  margin: 0;
+  font-family: 'Roboto-Sans', sans-serif;
+}
+
+h4 {
+  font-size: 25px;
+}
+
+h5 {
+  font-size: 22px;
+}
+
+#site_wrap {
+  width: 100%;
+}
+
+#site_inner {
+  width: 100%;
+}
+
+ .container {
+      max-width: 1200px;
+      margin: 0 auto;
+   }
+
+.containerbg {
+   
+   background: -webkit-gradient(linear,left bottom, left top,from(rgba(0,0,0,0.6)),to(rgba(0,0,0,0.6))), url('/images/sunset.jpg') center fixed;
+   
+   background: linear-gradient(0deg,rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('/images/sunset.jpg') center fixed;
+   background-repeat: no-repeat;
+   margin-bottom: 0;
+   background-size: cover;
+   &:after {
+    content: '';
+    display: block;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 40px solid $colorWhite;
+    border-left: 40px solid transparent; 
+    border-right: 40px solid transparent;
+    margin: -1px auto 0 auto;
+    z-index: 20 !important;
+    width: 0;
+    bottom: 0;
+    
+  }
+}
+
+.headingwrapper {
+   background-size: cover;
+   background-image: url('/images/headerbg.svg'), linear-gradient(to right, rgba(122, 188, 255, 1) 0%, rgba(34,102,152, 1) 44%, rgba(34,102,152, 1) 100%);
+   background-position: left right;
+   background-repeat: no-repeat no-repeat;
+   .container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      .spotlight-Heading {
+         padding: $spacingLg 0;
+         @include tablet {
+          padding: $spacingLg $spacingBase;
+         }
+         display: -webkit-box;
+         display: -ms-flexbox;
+         display: flex;
+         -webkit-box-orient: vertical;
+         -webkit-box-direction: normal;
+             -ms-flex-direction: column;
+                 flex-direction: column;
+         h3 {
+            @include font-size(38px);
+            font-family: 'Roboto Condensed', sans-serif;
+            letter-spacing: 2px;
+            color: white;
+            text-align: left;
+         }
+         p {
+            font-family: 'Roboto Condensed', sans-serif;
+            @include font-size(18px);
+            color: white;
+            margin: 0;
+            text-align: left;
+         }
+      }
+   }
+   /*
+   &:after {
+      content: '';
+      position: relative;
+      overflow: hidden;
+      border-top: 40px solid rgb(86, 165, 245);
+      border-left: 40px solid transparent;
+      border-right: 40px solid transparent;
+      z-index: 20 !important;
+      width: 0;
+      top: 100px;
+      right: 50%;
+   }
+   */
+}
+
+
+
+
+.image-container {
+   display: inline-block;
+   vertical-align: middle;
+}
+
+
+
+.text-container {
+  display: inline-block
+}
+
+/*content*/
+
+#content {
+  padding: 30px 20px;
+}
+
+/*paralax feature*/
+   .paralax {
+     background: -webkit-gradient( linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url('/images/banner04.jpg') no-repeat top fixed;
+     background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/images/banner04.jpg') no-repeat top fixed;
+     background-size: cover;
+     padding: 200px;
+     height: 86vh;
+     display: -webkit-box;
+     display: -ms-flexbox;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     
+   h3 {
+      letter-spacing: 2px;
+      padding: 20px;
+      font-size: 70px;
+      font-weight: 700;
+      color: #fff;
+      text-align: center;
+      font-family: 'Roboto Condensed', sans-serif;
+      @include tablet {
+         font-size: 24px;
+         min-width: 240px;
+
+      }
+   }
+   .paralax-heading {}
+}
+
+
+.interiorparalax {
+   height: 30vh;
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-align: center;
+       -ms-flex-align: center;
+           align-items: center;
+   .container {
+      margin: 5% 0 auto 20%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      .paralax-heading {
+         h3 {
+            background-color: rgba(7, 12, 15, 0.3);
+            padding: 20px;
+            font-size: 50px;
+            font-weight: 700;
+            color: #fff;
+            text-shadow: 2px 2px 2px rgba(150, 150, 150, 1);
+            @include tablet {
+               font-size: 24px;
+               min-width: 240px;
+            }
+         }
+      }
+   }
+}
+
+
+
+
+.hiddenText {
+  display: none;
+  color: white;
+  text-align: left;
+  padding-left: $spacingSm;
+}
+
+/*expertise content*/
+
+#expertise-content {
+   text-align: center;
+   padding: 80px 0 40px 0;
+}
+
+
+/*feature blocks*/
+
+#feature-content {
+  width: 100%;
+}
+
+.feature-container {
+   text-align: center;
+   max-width: 100%;
+}
+
+
+.feature-block {
+   display: inline-block;
+   max-width: 90%;
+   padding: 20px 40px 20px 40px;
+   img {
+      max-width: 80%;
+   }
+   h4 {
+      padding-bottom: 100px;
+   }
+}
+
+/*paralax2 features*/
+#paralax2 {
+   background: url("images/banner04.jpg") transparent no-repeat center top fixed;
+   padding: 50px 0;
+   h3 {
+      font-size: 30px;
+      font-weight: 700;
+      color: #fff;
+      text-align: center;
+   }
+   h4 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #fff;
+      text-align: center;
+   }
+}
+
+
+
+.inner-container {
+   text-align: center;
+   padding-top: 50px;
+   &:before {
+      content: ' ';
+      display: inline-block;
+      vertical-align: middle;
+   }
+}
+
+
+
+.paralax-text {
+   display: inline-block;
+   width: 50%;
+   vertical-align: middle;
+   background: url("images/orange-60.png");
+   padding: 5px;
+   p {
+      margin: 0px;
+      color: white;
+      text-align: left;
+      font-size: 13px;
+   }
+}
+
+
+
+#paralax2 img {
+   display: inline-block;
+   vertical-align: middle;
+   max-width: 90%;
+}
+
+
+/*services*/
+#services {
+   padding: 50px 0 h5;
+   padding: 5px 0 0 5px;
+   h4 {
+      font-size: 20px;
+      font-weight: 700;
+      text-align: center;
+   }
+   h3 {
+      font-size: 30px;
+      font-weight: 700;
+      text-align: center;
+   }
+   p {
+      padding: 5px 0 5px 5px;
+   }
+   ul {
+      padding-left: 25px;
+   }
+   li {
+      text-align: left;
+      font-size: 14px;
+   }
+}
+
+
+
+.services-text {
+   display: inline-block;
+   /* background: url("images/blue-10.png");*/
+   padding-left: 10px;
+   p {
+      display: inline-block;
+      width: 100%;
+      vertical-align: middle;
+      color: black;
+      font-size: 13px;
+      text-align: left;
+      padding: 5px;
+   }
+   h5 {
+      margin: 0;
+      text-align: left;
+      padding-bottom: 10px;
+   }
+}
+
+
+
+#services img {
+  max-width: 90%
+}
+
+.text-container {
+   padding-right: 10px;
+   /* background: url("images/blue-10.png");*/
+   h5 {
+      margin: 0;
+      text-align: left;
+      padding-bottom: 10px;
+   }
+   p {
+      text-align: left;
+      margin: 0;
+      padding-bottom: 10px;
+   }
+}
+
+/* paralax3*/
+
+#paralax3 {
+   background: url("images/const_05.jpeg") transparent no-repeat center top fixed;
+   padding: 50px 0;
+}

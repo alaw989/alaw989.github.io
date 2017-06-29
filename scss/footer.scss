@@ -1,0 +1,33 @@
+@import "spacingUnits";
+@import "colors";
+@import "fontSize";
+
+.footer {
+   background: url('/images/footerbg.svg');
+   background-repeat: repeat;
+   background-position: center;
+   background-size: cover;
+   padding: 55px 0;
+  
+   .footer-nav {
+      display: flex;
+      ul {
+         margin: 0;
+         padding-top: $spacingSm;
+         li {
+            display: inline-block;
+            position: relative;
+            font-family: 'Ropa Sans', sans-serif;
+            @include font-size(14px);
+            font-weight: 400;
+            color: #000;
+         }
+         li:after {
+         	content: " |";
+         }
+         li:last-child:after {
+            content: '';
+         }
+      }
+   }
+}

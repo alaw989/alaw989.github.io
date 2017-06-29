@@ -1,0 +1,261 @@
+@import "spacingUnits";
+@import "colors";
+@import "fontSize";
+@import "mediaQueries";
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+@import "bourbon/bourbon";
+
+.mapFeature {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+       -ms-flex-direction: column;
+           flex-direction: column;
+   width: 100%;
+   @include tablet {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+   }
+   .spotLight-Heading {
+      color: $colorBrandPrimaryDarker;
+   }
+   
+   .formwrapper {
+      -webkit-box-flex: 0;
+          -ms-flex: 0 1 50%;
+              flex: 0 1 50%;
+      .spotlight-content {
+         .spotlight-heading {
+            padding: 0 0 $spacingSm $spacingSm;
+         }
+         p {
+            margin: 0;
+            padding: 0 0 $spacingSm $spacingSm;
+         }
+      }
+   }
+}
+
+.mapwrapper {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+       -ms-flex-direction: column;
+           flex-direction: column;
+   position: relative;
+   iframe {
+      pointer-events: none;
+      position: relative;
+      width: 100%;
+      &.clicked {
+         pointer-events: auto;
+      }
+   }
+   .mapoverlay {
+      position: absolute;
+      top: 5%;
+      left: 70%;
+      background-color: white;
+      width: 25%;
+      min-width: 175px;
+      h2 {
+         margin-left: $spacingSm;
+         font-family: 'Roboto Condensed', sans-serif;
+         color: rgb(63,68,74);
+      }
+      h5 {
+         @include font-size(18px);
+         background-color: $colorBrandPrimary;
+         color: $colorWhite;
+         margin: 0 0 $spacingSm $spacingSm;
+         max-width: 20%;
+         padding: $spacingXSm;
+         min-width: 75px;
+         font-family: 'Roboto Condensed', sans-serif;
+         text-align: center;
+      }
+      p {
+         margin: 0 0 $spacingSm $spacingSm;
+         font-family: 'Roboto Condensed', sans-serif;
+      }
+      figure {
+         margin: 0 0 $spacingSm $spacingSm;
+         img {
+            width: 50%;
+         }
+      }
+   }
+}
+
+.formFeature {
+   background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url('/images/sunset.jpg');
+   background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/sunset.jpg');
+   background-attachment: fixed;
+   padding: $spacingLg;
+   background-size: cover;
+   height: 900px;
+   .container {
+      .mapFeature {
+         .formwrapper {
+            
+           
+
+            .spotlight-content {
+              background-color: rgba(0, 0, 0, .5);
+               padding-top: $spacingBase;
+            border-radius: 4px;
+               form {
+                  display: -webkit-box;
+                  display: -ms-flexbox;
+                  display: flex;
+                  -webkit-box-flex: 0;
+                  -ms-flex: 0 1 50%;
+                  flex: 0 1 50%;
+                  -webkit-box-orient: horizontal;
+                  -webkit-box-direction: normal;
+                  -ms-flex-direction: row;
+                  flex-direction: row;
+                  padding-left: $spacingBase;
+                  .formsplit1 {
+                     display: -webkit-box;
+                     display: -ms-flexbox;
+                     display: flex;
+                     -webkit-box-orient: vertical;
+                     -webkit-box-direction: normal;
+                     -ms-flex-direction: column;
+                     flex-direction: column;
+                     -webkit-box-flex: 0;
+                     -ms-flex: 0 1 50%;
+                     flex: 0 1 50%;
+                  }
+                  .formsplit2 {
+                     display: -webkit-box;
+                     display: -ms-flexbox;
+                     display: flex;
+                     -webkit-box-orient: vertical;
+                     -webkit-box-direction: normal;
+                     -ms-flex-direction: column;
+                     flex-direction: column;
+                     -webkit-box-flex: 0;
+                     -ms-flex: 0 1 50%;
+                     flex: 0 1 50%;
+                  }
+                  .formsplit3 {
+                     display: -webkit-box;
+                     display: -ms-flexbox;
+                     display: flex;
+                     -webkit-box-orient: vertical;
+                     -webkit-box-direction: normal;
+                     -ms-flex-direction: column;
+                     flex-direction: column;
+                     textarea {
+                        width: 100%;
+                     }
+                  }
+               }
+               form:nth-child(2) {
+                  margin-bottom: $spacingLg;
+               }
+            }
+         }
+      }
+   }
+}
+
+
+.formelement {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+       -ms-flex-direction: column;
+           flex-direction: column;
+   label {
+      text-align: left;
+      margin: $spacingSm 0;
+      padding-right: $spacingXSm;
+      padding-left: $spacingXSm;
+      font-weight: 600;
+      color: white;
+      font-family: 'Arial', sans-serif;
+      @include font-size(20px);
+   }
+   input[type=text],
+   select {
+      width: 95%;
+      padding: $spacingSm $spacingSm;
+      margin: 8px 0;
+      border: 2px solid $colorBrandPrimary;
+      border-radius: 4px;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      background-color: rgba(0,0,0,.3);
+      color: white;
+      @include font-size(20px);
+   }
+
+   input::-webkit-input-placeholder {
+      color: white;
+      @include font-size(20px);
+   }
+   
+   input:-ms-input-placeholder {
+      color: white;
+      @include font-size(20px);
+   }
+   
+   input::placeholder {
+      color: white;
+      @include font-size(20px);
+   }
+
+
+   input[type=submit] {
+      width: 25%;
+      min-width: 150px;
+      background: $colorBrandPrimary;
+      border: 2px solid $colorBrandPrimary;
+      color: white;
+      padding: 14px 20px;
+      margin: $spacingBase 0;
+      font-size: 20px;
+      cursor: pointer;
+      &:hover {
+         background: $colorBrandPrimaryDarker;
+         color: white;
+      }
+   }
+   textarea {
+      background-color: transparent;
+      margin: 4px 0;
+      border: 2px solid $colorBrandPrimary;
+      border-radius: 4px;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      background-color: rgba(0,0,0,.3);
+      color: white;
+      @include font-size(20px);
+
+      &::placeholder {
+         color: white;
+         @include font-size(16px);
+         padding: 0 $spacingSm;
+         font-family: arial;
+      }
+   }
+}
+
+
+
+
+
+
+
+   
