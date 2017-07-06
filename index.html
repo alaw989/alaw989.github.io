@@ -40,21 +40,61 @@ $(function() {
 
 </head>
 
-<body>
+<body onload="slider()">
+
+<script>
+$(document).ready(function() {
+   var sliderArray = $(".slider");
+   sliderLength = sliderArray.length - 1;
+   var count = -1;
+   
+   var first = $('.paralax-heading h3:nth-child(3)');
+   first.removeClass('slider');
+   setTimeout(function() {
+      first.addClass('slider');
+   }, 5000);
+
+   setInterval(function() {
+      count < sliderLength ? count++ : count = 0;
+
+      sliderArray.eq(count).removeClass('slider').addClass('fadeIn');
+      sliderArray.eq(count - 1).addClass('slider');
+   }, 5000);
+
+});
+</script>
+
+<script>
+	$(document).ready(function() {
+	var bgArray = [$(".fader-bg"), $(".fader-bg2")];
+	var bgLength = bgArray.length - 1;
+	var count = -1;
+
+	var paralax = $('.paralax');
+
+	console.log(bgArray)
+
+	setInterval(function() {
+		count < bgLength ? count++ : count = 0;
+		$('.paralax').removeClass(bgArray);
+	}, 5000);
+ });
+</script>
+
+
+
 
 	<div id="site_wrap">
     	<div id="site_inner">
-
     	<div id="header"></div>
-    	
-
-
-
     	<div class="spacer"></div>
 		<!--spacing element between navbar and paralax -->
- 			<div class="paralax">
+ 			<div class="paralax fader-bg">
 				<div class="paralax-heading">
-					<h3 class="wow fadeIn" data-wow-duration="2s" data-wow-delay=".25s"> STRUCTURAL ENGINEERING <br> <span style="font-weight: 300">& <br></span> STEEL DETAILING</h3>
+					<h3 class="slider"> EMPLOYING THE LATEST <br> </span> CAD SOFTWARE</h3>
+					<h3 class="slider"> QUICK <br>  RESPONSE</h3>
+					<h3 class="slider"> STRUCTURAL ENGINEERING <br> <span style="font-weight: 300">& <br></span> STEEL DETAILING</h3>
+					<h3 class="slider"> BUILDING INFORMATION <br>  MODEL (BIM)</h3>
 				</div><!--paralax container-->
 			</div><!--paralax-->
 
@@ -62,6 +102,7 @@ $(function() {
 			<div class="container">
 			   <h3 class="featureBlock-Heading"> OUR WORK. OUR SOLUTIONS. </h3>
 			   <div class="featureBlock">
+			   <a href="/services.html">
 			      <figure>
 			         <figcaption>
 			            <h3>SERVICES</h3>
@@ -78,9 +119,10 @@ $(function() {
 			               </ul>
 			            </div>
 			         </figcaption>
-			         <a href="/services.html"><img src="/images/portfolio.jpg"></a>
+			         <img src="/images/portfolio.jpg">
 			      </figure>
 			      </a>
+			      <a href="/contactus.html">
 			      <figure>
 			         <figcaption>
 			            <h3>PORTFOLIO</h3>
@@ -91,6 +133,7 @@ $(function() {
 			         <a href="/portfolio.html"><img src="/images/portfolio.jpg">
 			      </figure>
 			      </a>
+			      <a href="/contactus.html">
 			      <figure>
 			         <figcaption>
 			            <h3>CONTACT US</h3>
@@ -99,7 +142,7 @@ $(function() {
 			            	<p>VP & Associates Inc. <br><br> 202 S. 22nd Street <br> Suite 209 <br> Tampa, FL 33605 <br> 813.247.3835 <br> 813.247.4305</p>
 			            	</div>
 			         </figcaption>
-			         <a href="/contactus.html"><img src="/images/contactus.jpg"></a>
+			         <img src="/images/contactus.jpg">
 			      </figure>
 			      </a>
 			   </div>
@@ -149,7 +192,6 @@ $(function() {
 			</div> -->
 
 
-			
 
 			
 			<div id="footer"></div>
@@ -184,5 +226,4 @@ window.onload = init();
 
 
 </html>
-
 

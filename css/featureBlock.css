@@ -154,9 +154,7 @@
     -ms-flex-preferred-size: auto;
         flex-basis: auto;
     -ms-flex-negative: 1;
-        flex-shrink: 1;
-    -webkit-box-shadow: 5px 5px 5px #888888;
-            box-shadow: 5px 5px 5px #888888; }
+        flex-shrink: 1; }
     .featureBlock figure figcaption {
       height: 20%;
       -webkit-transition: all .5s  ease-out;
@@ -170,7 +168,7 @@
       display: block; }
     .featureBlock figure figcaption {
       padding: 12px 0 12px 0;
-      background-color: rgba(47, 102, 151, 0.7);
+      background-color: rgba(47, 102, 151, 0.8);
       position: absolute;
       bottom: 0;
       right: 0;

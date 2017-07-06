@@ -83,6 +83,456 @@
  * line-height applied to the body.
  */
 @import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
+/* SPACING UNITS
+========================================================================== */
+/*
+* Try and use only these values to set typography spacing (margins) across site for consistency.
+*
+* $spacingBase is the same as default line height above. This value is then increased/decreased by halves.
+*
+* These values can be used in classes for tweaking spacing and are used in _base/helper-classes.scss
+* styles for one-off use cases where an entire new class is not necessary
+*/
+/*
+ * Headings sizes (in pixels).
+ */
+/*
+ * Ancillary sizes (in pixels).
+ */
+/* ============================================================================================== */
+/* ============================================================================================== */
+/*
+ * Monochrome colors
+ */
+/*
+ * Text elements
+ */
+/*
+ * Generic border color for consistency
+ */
+/* FONT-SIZE
+========================================================================== */
+/*
+ * Create a fully formed type style (sizing and vertical rhythm) by passing in a
+ * single value, e.g.:
+ *
+   `@include font-size(10px);`
+ *
+ * Thanks to @redclov3r for the `line-height` Sass:
+ * twitter.com/redclov3r/status/250301539321798657
+ *
+ * Basically what this does is add font size (in rems) and if no line-height is declared
+ * in the style you are creating, this mixin will create one that matches the
+ * line-height applied to the body.
+ */
+/* SPACING UNITS
+========================================================================== */
+/*
+* Try and use only these values to set typography spacing (margins) across site for consistency.
+*
+* $spacingBase is the same as default line height above. This value is then increased/decreased by halves.
+*
+* These values can be used in classes for tweaking spacing and are used in _base/helper-classes.scss
+* styles for one-off use cases where an entire new class is not necessary
+*/
+/*
+ * Headings sizes (in pixels).
+ */
+/*
+ * Ancillary sizes (in pixels).
+ */
+/* ============================================================================================== */
+/* ============================================================================================== */
+/*
+ * Monochrome colors
+ */
+/*
+ * Text elements
+ */
+/*
+ * Generic border color for consistency
+ */
+/* FONT-SIZE
+========================================================================== */
+/*
+ * Create a fully formed type style (sizing and vertical rhythm) by passing in a
+ * single value, e.g.:
+ *
+   `@include font-size(10px);`
+ *
+ * Thanks to @redclov3r for the `line-height` Sass:
+ * twitter.com/redclov3r/status/250301539321798657
+ *
+ * Basically what this does is add font size (in rems) and if no line-height is declared
+ * in the style you are creating, this mixin will create one that matches the
+ * line-height applied to the body.
+ */
+/*fonts*/
+@import url("https://fonts.googleapis.com/css?family=Ropa+Sans");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
+/*general styles and resets*/
+/*border box*/
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle; }
+
+/*clearfix*/
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both; }
+
+ul li {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0px;
+  height: 100%; }
+
+#content a {
+  text-decoration: none; }
+
+#content p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #5c6873; }
+
+h1 h2 h3 h4 h5 {
+  line-height: 1.2;
+  margin-bottom: 12px;
+  padding: 0; }
+
+h1 {
+  font-size: 35px; }
+
+h2 {
+  font-size: 30px; }
+
+h3 {
+  font-size: 28px;
+  margin: 0;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #3f444a; }
+
+h4 {
+  font-size: 25px; }
+
+h5 {
+  font-size: 22px; }
+
+p {
+  color: #5c6873; }
+
+#site_wrap {
+  width: 100%; }
+
+#site_inner {
+  width: 100%; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto; }
+
+.containerbg {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url("/images/sunset.jpg") center fixed;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("/images/sunset.jpg") center fixed;
+  background-repeat: no-repeat;
+  margin-bottom: 0;
+  background-size: cover; }
+  .containerbg:after {
+    content: '';
+    display: block;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 40px solid #fff;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    margin: -1px auto 0 auto;
+    z-index: 20 !important;
+    width: 0;
+    bottom: 0; }
+
+.headingwrapper {
+  background-size: cover;
+  background-image: url("/images/headerbg.svg"), -webkit-gradient(linear, left top, right top, from(#7abcff), color-stop(44%, #226698), to(#226698));
+  background-image: url("/images/headerbg.svg"), linear-gradient(to right, #7abcff 0%, #226698 44%, #226698 100%);
+  background-position: left right;
+  background-repeat: no-repeat no-repeat;
+  /*
+   &:after {
+      content: '';
+      position: relative;
+      overflow: hidden;
+      border-top: 40px solid rgb(86, 165, 245);
+      border-left: 40px solid transparent;
+      border-right: 40px solid transparent;
+      z-index: 20 !important;
+      width: 0;
+      top: 100px;
+      right: 50%;
+   }
+   */ }
+  .headingwrapper .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .headingwrapper .container .spotlight-Heading {
+      padding: 48px 0;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+      @media (min-width: 1px) and (max-width: 1250px) {
+        .headingwrapper .container .spotlight-Heading {
+          padding: 48px 24px; } }
+      .headingwrapper .container .spotlight-Heading h3 {
+        font-size: 38px;
+        font-size: 2.375rem;
+        line-height: 1.26316;
+        font-family: 'Roboto Condensed', sans-serif;
+        letter-spacing: 2px;
+        color: white;
+        text-align: left; }
+      .headingwrapper .container .spotlight-Heading p {
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 18px;
+        font-size: 1.125rem;
+        line-height: 1.33333;
+        color: white;
+        margin: 0;
+        text-align: left; }
+
+.image-container {
+  display: inline-block;
+  vertical-align: middle; }
+
+.text-container {
+  display: inline-block; }
+
+/*content*/
+#content {
+  padding: 30px 20px; }
+
+/*paralax feature*/
+.fader-bg {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url("/images/banner04.jpg") no-repeat top fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/images/banner04.jpg") no-repeat top fixed;
+  background-size: cover; }
+
+.fader-bg2 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url("/images/sunset.jpg") no-repeat top fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/images/sunset.jpg") no-repeat top fixed;
+  background-size: cover; }
+
+.paralax {
+  padding: 200px;
+  height: 86vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative; }
+  .paralax .paralax-heading h3 {
+    letter-spacing: 2px;
+    padding: 20px;
+    font-size: 80px;
+    font-size: 5rem;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    position: absolute;
+    top: 200px;
+    left: 0;
+    right: 0; }
+    @media (min-width: 1px) and (max-width: 1250px) {
+      .paralax .paralax-heading h3 {
+        font-size: 50px;
+        min-width: 240px; } }
+  .paralax .slider {
+    display: none; }
+  .paralax .fadeIn {
+    -webkit-animation: fadein 2s;
+            animation: fadein 2s; }
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+.interiorparalax {
+  height: 30vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .interiorparalax .container {
+    margin: 5% 0 auto 20%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start; }
+    .interiorparalax .container .paralax-heading h3 {
+      background-color: rgba(7, 12, 15, 0.3);
+      padding: 20px;
+      font-size: 50px;
+      font-weight: 700;
+      color: #fff;
+      text-shadow: 2px 2px 2px #969696; }
+      @media (min-width: 1px) and (max-width: 1250px) {
+        .interiorparalax .container .paralax-heading h3 {
+          font-size: 24px;
+          min-width: 240px; } }
+
+.hiddenText {
+  display: none;
+  color: white;
+  text-align: left;
+  padding-left: 12px; }
+
+/*expertise content*/
+#expertise-content {
+  text-align: center;
+  padding: 80px 0 40px 0; }
+
+/*feature blocks*/
+#feature-content {
+  width: 100%; }
+
+.feature-container {
+  text-align: center;
+  max-width: 100%; }
+
+.feature-block {
+  display: inline-block;
+  max-width: 90%;
+  padding: 20px 40px 20px 40px; }
+  .feature-block img {
+    max-width: 80%; }
+  .feature-block h4 {
+    padding-bottom: 100px; }
+
+/*paralax2 features*/
+#paralax2 {
+  background: url("images/banner04.jpg") transparent no-repeat center top fixed;
+  padding: 50px 0; }
+  #paralax2 h3 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center; }
+  #paralax2 h4 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center; }
+
+.inner-container {
+  text-align: center;
+  padding-top: 50px; }
+  .inner-container:before {
+    content: ' ';
+    display: inline-block;
+    vertical-align: middle; }
+
+.paralax-text {
+  display: inline-block;
+  width: 50%;
+  vertical-align: middle;
+  background: url("images/orange-60.png");
+  padding: 5px; }
+  .paralax-text p {
+    margin: 0px;
+    color: white;
+    text-align: left;
+    font-size: 13px; }
+
+#paralax2 img {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 90%; }
+
+/*services*/
+#services {
+  padding: 50px 0 h5;
+  padding: 5px 0 0 5px; }
+  #services h4 {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center; }
+  #services h3 {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center; }
+  #services p {
+    padding: 5px 0 5px 5px; }
+  #services ul {
+    padding-left: 25px; }
+  #services li {
+    text-align: left;
+    font-size: 14px; }
+
+.services-text {
+  display: inline-block;
+  /* background: url("images/blue-10.png");*/
+  padding-left: 10px; }
+  .services-text p {
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+    color: black;
+    font-size: 13px;
+    text-align: left;
+    padding: 5px; }
+  .services-text h5 {
+    margin: 0;
+    text-align: left;
+    padding-bottom: 10px; }
+
+#services img {
+  max-width: 90%; }
+
+.text-container {
+  padding-right: 10px;
+  /* background: url("images/blue-10.png");*/ }
+  .text-container h5 {
+    margin: 0;
+    text-align: left;
+    padding-bottom: 10px; }
+  .text-container p {
+    text-align: left;
+    margin: 0;
+    padding-bottom: 10px; }
+
+/* paralax3*/
+#paralax3 {
+  background: url("images/const_05.jpeg") transparent no-repeat center top fixed;
+  padding: 50px 0; }
+
 .mapFeature {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -110,109 +560,193 @@
       margin: 0;
       padding: 0 0 12px 12px; }
 
-.mapwrapper {
+.content-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative; }
-  .mapwrapper iframe {
-    pointer-events: none;
-    position: relative;
-    width: 100%; }
-    .mapwrapper iframe.clicked {
-      pointer-events: auto; }
-  .mapwrapper .mapoverlay {
-    position: absolute;
-    top: 5%;
-    left: 70%;
-    background-color: white;
-    width: 25%;
-    min-width: 175px; }
-    .mapwrapper .mapoverlay h2 {
-      margin-left: 12px;
-      font-family: 'Roboto Condensed', sans-serif;
-      color: #3f444a; }
-    .mapwrapper .mapoverlay h5 {
-      font-size: 18px;
-      font-size: 1.125rem;
-      line-height: 1.33333;
-      background-color: #6699cc;
-      color: #fff;
-      margin: 0 0 12px 12px;
-      max-width: 20%;
-      padding: 6px;
-      min-width: 75px;
-      font-family: 'Roboto Condensed', sans-serif;
-      text-align: center; }
-    .mapwrapper .mapoverlay p {
-      margin: 0 0 12px 12px;
-      font-family: 'Roboto Condensed', sans-serif; }
-    .mapwrapper .mapoverlay figure {
-      margin: 0 0 12px 12px; }
-      .mapwrapper .mapoverlay figure img {
-        width: 50%; }
-
-.formFeature {
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("/images/sunset.jpg");
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/sunset.jpg");
-  background-attachment: fixed;
-  padding: 48px;
-  background-size: cover;
-  height: 900px; }
-  .formFeature .container .mapFeature .formwrapper .spotlight-content {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding-top: 24px;
-    border-radius: 4px; }
-    .formFeature .container .mapFeature .formwrapper .spotlight-content form {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-flex: 0;
-      -ms-flex: 0 1 50%;
-      flex: 0 1 50%;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
       -ms-flex-direction: row;
-      flex-direction: row;
-      padding-left: 24px; }
-      .formFeature .container .mapFeature .formwrapper .spotlight-content form .formsplit1 {
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: url(/images/bg.gif); }
+  .content-wrap .mapwrapper {
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: relative; }
+    .content-wrap .mapwrapper iframe {
+      pointer-events: none;
+      position: relative;
+      width: 100%; }
+      .content-wrap .mapwrapper iframe.clicked {
+        pointer-events: auto; }
+    .content-wrap .mapwrapper .mapoverlay {
+      position: absolute;
+      top: 5%;
+      left: 70%;
+      background-color: white;
+      width: 25%;
+      min-width: 175px; }
+      .content-wrap .mapwrapper .mapoverlay h2 {
+        margin-left: 12px;
+        font-family: 'Roboto Condensed', sans-serif;
+        color: #3f444a; }
+      .content-wrap .mapwrapper .mapoverlay h5 {
+        font-size: 18px;
+        font-size: 1.125rem;
+        line-height: 1.33333;
+        background-color: #6699cc;
+        color: #fff;
+        margin: 0 0 12px 12px;
+        max-width: 20%;
+        padding: 6px;
+        min-width: 75px;
+        font-family: 'Roboto Condensed', sans-serif;
+        text-align: center; }
+      .content-wrap .mapwrapper .mapoverlay p {
+        margin: 0 0 12px 12px;
+        font-family: 'Roboto Condensed', sans-serif; }
+      .content-wrap .mapwrapper .mapoverlay figure {
+        margin: 0 0 12px 12px; }
+        .content-wrap .mapwrapper .mapoverlay figure img {
+          width: 50%; }
+  .content-wrap .map-note {
+    text-align: left;
+    margin: 0 auto; }
+    .content-wrap .map-note h3 {
+      font-size: 50px;
+      font-size: 3.125rem;
+      line-height: 1.44; }
+
+@media (min-width: 1px) and (max-width: 1250px) {
+  .content-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column-reverse; }
+    .content-wrap .mapwrapper {
+      width: 100%; }
+  .map-note {
+    display: none; } }
+
+.content-wrap2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #f7f7f7; }
+  @media (min-width: 1px) and (max-width: 1250px) {
+    .content-wrap2 {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; } }
+  .content-wrap2 .formFeature {
+    background: #f7f7f7;
+    padding: 48px 48px;
+    height: 700px;
+    width: 50%;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2; }
+    .content-wrap2 .formFeature .container .mapFeature .formwrapper .spotlight-content {
+      padding-top: 24px;
+      border-radius: 4px; }
+      .content-wrap2 .formFeature .container .mapFeature .formwrapper .spotlight-content form {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
         -webkit-box-flex: 0;
         -ms-flex: 0 1 50%;
-        flex: 0 1 50%; }
-      .formFeature .container .mapFeature .formwrapper .spotlight-content form .formsplit2 {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
+        flex: 0 1 50%;
+        -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-flex: 0;
-        -ms-flex: 0 1 50%;
-        flex: 0 1 50%; }
-      .formFeature .container .mapFeature .formwrapper .spotlight-content form .formsplit3 {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column; }
-        .formFeature .container .mapFeature .formwrapper .spotlight-content form .formsplit3 textarea {
-          width: 100%; }
-    .formFeature .container .mapFeature .formwrapper .spotlight-content form:nth-child(2) {
-      margin-bottom: 48px; }
+        -ms-flex-direction: row;
+        flex-direction: row;
+        padding-left: 24px; }
+        .content-wrap2 .formFeature .container .mapFeature .formwrapper .spotlight-content form .formsplit1 {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          -webkit-box-flex: 0;
+          -ms-flex: 0 1 50%;
+          flex: 0 1 50%; }
+        .content-wrap2 .formFeature .container .mapFeature .formwrapper .spotlight-content form .formsplit2 {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          -webkit-box-flex: 0;
+          -ms-flex: 0 1 50%;
+          flex: 0 1 50%; }
+        .content-wrap2 .formFeature .container .mapFeature .formwrapper .spotlight-content form .formsplit3 {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+          flex-direction: column; }
+          .content-wrap2 .formFeature .container .mapFeature .formwrapper .spotlight-content form .formsplit3 textarea {
+            width: 100%; }
+      .content-wrap2 .formFeature .container .mapFeature .formwrapper .spotlight-content form:nth-child(2) {
+        margin-bottom: 48px; }
+  .content-wrap2 .form-note {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    text-align: right;
+    margin: 0 auto;
+    background: url(/images/bg.gif);
+    padding-top: 12px;
+    background: #f7f7f7; }
+    .content-wrap2 .form-note h3 {
+      font-size: 50px;
+      font-size: 3.125rem;
+      line-height: 1.44; }
+
+@media (min-width: 1px) and (max-width: 1250px) {
+  .content-wrap2 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    .content-wrap2 .formFeature {
+      width: 100%;
+      padding: 0 12px; }
+    .content-wrap2 .form-note {
+      padding-top: 48px; }
+      .content-wrap2 .form-note h3 {
+        text-align: center; }
+      .content-wrap2 .form-note p {
+        text-align: center; } }
 
 .formelement {
   display: -webkit-box;
@@ -228,7 +762,7 @@
     padding-right: 6px;
     padding-left: 6px;
     font-weight: 600;
-    color: white;
+    color: gray;
     font-family: 'Arial', sans-serif;
     font-size: 20px;
     font-size: 1.25rem;
@@ -238,27 +772,26 @@
     width: 95%;
     padding: 12px 12px;
     margin: 8px 0;
-    border: 2px solid #6699cc;
+    border: 2px solid #d1d1d1;
     border-radius: 4px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    background-color: rgba(0, 0, 0, 0.3);
-    color: white;
+    color: black;
     font-size: 20px;
     font-size: 1.25rem;
     line-height: 1.2; }
   .formelement input::-webkit-input-placeholder {
-    color: white;
+    color: #3f444a;
     font-size: 20px;
     font-size: 1.25rem;
     line-height: 1.2; }
   .formelement input:-ms-input-placeholder {
-    color: white;
+    color: #3f444a;
     font-size: 20px;
     font-size: 1.25rem;
     line-height: 1.2; }
   .formelement input::placeholder {
-    color: white;
+    color: #3f444a;
     font-size: 20px;
     font-size: 1.25rem;
     line-height: 1.2; }
@@ -271,38 +804,22 @@
     padding: 14px 20px;
     margin: 24px 0;
     font-size: 20px;
-    cursor: pointer; }
+    cursor: pointer;
+    border-radius: 2px; }
     .formelement input[type=submit]:hover {
       background: #334d66;
       color: white; }
   .formelement textarea {
-    background-color: transparent;
     margin: 4px 0;
-    border: 2px solid #6699cc;
-    border-radius: 4px;
+    border: 2px solid #d1d1d1;
+    border-radius: 2px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    background-color: rgba(0, 0, 0, 0.3);
-    color: white;
+    color: black;
     font-size: 20px;
     font-size: 1.25rem;
     line-height: 1.2; }
-    .formelement textarea::-webkit-input-placeholder {
-      color: white;
-      font-size: 16px;
-      font-size: 1rem;
-      line-height: 1.5;
-      padding: 0 12px;
-      font-family: arial; }
-    .formelement textarea:-ms-input-placeholder {
-      color: white;
-      font-size: 16px;
-      font-size: 1rem;
-      line-height: 1.5;
-      padding: 0 12px;
-      font-family: arial; }
-    .formelement textarea::placeholder {
-      color: white;
+    .formelement textarea:placeholder {
       font-size: 16px;
       font-size: 1rem;
       line-height: 1.5;

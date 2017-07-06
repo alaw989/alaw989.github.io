@@ -1,7 +1,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Services</title>
+  <title>Contact Us</title>
 
 <link rel="stylesheet" type="text/css" href="css/styles.css">
 <link rel="stylesheet" type="text/css" href="css/featureBlock.css">
@@ -9,20 +9,26 @@
 <link rel="stylesheet" type="text/css" href="css/spacingUnits.css">
 <link rel="stylesheet" type="text/css" href="css/lineHeight.css">
 <link rel="stylesheet" type="text/css" href="css/fontSize.css">
-<link rel="stylesheet" type="text/css" href="css/textblock.css">
+<link rel="stylesheet" type="text/css" href="css/textblock.css">   
 <link rel="stylesheet" type="text/css" href="css/mainNav.css">
 <link rel="stylesheet" type="text/css" href="css/spotLight.css">
 <link rel="stylesheet" type="text/css" href="css/footer.css">
 <link rel="stylesheet" type="text/css" href="css/mediaQueries.css">
 <link rel="stylesheet" type="text/css" href="css/mapFeature.css">
 <link rel="stylesheet" type="text/css" href="css/twoColumn.css">
+<link rel="stylesheet" type="text/css" href="css/contactFeature.css">
+<link rel="stylesheet" href="css/animate.css">
 <link rel="stylesheet" type="text/css" href="css/normalize.css">
-<script type="text/javascript" src="js/scrollJump.js"></script>
 <script type="text/javascript" src="js/scrollFade.js"></script>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 
+<link rel="stylesheet" href="css/jquery-ui.min.css">
+<script src="external/jquery/jquery.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 <script>
 $(function() {
    $("#footer").load("footer.html");
@@ -39,7 +45,7 @@ $(function() {
         	<div class="spacer"></div>
 			<div class="headingwrapper">
 			   <div class="container">
-			      <div class="spotLight-Heading">
+			      <div class="spotLight-Heading wow fadeInLeft">
 			         <h3>CONTACT US</h3>
 			         <p>Location & Contact Info</p>
 			      </div>
@@ -48,11 +54,11 @@ $(function() {
 
 
 
-
-			<div class="mapwrapper">
-			   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112784.2050385947!2d-82.50427228125808!3d27.94777327637866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2c4fe5141b569%3A0x5422074a6bbf560b!2sV+P+%26+Associates+Inc!5e0!3m2!1sen!2sus!4v1495387301283" height="650" frameborder="1" style="border:0" allowfullscreen>
-			   </iframe>
-			   <div class="mapoverlay">
+<div class="content-wrap">
+   <div class="mapwrapper">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112784.2050385947!2d-82.50427228125808!3d27.94777327637866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2c4fe5141b569%3A0x5422074a6bbf560b!2sV+P+%26+Associates+Inc!5e0!3m2!1sen!2sus!4v1495387301283" height="650" frameborder="1" style="border:0" allowfullscreen>
+      </iframe>
+      <!--<div class="mapoverlay">
 			      <h2>VP & ASSOCIATES</h2>
 			      <figure>
 			         <img src="/images/vpbuilding.png" alt="" />
@@ -64,31 +70,43 @@ $(function() {
 			      <h5> Contacts</h5>
 			      <p>813.247.3835
 			         <br> Fax 813.247.4305</p>
-			   </div>
-			</div>
-			<script>
-			$('.mapwrapper')
-			   .click(function() {
-			      $(this).find('iframe').addClass('clicked')
-			   })
-			   .mouseleave(function() {
-			      $(this).find('iframe').removeClass('clicked')
-			   });
-			</script>
+			   </div>-->
+   </div>
+   <script>
+   $('.mapwrapper')
+      .click(function() {
+         $(this).find('iframe').addClass('clicked')
+      })
+      .mouseleave(function() {
+         $(this).find('iframe').removeClass('clicked')
+      });
+   </script>
+   <div class="map-note wow fadeInRight">
+      <h3>ADDRESS</h3>
+      <hr>
+      <p> 202 S 22nd St #209
+         <br> Tampa, FL 33605
+         <br> USA</p>
+      
+      <p>813.247.3835
+         <br> Fax 813.247.4305</p>
+   </div>
+</div>
 
 
-			<div class="headingwrapper">
+
+			<!--<div class="headingwrapper">
 			   <div class="container">
 			      <div class="spotLight-Heading">
 			         <h3>GET IN TOUCH</h3>
 			         <p>Please use this form or contact us directly. We are happy to answer any questions.</p>
 			      </div>
 			   </div>
-			</div>
+			</div> -->
 
 
 
-
+<div class="content-wrap2">
 			<div class="formFeature">
 			   <div class="container">
 			      <div class="mapFeature">
@@ -108,9 +126,9 @@ $(function() {
 			                     </div>
 			                     <div class="formelement">
 			                       <!-- <label for="fname">First Name:</label>-->
-			                        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+			                        <input type="text" id="fname" name="firstname" placeholder="First Name">
 			                        <!--<label for="lname">Last Name:</label>-->
-			                        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+			                        <input type="text" id="lname" name="lastname" placeholder="Last Name">
 			                     </div>
 			                     <div class="formelement">
 			                        <!--<label for="company">Company:</label>-->
@@ -148,7 +166,7 @@ $(function() {
 			                  <div class="formsplit3">
 			                     <div class="formelement">
 			                       <!--<label for="message">Message:</label>-->
-			                        <textarea placeholder="Message" rows="10" cols="100" name="description">
+			                        <textarea placeholder="Message" rows="5" cols="59" name="description">
 			                        </textarea>
 			                     </div>
 			                     <div class="formelement">
@@ -161,7 +179,12 @@ $(function() {
 			      </div>
 			   </div>
 			</div>
-
+			<div class="form-note wow fadeInLeft">
+				<h3 class="wow fadeIn">GET IN TOUCH</h3>
+				<hr>
+				<p>Please use this form or contact us directly. <br> We are happy to answer any questions.</p>
+			</div>
+</div>
 
 
 
@@ -176,6 +199,10 @@ $(function() {
 
 		</div><!--site_inner-->
 	</div><!-- site wrap-->
+	<script src="js/wow.min.js"></script>
+<script>
+new WOW().init();
+</script>
 </body>
 
 

@@ -237,9 +237,7 @@
         transition: transform .4s ease-out;
         transition: transform .4s ease-out, -webkit-transform .4s ease-out;
         -webkit-transform: scale(1, 1);
-        transform: scale(1, 1);
-        -webkit-box-shadow: 3px 3px 3px #888888;
-                box-shadow: 3px 3px 3px #888888; }
+        transform: scale(1, 1); }
         .two-column .right-column .portfolioRow .image:hover {
           cursor: pointer; }
         .two-column .right-column .portfolioRow .image:before {

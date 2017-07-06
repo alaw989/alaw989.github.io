@@ -221,6 +221,41 @@
 .hamburger {
   display: none; }
 
+.sidenav {
+  height: 100%;
+  /* 100% Full-height */
+  width: 0;
+  /* 0 width - change this with JavaScript */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: #111;
+  /* Black*/
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  padding-top: 60px;
+  /* Place content 60px from the top */
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  /* 0.5 second transition effect to slide in the sidenav */ }
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    -webkit-transition: 0.3s .sidenav a;
+    transition: 0.3s .sidenav a; }
+    .sidenav a :hover {
+      color: #f1f1f1; }
+
+#main {
+  -webkit-transition: margin-left .5s;
+  transition: margin-left .5s; }
+
 @media (min-width: 1px) and (max-width: 1250px) {
   #header {
     padding: 6px 0; }
@@ -245,11 +280,11 @@
             justify-content: flex-end;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center; }
+            align-items: center;
+    padding: 48px 12px; }
     .hamburger img {
-      width: 10%;
-      padding-right: 48px;
       min-width: 60px;
-      padding: 30px 0; }
+      max-width: 56px;
+      border: 2px solid #6699cc; }
   #mainNav {
     display: none; } }

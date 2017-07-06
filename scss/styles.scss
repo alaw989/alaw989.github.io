@@ -51,7 +51,7 @@ body {
       font-family: 'Poppins', sans-serif;
       font-size: 18px;
       font-weight: 400;
-      color: #000;
+      color: $colorParagraph;
    }
 }
 
@@ -73,7 +73,8 @@ h2 {
 h3 {
   font-size: 28px;
   margin: 0;
-  font-family: 'Roboto-Sans', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: $colorHeading;
 }
 
 h4 {
@@ -82,6 +83,10 @@ h4 {
 
 h5 {
   font-size: 22px;
+}
+
+p {
+  color: $colorParagraph;
 }
 
 #site_wrap {
@@ -98,10 +103,7 @@ h5 {
    }
 
 .containerbg {
-   
-   background: -webkit-gradient(linear,left bottom, left top,from(rgba(0,0,0,0.6)),to(rgba(0,0,0,0.6))), url('/images/sunset.jpg') center fixed;
-   
-   background: linear-gradient(0deg,rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('/images/sunset.jpg') center fixed;
+   background: linear-gradient(0deg,rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url('/images/sunset.jpg') center fixed;
    background-repeat: no-repeat;
    margin-bottom: 0;
    background-size: cover;
@@ -195,34 +197,63 @@ h5 {
 }
 
 /*paralax feature*/
-   .paralax {
-     background: -webkit-gradient( linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url('/images/banner04.jpg') no-repeat top fixed;
-     background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/images/banner04.jpg') no-repeat top fixed;
-     background-size: cover;
-     padding: 200px;
-     height: 86vh;
-     display: -webkit-box;
-     display: -ms-flexbox;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     
-   h3 {
-      letter-spacing: 2px;
-      padding: 20px;
-      font-size: 70px;
-      font-weight: 700;
-      color: #fff;
-      text-align: center;
-      font-family: 'Roboto Condensed', sans-serif;
-      @include tablet {
-         font-size: 24px;
-         min-width: 240px;
 
+.fader-bg {
+   background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/images/banner04.jpg') no-repeat top fixed;
+   background-size: cover;
+}
+
+.fader-bg2 {
+   background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/images/sunset.jpg') no-repeat top fixed;
+   background-size: cover;
+}
+
+   .paralax {
+      padding: 200px;
+      height: 86vh;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      .paralax-heading {
+         h3 {
+            letter-spacing: 2px;
+            padding: 20px;
+            @include font-size(80px);
+            font-weight: 700;
+            color: #fff;
+            text-align: center;
+            font-family: 'Roboto Condensed', sans-serif;
+            position: absolute;
+            top: 200px;
+            left: 0;
+            right: 0;
+            @include tablet {
+               font-size: 50px;
+               min-width: 240px;
+            }
+           
+         }
+      }
+      .slider {
+         display: none;
+      }
+      .fadeIn {
+         animation: fadein 2s;
+      }
+      @keyframes fadein {
+         from {
+            opacity: 0;
+         }
+         to {
+            opacity: 1;
+         }
       }
    }
-   .paralax-heading {}
-}
+
+
 
 
 .interiorparalax {
@@ -241,7 +272,7 @@ h5 {
       -webkit-box-pack: start;
           -ms-flex-pack: start;
               justify-content: flex-start;
-      .paralax-heading {
+      .paralax-heading {  
          h3 {
             background-color: rgba(7, 12, 15, 0.3);
             padding: 20px;

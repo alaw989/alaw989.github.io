@@ -5,7 +5,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
 
 #header {
-   
    background: url(/images/bg.gif);
    background-repeat: repeat;
    background-position: right, left;
@@ -152,11 +151,47 @@
    display: none;
 }
 
+.sidenav {
+   height: 100%;
+   /* 100% Full-height */
+   width: 0;
+   /* 0 width - change this with JavaScript */
+   position: fixed;
+   /* Stay in place */
+   z-index: 1;
+   /* Stay on top */
+   top: 0;
+   left: 0;
+   background-color: #111;
+   /* Black*/
+   overflow-x: hidden;
+   /* Disable horizontal scroll */
+   padding-top: 60px;
+   /* Place content 60px from the top */
+   transition: 0.5s;
+   /* 0.5 second transition effect to slide in the sidenav */
+   a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s &:hover {
+         color: #f1f1f1;
+      }
+   }
+}
+
+#main {
+    transition: margin-left .5s;
+}
+
+
 @include tablet {
    #header {
-    padding: $spacingXSm 0;
+      padding: $spacingXSm 0;
       #logo {
-        padding-left: $spacingSm;
+         padding-left: $spacingSm;
          #logo-image {
             width: 100%;
             padding-top: $spacingSm;
@@ -164,10 +199,10 @@
             opacity: 1;
          }
          #logo-image2 {
-          width: 100%;
-          padding-top: $spacingSm;
-          display: none;
-         min-width: 105px;
+            width: 100%;
+            padding-top: $spacingSm;
+            display: none;
+            min-width: 105px;
          }
       }
    }
@@ -175,18 +210,15 @@
       display: flex;
       justify-content: flex-end;
       align-items: center;
-      
-
+      padding: $spacingLg $spacingSm;
       img {
-         width: 10%;
-         padding-right: $spacingLg;
          min-width: 60px;
-         padding: 30px 0;
+         max-width: 56px;
+         border: 2px solid $colorBrandPrimary;
+         
       }
    }
    #mainNav {
       display: none;
    }
 }
-
- 

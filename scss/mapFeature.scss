@@ -4,6 +4,8 @@
 @import "mediaQueries";
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
 @import "bourbon/bourbon";
+@import "styles";
+
 
 .mapFeature {
    display: -webkit-box;
@@ -40,74 +42,108 @@
    }
 }
 
-.mapwrapper {
-   display: -webkit-box;
-   display: -ms-flexbox;
+.content-wrap {
    display: flex;
-   -webkit-box-orient: vertical;
-   -webkit-box-direction: normal;
-       -ms-flex-direction: column;
-           flex-direction: column;
-   position: relative;
-   iframe {
-      pointer-events: none;
+   flex-direction: row;
+   justify-content: flex-start;
+   align-items: center;
+   background: url(/images/bg.gif);
+   .mapwrapper {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
       position: relative;
-      width: 100%;
-      &.clicked {
-         pointer-events: auto;
+      iframe {
+         pointer-events: none;
+         position: relative;
+         width: 100%;
+         &.clicked {
+            pointer-events: auto;
+         }
+      }
+      .mapoverlay {
+         position: absolute;
+         top: 5%;
+         left: 70%;
+         background-color: white;
+         width: 25%;
+         min-width: 175px;
+         h2 {
+            margin-left: $spacingSm;
+            font-family: 'Roboto Condensed', sans-serif;
+            color: rgb(63, 68, 74);
+         }
+         h5 {
+            @include font-size(18px);
+            background-color: $colorBrandPrimary;
+            color: $colorWhite;
+            margin: 0 0 $spacingSm $spacingSm;
+            max-width: 20%;
+            padding: $spacingXSm;
+            min-width: 75px;
+            font-family: 'Roboto Condensed', sans-serif;
+            text-align: center;
+         }
+         p {
+            margin: 0 0 $spacingSm $spacingSm;
+            font-family: 'Roboto Condensed', sans-serif;
+         }
+         figure {
+            margin: 0 0 $spacingSm $spacingSm;
+            img {
+               width: 50%;
+            }
+         }
       }
    }
-   .mapoverlay {
-      position: absolute;
-      top: 5%;
-      left: 70%;
-      background-color: white;
-      width: 25%;
-      min-width: 175px;
-      h2 {
-         margin-left: $spacingSm;
-         font-family: 'Roboto Condensed', sans-serif;
-         color: rgb(63,68,74);
-      }
-      h5 {
-         @include font-size(18px);
-         background-color: $colorBrandPrimary;
-         color: $colorWhite;
-         margin: 0 0 $spacingSm $spacingSm;
-         max-width: 20%;
-         padding: $spacingXSm;
-         min-width: 75px;
-         font-family: 'Roboto Condensed', sans-serif;
-         text-align: center;
-      }
-      p {
-         margin: 0 0 $spacingSm $spacingSm;
-         font-family: 'Roboto Condensed', sans-serif;
-      }
-      figure {
-         margin: 0 0 $spacingSm $spacingSm;
-         img {
-            width: 50%;
-         }
+   .map-note {
+      text-align: left;
+      margin: 0 auto;
+      h3 {
+         @include font-size(50px);
       }
    }
 }
 
+ @include tablet {
+    .content-wrap {
+       -webkit-box-orient: vertical;
+       -webkit-box-direction: normal;
+       -ms-flex-direction: column;
+       flex-direction: column-reverse;
+       .mapwrapper {
+         width: 100%;
+       }
+    }
+    .map-note {
+      display: none;
+    }
+ }
+
+
+
+.content-wrap2 {
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-start;
+   align-items: center;
+   background: #f7f7f7;
+      @include tablet {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+   }
 .formFeature {
-   background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url('/images/sunset.jpg');
-   background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/sunset.jpg');
-   background-attachment: fixed;
-   padding: $spacingLg;
-   background-size: cover;
-   height: 900px;
+  background: #f7f7f7;
+  padding: $spacingLg $spacingLg; 
+   height: 700px;
+   width: 50%;
+   order: 2;
    .container {
       .mapFeature {
          .formwrapper {
-            
-           
-
             .spotlight-content {
-              background-color: rgba(0, 0, 0, .5);
                padding-top: $spacingBase;
             border-radius: 4px;
                form {
@@ -167,7 +203,42 @@
       }
    }
 }
+.form-note {
+   order: 1;
+   text-align: right;
+   margin: 0 auto;
+   background: url(/images/bg.gif);
+   padding-top: $spacingSm;
+   background: #f7f7f7;
+   h3 {
+      @include font-size(50px);
+      
+   }
+   
+}
+}
 
+ @include tablet {
+    .content-wrap2 {
+       -webkit-box-orient: vertical;
+       -webkit-box-direction: normal;
+       -ms-flex-direction: column;
+       flex-direction: column;
+       .formFeature {
+         width: 100%;
+        padding: 0 $spacingSm;
+       }
+       .form-note {
+         padding-top: $spacingLg;
+         h3 {
+            text-align: center;
+         }
+         p {
+            text-align:center;
+         }
+       }
+    }
+ }
 
 .formelement {
    display: -webkit-box;
@@ -183,7 +254,7 @@
       padding-right: $spacingXSm;
       padding-left: $spacingXSm;
       font-weight: 600;
-      color: white;
+      color: gray;
       font-family: 'Arial', sans-serif;
       @include font-size(20px);
    }
@@ -192,27 +263,27 @@
       width: 95%;
       padding: $spacingSm $spacingSm;
       margin: 8px 0;
-      border: 2px solid $colorBrandPrimary;
+      border: 2px solid #d1d1d1;
       border-radius: 4px;
       -webkit-box-sizing: border-box;
               box-sizing: border-box;
-      background-color: rgba(0,0,0,.3);
-      color: white;
+      
+      color: black;
       @include font-size(20px);
    }
 
    input::-webkit-input-placeholder {
-      color: white;
+      color: $colorHeading;
       @include font-size(20px);
    }
    
    input:-ms-input-placeholder {
-      color: white;
+      color: $colorHeading;
       @include font-size(20px);
    }
    
    input::placeholder {
-      color: white;
+      color: $colorHeading;
       @include font-size(20px);
    }
 
@@ -227,24 +298,24 @@
       margin: $spacingBase 0;
       font-size: 20px;
       cursor: pointer;
+      border-radius: 2px;
       &:hover {
          background: $colorBrandPrimaryDarker;
          color: white;
       }
    }
    textarea {
-      background-color: transparent;
       margin: 4px 0;
-      border: 2px solid $colorBrandPrimary;
-      border-radius: 4px;
+      border: 2px solid #d1d1d1;
+      border-radius: 2px;
       -webkit-box-sizing: border-box;
               box-sizing: border-box;
-      background-color: rgba(0,0,0,.3);
-      color: white;
+      
+      color: black;
       @include font-size(20px);
 
-      &::placeholder {
-         color: white;
+      &:placeholder {
+         
          @include font-size(16px);
          padding: 0 $spacingSm;
          font-family: arial;
