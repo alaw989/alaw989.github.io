@@ -26,11 +26,11 @@
          color: $colorBrandPrimaryDarker;
          max-width: 70%;
          padding: $spacingXSm $spacingXSm $spacingXSm $spacingSm;
-         text-align: left;
+         text-align: justify;
          /*background: rgba($colorBrandPrimaryDark, .8); */
          color: $colorWhite;
          max-height: 100%;
-         margin: $spacingLg;
+         margin: $spacingSm;
          @include font-size(19px);
          line-height: 32px;
          font-family: 'Roboto Condensed', sans-serif;
@@ -51,7 +51,6 @@
          h3 {
             color: white;
             background: rgba($colorBrandPrimaryDark, .8);
-            
             padding: $spacingXSm;
             align-self: center;
             margin: 0;
@@ -62,7 +61,7 @@
          justify-content: center;
          p {
             font-size: 16px;
-            text-align: center;
+            text-align: justify;
             order: 2;
             line-height: 24px;
          }

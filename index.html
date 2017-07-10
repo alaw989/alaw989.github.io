@@ -1,48 +1,48 @@
 <html>
+
 <head>
-  <meta charset="utf-8">
-  <title>VP & Associates, Inc</title>
+   <meta charset="utf-8">
+   <title>VP & Associates, Inc</title>
+   <link rel="stylesheet" type="text/css" href="css/styles.css">
+   <link rel="stylesheet" type="text/css" href="css/featureBlock.css">
+   <link rel="stylesheet" type="text/css" href="css/colors.css">
+   <link rel="stylesheet" type="text/css" href="css/spacingUnits.css">
+   <link rel="stylesheet" type="text/css" href="css/lineHeight.css">
+   <link rel="stylesheet" type="text/css" href="css/fontSize.css">
+   <link rel="stylesheet" type="text/css" href="css/textblock.css">
+   <link rel="stylesheet" type="text/css" href="css/mainNav.css">
+   <link rel="stylesheet" type="text/css" href="css/spotLight.css">
+   <link rel="stylesheet" type="text/css" href="css/footer.css">
+   <link rel="stylesheet" type="text/css" href="css/mediaQueries.css">
+   <link rel="stylesheet" type="text/css" href="css/mapFeature.css">
+   <link rel="stylesheet" type="text/css" href="css/twoColumn.css">
+   <link rel="stylesheet" type="text/css" href="css/contactFeature.css">
+   <link rel="stylesheet" href="css/animate.css">
+   <link rel="stylesheet" type="text/css" href="css/normalize.css">
+   <link rel="stylesheet" href="css/jquery-ui.min.css">
+   <link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css">
 
-<link rel="stylesheet" type="text/css" href="css/styles.css">
-<link rel="stylesheet" type="text/css" href="css/featureBlock.css">
-<link rel="stylesheet" type="text/css" href="css/colors.css">
-<link rel="stylesheet" type="text/css" href="css/spacingUnits.css">
-<link rel="stylesheet" type="text/css" href="css/lineHeight.css">
-<link rel="stylesheet" type="text/css" href="css/fontSize.css">
-<link rel="stylesheet" type="text/css" href="css/textblock.css">
-<link rel="stylesheet" type="text/css" href="css/mainNav.css">
-<link rel="stylesheet" type="text/css" href="css/spotLight.css">
-<link rel="stylesheet" type="text/css" href="css/footer.css">
-<link rel="stylesheet" type="text/css" href="css/mediaQueries.css">
-<link rel="stylesheet" type="text/css" href="css/mapFeature.css">
-<link rel="stylesheet" type="text/css" href="css/twoColumn.css">
-<link rel="stylesheet" type="text/css" href="css/contactFeature.css">
-<link rel="stylesheet" href="css/animate.css">
-<link rel="stylesheet" type="text/css" href="css/normalize.css">
-<script type="text/javascript" src="js/scrollFade.js"></script>
-<script type="text/javascript" src="js/iescrollJump.js"></script>
-<script src="js/wow.min.js"></script>
-
-<link rel="stylesheet" href="css/jquery-ui.min.css">
-<script src="external/jquery/jquery.js"></script>
-<script src="js/jquery-ui.min.js"></script>
-
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<script>
-$(function() {
-   $("#footer").load("footer.html");
-   $("#header").load("header.html");
-});
-</script>
-
+   <script type="text/javascript" src="js/scrollFade.js"></script>
+   <script type="text/javascript" src="js/iescrollJump.js"></script>
+   <script src="js/wow.min.js"></script>
+   <script src="external/jquery/jquery.js"></script>
+   <script src="js/jquery-ui.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+   <script src="/js/jquery.bxslider.js"></script>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+   <script>
+   $(function() {
+      $("#footer").load("footer.html");
+      $("#header").load("header.html");
+   });
+   </script>
 </head>
 
-<body onload="slider()">
 
-<script>
+<body>
+
+<!--<script>
 $(document).ready(function() {
    var sliderArray = $(".slider");
    sliderLength = sliderArray.length - 1;
@@ -62,24 +62,14 @@ $(document).ready(function() {
    }, 5000);
 
 });
-</script>
+</script>-->
 
 <script>
-	$(document).ready(function() {
-	var bgArray = [$(".fader-bg"), $(".fader-bg2")];
-	var bgLength = bgArray.length - 1;
-	var count = -1;
-
-	var paralax = $('.paralax');
-
-	console.log(bgArray)
-
-	setInterval(function() {
-		count < bgLength ? count++ : count = 0;
-		$('.paralax').removeClass(bgArray);
-	}, 5000);
- });
+$(document).ready(function(){
+  $('.bxslider').bxSlider();
+});
 </script>
+
 
 
 
@@ -89,65 +79,68 @@ $(document).ready(function() {
     	<div id="header"></div>
     	<div class="spacer"></div>
 		<!--spacing element between navbar and paralax -->
- 			<div class="paralax fader-bg">
-				<div class="paralax-heading">
-					<h3 class="slider"> EMPLOYING THE LATEST <br> </span> CAD SOFTWARE</h3>
-					<h3 class="slider"> QUICK <br>  RESPONSE</h3>
-					<h3 class="slider"> STRUCTURAL ENGINEERING <br> <span style="font-weight: 300">& <br></span> STEEL DETAILING</h3>
-					<h3 class="slider"> BUILDING INFORMATION <br>  MODEL (BIM)</h3>
-				</div><!--paralax container-->
-			</div><!--paralax-->
+		<div class="slide-combo">
+		   <ul class="bxslider">
+		      <li><img src="/images/sunset.jpg" /></li>
+		      <li><img src="/images/banner04.jpg" /></li>
+		   </ul>
+		</div>
 
-
-			<div class="container">
-			   <h3 class="featureBlock-Heading"> OUR WORK. OUR SOLUTIONS. </h3>
-			   <div class="featureBlock">
-			   <a href="/services.html">
-			      <figure>
-			         <figcaption>
-			            <h3>SERVICES</h3>
-			            <div class="hiddenText">
-			               <p>We are well versed in the following building materials:</p>
-			               <ul>
-			                  <li> Structural steel per AISC </li>
-			                  <li> Steel tank per ASME </li>
-			                  <li> Cold formed steel per LGSEA </li>
-			                  <li> Reinforced concrete per ACI </li>
-			                  <li> Masonry per ACI 530 </li>
-			                  <li> Wood per NDS </li>
-			                  <li> Aluminum per AA </li>
-			               </ul>
-			            </div>
-			         </figcaption>
-			         <img src="/images/portfolio.jpg">
-			      </figure>
-			      </a>
-			      <a href="/contactus.html">
-			      <figure>
-			         <figcaption>
-			            <h3>PORTFOLIO</h3>
-			            <div class="hiddenText">
-			            	<p> Our team has successfully detailed a variety of steel structures from 10 tons to 1,500 tons using the latest 3D modeling software, SDS2. We detail per AISC standard and provide all CNC data including ABM, DXF, and KISS files required for fabrication.</p>
-			            </div>
-			         </figcaption>
-			         <a href="/portfolio.html"><img src="/images/portfolio.jpg">
-			      </figure>
-			      </a>
-			      <a href="/contactus.html">
-			      <figure>
-			         <figcaption>
-			            <h3>CONTACT US</h3>
-			             <div class="hiddenText">
-
-			            	<p>VP & Associates Inc. <br><br> 202 S. 22nd Street <br> Suite 209 <br> Tampa, FL 33605 <br> 813.247.3835 <br> 813.247.4305</p>
-			            	</div>
-			         </figcaption>
-			         <img src="/images/contactus.jpg">
-			      </figure>
-			      </a>
+			<div class="featureBlock-container">
+			   <div class="container">
+			      <h3 class="featureBlock-Heading"> OUR WORK. OUR SOLUTIONS. </h3>
+			      <div class="featureBlock">
+			         <a href="/services.html">
+			            <figure>
+			               <figcaption>
+			                  <h3>SERVICES</h3>
+			                  <div class="hiddenText">
+			                     <p>We are well versed in the following building materials:</p>
+			                     <ul>
+			                        <li> Structural steel per AISC </li>
+			                        <li> Steel tank per ASME </li>
+			                        <li> Cold formed steel per LGSEA </li>
+			                        <li> Reinforced concrete per ACI </li>
+			                        <li> Masonry per ACI 530 </li>
+			                        <li> Wood per NDS </li>
+			                        <li> Aluminum per AA </li>
+			                     </ul>
+			                  </div>
+			               </figcaption>
+			               <img src="/images/servicehat.jpg">
+			            </figure>
+			         </a>
+			         <a href="/contactus.html">
+			            <figure>
+			               <figcaption>
+			                  <h3>PORTFOLIO</h3>
+			                  <div class="hiddenText">
+			                     <p> Our team has successfully detailed a variety of steel structures from 10 tons to 1,500 tons using the latest 3D modeling software, SDS2. We detail per AISC standard and provide all CNC data including ABM, DXF, and KISS files required for fabrication.</p>
+			                  </div>
+			               </figcaption>
+			               <a href="/portfolio.html"><img src="/images/portfolio.jpg">
+			            </figure>
+			            </a>
+			            <a href="/contactus.html">
+			               <figure>
+			                  <figcaption>
+			                     <h3>CONTACT US</h3>
+			                     <div class="hiddenText">
+			                        <p>VP & Associates Inc.
+			                           <br>
+			                           <br> 202 S. 22nd Street
+			                           <br> Suite 209
+			                           <br> Tampa, FL 33605
+			                           <br> 813.247.3835
+			                           <br> 813.247.4305</p>
+			                     </div>
+			                  </figcaption>
+			                  <img src="/images/contactus.jpg">
+			               </figure>
+			            </a>
+			      </div>
 			   </div>
 			</div>
-
 
 
 
@@ -156,9 +149,9 @@ $(document).ready(function() {
 			
 			<div class="containerbg">
 			   <div class="container">
-			      <div class="featureBlock-Heading">
+			      
 			         <h3>THE ENGINEERING EXPERTS</h3>
-			      </div>
+			      
 			     
 			      <div class="textblock">
 			         <p>VP & Associates, Inc. provide a full range of structural engineering, steel detailing services and inspection services. Our engineers and steel detailers have over 30 years of experience. We have experience in all facets of structural engineering and steel detailing including, but not limited to, developing plans and specifications for construction of new and existing buildings/tanks, as well as providing inspection services.
@@ -166,7 +159,7 @@ $(document).ready(function() {
 			            </br>
 			            We provide services to corporate industrial contractors, commercial architects and steel fabricators, utilizing the most current 3-D computer analysis systems available, ACAD drafting, SDS2 steel detailing, and coordinating available research materials. Our engineers and detailers have initiated, engineered, and completed many multi-faceted design and construction projects which have met goals to reduce construction cost and time.
 			         </p>
-			         <a href="http://placehold.it"><img src="/images/portfolio.jpg"></a>
+			         <!--<a href="http://placehold.it"><img src="/images/portfolio.jpg"></a>-->
 			      </div>
 			   </div>
 			</div>

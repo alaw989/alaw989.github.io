@@ -41,13 +41,16 @@
 
 .featureBlock-Heading {
    padding: $spacingLg 0 $spacingBase 0;
-   text-align: left;
+   text-align: center;
    color: $colorBrandPrimaryDarker;
    @include font-size(35px);
    font-family: 'Roboto Condensed', sans-serif;
-   letter-spacing: .5px;
+   letter-spacing: 2px;
 }
 
+.featureBlock-container {
+  padding: $spacingSm 0;
+}
 
 
    .featureBlock {
@@ -66,6 +69,7 @@
       overflow: hidden;
           flex-basis: auto;
           flex-shrink: 1;
+          max-height: 250px;
       
       figcaption {
         height: 20%;

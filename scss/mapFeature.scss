@@ -8,18 +8,10 @@
 
 
 .mapFeature {
-   display: -webkit-box;
-   display: -ms-flexbox;
    display: flex;
-   -webkit-box-orient: vertical;
-   -webkit-box-direction: normal;
-       -ms-flex-direction: column;
            flex-direction: column;
    width: 100%;
    @include tablet {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
               flex-direction: column;
    }
    .spotLight-Heading {
@@ -27,8 +19,6 @@
    }
    
    .formwrapper {
-      -webkit-box-flex: 0;
-          -ms-flex: 0 1 50%;
               flex: 0 1 50%;
       .spotlight-content {
          .spotlight-heading {
@@ -101,6 +91,7 @@
       margin: 0 auto;
       h3 {
          @include font-size(50px);
+                 color: $colorBrandPrimaryDarker;
       }
    }
 }
@@ -112,13 +103,17 @@
        -ms-flex-direction: column;
        flex-direction: column-reverse;
        .mapwrapper {
-         width: 100%;
+          width: 100%;
        }
     }
     .map-note {
-      display: none;
+       display: none;
+       h3 {
+
+       }
     }
  }
+
 
 
 
@@ -129,9 +124,6 @@
    align-items: center;
    background: #f7f7f7;
       @include tablet {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
               flex-direction: column;
    }
 .formFeature {
@@ -153,33 +145,20 @@
                   -webkit-box-flex: 0;
                   -ms-flex: 0 1 50%;
                   flex: 0 1 50%;
-                  -webkit-box-orient: horizontal;
-                  -webkit-box-direction: normal;
-                  -ms-flex-direction: row;
                   flex-direction: row;
                   padding-left: $spacingBase;
                   .formsplit1 {
                      display: -webkit-box;
                      display: -ms-flexbox;
                      display: flex;
-                     -webkit-box-orient: vertical;
-                     -webkit-box-direction: normal;
-                     -ms-flex-direction: column;
                      flex-direction: column;
                      -webkit-box-flex: 0;
                      -ms-flex: 0 1 50%;
                      flex: 0 1 50%;
                   }
                   .formsplit2 {
-                     display: -webkit-box;
-                     display: -ms-flexbox;
                      display: flex;
-                     -webkit-box-orient: vertical;
-                     -webkit-box-direction: normal;
-                     -ms-flex-direction: column;
                      flex-direction: column;
-                     -webkit-box-flex: 0;
-                     -ms-flex: 0 1 50%;
                      flex: 0 1 50%;
                   }
                   .formsplit3 {
@@ -211,6 +190,7 @@
    padding-top: $spacingSm;
    background: #f7f7f7;
    h3 {
+      color: $colorBrandPrimaryDarker;
       @include font-size(50px);
       
    }
@@ -302,6 +282,7 @@
       &:hover {
          background: $colorBrandPrimaryDarker;
          color: white;
+         border: 2px solid $colorBrandPrimaryDarker;
       }
    }
    textarea {

@@ -111,11 +111,11 @@
     color: #334d66;
     max-width: 70%;
     padding: 6px 6px 6px 12px;
-    text-align: left;
+    text-align: justify;
     /*background: rgba($colorBrandPrimaryDark, .8); */
     color: #fff;
     max-height: 100%;
-    margin: 48px;
+    margin: 12px;
     font-size: 19px;
     font-size: 1.1875rem;
     line-height: 1.26316;
@@ -151,7 +151,7 @@
             justify-content: center; }
     .containerbg .textblock p {
       font-size: 16px;
-      text-align: center;
+      text-align: justify;
       -webkit-box-ordinal-group: 3;
           -ms-flex-order: 2;
               order: 2;

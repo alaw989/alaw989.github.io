@@ -215,7 +215,10 @@
          min-width: 60px;
          max-width: 56px;
          border: 2px solid $colorBrandPrimary;
-         
+         border-radius: 5px;
+         &:hover {
+            cursor: pointer;
+         }
       }
    }
    #mainNav {

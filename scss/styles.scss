@@ -7,8 +7,8 @@
 /*fonts*/
 @import url('https://fonts.googleapis.com/css?family=Ropa+Sans');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
-
-
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans');
 
 /*general styles and resets*/
 /*border box*/
@@ -48,7 +48,7 @@ body {
       text-decoration: none;
    }
    p {
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Open Sans', sans-serif;
       font-size: 18px;
       font-weight: 400;
       color: $colorParagraph;
@@ -87,6 +87,7 @@ h5 {
 
 p {
   color: $colorParagraph;
+  font-family: 'Fira Sans', sans-serif;
 }
 
 #site_wrap {
@@ -103,24 +104,32 @@ p {
    }
 
 .containerbg {
-   background: linear-gradient(0deg,rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url('/images/sunset.jpg') center fixed;
+   /* background: linear-gradient(0deg,rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url('/images/sunset.jpg') center fixed;*/
+   background: $colorBrandPrimary;
    background-repeat: no-repeat;
    margin-bottom: 0;
    background-size: cover;
+   h3 {
+      color: $colorWhite;
+      text-align: center;
+      @include font-size(35px);
+      font-family: 'Roboto Condensed', sans-serif;
+      letter-spacing: 2px;
+      padding: $spacingLg 0 0 0;
+   }
    &:after {
-    content: '';
-    display: block;
-    position: relative;
-    overflow: hidden;
-    border-bottom: 40px solid $colorWhite;
-    border-left: 40px solid transparent; 
-    border-right: 40px solid transparent;
-    margin: -1px auto 0 auto;
-    z-index: 20 !important;
-    width: 0;
-    bottom: 0;
-    
-  }
+      content: '';
+      display: block;
+      position: relative;
+      overflow: hidden;
+      border-top: 40px solid $colorBrandPrimary;
+      border-left: 40px solid transparent;
+      border-right: 40px solid transparent;
+      margin: -1px auto 0 auto;
+      z-index: 20 !important;
+      width: 0;
+      bottom: -40;
+   }
 }
 
 .headingwrapper {
@@ -198,25 +207,11 @@ p {
 
 /*paralax feature*/
 
-.fader-bg {
-   background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/images/banner04.jpg') no-repeat top fixed;
-   background-size: cover;
-}
-
-.fader-bg2 {
-   background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/images/sunset.jpg') no-repeat top fixed;
-   background-size: cover;
-}
-
-   .paralax {
-      padding: 200px;
-      height: 86vh;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
+   .bxslider {
       justify-content: center;
       align-items: center;
       position: relative;
+
       .paralax-heading {
          h3 {
             letter-spacing: 2px;
@@ -227,7 +222,7 @@ p {
             text-align: center;
             font-family: 'Roboto Condensed', sans-serif;
             position: absolute;
-            top: 200px;
+            top: 30%;
             left: 0;
             right: 0;
             @include tablet {

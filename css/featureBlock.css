@@ -120,13 +120,16 @@
 
 .featureBlock-Heading {
   padding: 48px 0 24px 0;
-  text-align: left;
+  text-align: center;
   color: #334d66;
   font-size: 35px;
   font-size: 2.1875rem;
   line-height: 1.37143;
   font-family: 'Roboto Condensed', sans-serif;
-  letter-spacing: .5px; }
+  letter-spacing: 2px; }
+
+.featureBlock-container {
+  padding: 12px 0; }
 
 .featureBlock {
   display: -webkit-box;
@@ -154,7 +157,8 @@
     -ms-flex-preferred-size: auto;
         flex-basis: auto;
     -ms-flex-negative: 1;
-        flex-shrink: 1; }
+        flex-shrink: 1;
+    max-height: 250px; }
     .featureBlock figure figcaption {
       height: 20%;
       -webkit-transition: all .5s  ease-out;

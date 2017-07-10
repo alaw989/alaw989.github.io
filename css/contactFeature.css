@@ -105,7 +105,7 @@
     padding-top: 48px; }
   .contactFeature h2 {
     text-align: center;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Ropa Sans', sans-serif;
     color: #525252;
     font-weight: 600px;
     margin: 0;
@@ -124,10 +124,10 @@
     transition: background-color .5s ease-out;
     color: #6699cc;
     letter-spacing: 5px;
-    font-family: 'Roboto Condensed', sans-serif;
-    font-size: 26px;
-    font-size: 1.625rem;
-    line-height: 1.84615;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 30px;
+    font-size: 1.875rem;
+    line-height: 1.6;
     font-weight: bold;
     margin: 6px 0; }
     .contactFeature input:hover {
