@@ -208,10 +208,11 @@ p {
 /*paralax feature*/
 
    .bxslider {
-      justify-content: center;
-      align-items: center;
-      position: relative;
-
+      img {
+         width: 100%;
+         
+         
+      }
       .paralax-heading {
          h3 {
             letter-spacing: 2px;
@@ -229,7 +230,6 @@ p {
                font-size: 50px;
                min-width: 240px;
             }
-           
          }
       }
       .slider {

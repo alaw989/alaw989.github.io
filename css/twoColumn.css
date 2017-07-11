@@ -99,7 +99,7 @@
     flex: 2 2 25%;
     padding-right: 24px; }
     .two-column .left-column h5 {
-      font-family: 'Open Sans', sans-serif;
+      font-family: 'Roboto Condensed', sans-serif;
       letting-spacing: normal;
       margin: 0;
       color: #3f444a; }
@@ -142,7 +142,13 @@
         background: -webkit-gradient(linear, left top, right top, from(#7abcff), color-stop(44%, #60abf8), to(#4096ee));
         background: linear-gradient(to right, #7abcff 0%, #60abf8 44%, #4096ee 100%);
         border: none;
-        min-width: 174px; }
+        min-width: 174px;
+        border-radius: 3px;
+        -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+                box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75); }
+        .two-column .left-column .questionBox button:hover {
+          -webkit-box-shadow: 4px;
+                  box-shadow: 4px; }
         .two-column .left-column .questionBox button a {
           text-decoration: none; }
         .two-column .left-column .questionBox button p {
@@ -150,7 +156,7 @@
           font-size: 19px;
           font-size: 1.1875rem;
           line-height: 1.26316;
-          font-weight: bold;
+          text-align: center;
           color: #fff;
           margin: 6px 0; }
       .two-column .left-column .questionBox p {

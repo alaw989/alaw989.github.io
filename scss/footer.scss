@@ -1,6 +1,7 @@
 @import "spacingUnits";
 @import "colors";
 @import "fontSize";
+@import "mediaQueries";
 
 .footer {
    background: url('/images/footerbg.svg');
@@ -18,15 +19,31 @@
             display: inline-block;
             position: relative;
             font-family: 'Ropa Sans', sans-serif;
-            @include font-size(14px);
+            @include font-size(20px);
             font-weight: 400;
             color: #000;
+            cursor: pointer;
+            &:hover {
+               color: $colorOrange;
+            }
          }
          li:after {
          	content: " |";
          }
          li:last-child:after {
             content: '';
+         }
+      }
+   }
+}
+
+@include phone {
+   .footer {
+      .footer-nav {
+         ul {
+            li {
+               @include font-size(16px);
+            }
          }
       }
    }

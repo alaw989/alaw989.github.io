@@ -20,7 +20,7 @@
       flex: 2 2 25%;
       padding-right: $spacingBase;
       h5 {
-         font-family: 'Open Sans', sans-serif;
+         font-family: 'Roboto Condensed', sans-serif;
          letting-spacing: normal;
          margin: 0;
          color: $colorHeading;
@@ -66,13 +66,19 @@
             background: linear-gradient(to right, rgba(122, 188, 255, 1) 0%, rgba(96, 171, 248, 1) 44%, rgba(64, 150, 238, 1) 100%);
             border: none;
             min-width: 174px;
+            border-radius: 3px;
+            box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+            &:hover {
+               box-shadow: 4px;
+            }
             a {
                text-decoration: none;
             }
             p {
                font-family: 'Roboto Condensed', sans-serif;
                @include font-size(19px);
-               font-weight: bold;
+               text-align: center;
+
                color: $colorWhite;
                margin: $spacingXSm 0;
             }
