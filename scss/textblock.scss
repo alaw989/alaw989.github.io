@@ -24,7 +24,7 @@
       align-items: center;
       p {
          color: $colorBrandPrimaryDarker;
-         max-width: 70%;
+         max-width: 80%;
          padding: $spacingXSm $spacingXSm $spacingXSm $spacingSm;
          text-align: justify;
          /*background: rgba($colorBrandPrimaryDark, .8); */
@@ -72,3 +72,31 @@
    }
 }
 
+@include phone {
+   .containerbg {
+      .featureBlock-Heading {
+         display: flex;
+         justify-content: center;
+         h3 {
+            color: white;
+            background: rgba($colorBrandPrimaryDark, .8);
+            padding: $spacingXSm;
+            align-self: center;
+            margin: 0;
+         }
+      }
+      .textblock {
+         flex-direction: column;
+         justify-content: center;
+         p {
+            font-size: 18px;
+            text-align: justify;
+            order: 2;
+            line-height: 24px;
+         }
+         img {
+            order: 1;
+         }
+      }
+   }
+}
