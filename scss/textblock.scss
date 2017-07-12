@@ -5,6 +5,7 @@
 @import "bourbon/bourbon";
 
 .containerbg {
+   width: 100%;
    .featureBlock-Heading {
       display: flex;
       h3 {
@@ -74,6 +75,7 @@
 
 @include phone {
    .containerbg {
+      width:100%;
       .featureBlock-Heading {
          display: flex;
          justify-content: center;
