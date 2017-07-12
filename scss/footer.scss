@@ -12,9 +12,11 @@
   
    .footer-nav {
       display: flex;
+
       ul {
          margin: 0;
          padding-top: $spacingSm;
+
          li {
             display: inline-block;
             position: relative;
@@ -40,9 +42,11 @@
 @include phone {
    .footer {
       .footer-nav {
+         justify-content: center;
          ul {
+
             li {
-               @include font-size(16px);
+               @include font-size(12px);
             }
          }
       }

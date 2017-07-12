@@ -113,7 +113,11 @@
         content: ''; }
 
 @media (min-width: 1px) and (max-width: 768px) {
-  .footer .footer-nav ul li {
-    font-size: 16px;
-    font-size: 1rem;
-    line-height: 1.5; } }
+  .footer .footer-nav {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .footer .footer-nav ul li {
+      font-size: 12px;
+      font-size: 0.75rem;
+      line-height: 2; } }
