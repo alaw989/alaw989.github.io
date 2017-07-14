@@ -211,24 +211,30 @@
       font-family: 'Roboto Condensed', sans-serif;
       letter-spacing: 1.5px;
       color: #3f444a;
-      text-align: center; }
+      text-align: center;
+      padding: 24px 0 12px 0;
+      font-size: 40px;
+      font-size: 2.5rem;
+      line-height: 1.2; }
     .two-column .right-column p {
       margin: 0;
       padding: 0;
-      text-align: justify; }
+      text-align: center; }
     .two-column .right-column .portfolioRow {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-      flex-direction: row;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      justify-content: space-between;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
       -ms-flex-wrap: wrap;
-          flex-wrap: wrap; }
+          flex-wrap: wrap;
+      background-color: silver;
+      /*border-radius: 5px 5px 0 0;*/
+      padding: 12px 0 0 0; }
       .two-column .right-column .portfolioRow .image {
         margin: .90% .2%;
         position: relative;
@@ -237,8 +243,8 @@
         display: -ms-flexbox;
         display: flex;
         -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         -webkit-transition: all .2s ease-out;
         transition: all .2s ease-out;
         -webkit-transition: -webkit-transform .4s ease-out;
@@ -246,7 +252,8 @@
         transition: transform .4s ease-out;
         transition: transform .4s ease-out, -webkit-transform .4s ease-out;
         -webkit-transform: scale(1, 1);
-        transform: scale(1, 1); }
+                transform: scale(1, 1);
+        border: 1px solid white; }
         .two-column .right-column .portfolioRow .image:hover {
           cursor: pointer; }
         .two-column .right-column .portfolioRow .image:before {
@@ -266,8 +273,10 @@
           left: 0;
           width: 100%;
           background-color: rgba(0, 0, 0, 0.5); }
-        .two-column .right-column .portfolioRow .image:hover:after {
-          background-color: rgba(0, 0, 0, 0.1); }
+        .two-column .right-column .portfolioRow .image:hover {
+          border: 1px solid black; }
+          .two-column .right-column .portfolioRow .image:hover:after {
+            background-color: rgba(0, 0, 0, 0.1); }
         .two-column .right-column .portfolioRow .image img {
           width: 100%; }
         .two-column .right-column .portfolioRow .image p {
@@ -281,54 +290,52 @@
           width: 100%; }
     .two-column .right-column .buttonContainer {
       position: relative;
-      height: 600px; }
-    .two-column .right-column .buttonGrid1,
-    .two-column .right-column .buttonGrid2,
-    .two-column .right-column .buttonGrid3,
-    .two-column .right-column .buttonGrid4 {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: none;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
-      padding: 12px 0;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      justify-content: center;
-      position: absolute;
-      width: 100%; }
-      .two-column .right-column .buttonGrid1 input,
-      .two-column .right-column .buttonGrid2 input,
-      .two-column .right-column .buttonGrid3 input,
-      .two-column .right-column .buttonGrid4 input {
-        -webkit-box-flex: 0;
-        -ms-flex: 0 1 30%;
-        flex: 0 1 25%;
-        margin: 6px 6px;
-        background: #3498db;
-        background: #E44D26;
-        /* fallback for old browsers */
-        /* Chrome 10-25, Safari 5.1-6 */
-        background: -webkit-gradient(linear, left bottom, left top, from(#F16529), to(#E44D26));
-        background: linear-gradient(to top, #F16529, #E44D26);
-        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        border-radius: 0px;
-        font-family: Arial;
-        color: #ffffff;
-        font-size: 20px;
-        padding: 10px 20px 10px 20px;
-        text-decoration: none;
-        border: none;
-        -webkit-box-shadow: 3px 3px 3px #888888;
-                box-shadow: 3px 3px 3px #888888;
-        border-radius: 5px; }
-        .two-column .right-column .buttonGrid1 input:hover,
-        .two-column .right-column .buttonGrid2 input:hover,
-        .two-column .right-column .buttonGrid3 input:hover,
-        .two-column .right-column .buttonGrid4 input:hover {
-          cursor: pointer; }
+      height: 600px;
+      background-color: silver;
+      /*border-radius: 0 0 5px 5px;*/ }
+      .two-column .right-column .buttonContainer .buttonGrid1,
+      .two-column .right-column .buttonContainer .buttonGrid2,
+      .two-column .right-column .buttonContainer .buttonGrid3,
+      .two-column .right-column .buttonContainer .buttonGrid4 {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: none;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+        padding: 12px 0;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: center;
+        position: absolute;
+        width: 100%; }
+        .two-column .right-column .buttonContainer .buttonGrid1 input,
+        .two-column .right-column .buttonContainer .buttonGrid2 input,
+        .two-column .right-column .buttonContainer .buttonGrid3 input,
+        .two-column .right-column .buttonContainer .buttonGrid4 input {
+          -webkit-box-flex: 0;
+              -ms-flex: 0 1 25%;
+                  flex: 0 1 25%;
+          margin: 6px 6px;
+          background: -webkit-gradient(linear, left bottom, left top, from(#F16529), to(#E44D26));
+          background: linear-gradient(to top, #F16529, #E44D26);
+          border-radius: 0px;
+          font-family: 'Roboto Condensed', sans-serif;
+          color: #ffffff;
+          font-size: 20px;
+          padding: 10px 20px 10px 20px;
+          text-decoration: none;
+          border: none;
+          -webkit-box-shadow: 3px 3px 3px #888888;
+                  box-shadow: 3px 3px 3px #888888;
+          border-radius: 5px;
+          min-width: 260px; }
+          .two-column .right-column .buttonContainer .buttonGrid1 input:hover,
+          .two-column .right-column .buttonContainer .buttonGrid2 input:hover,
+          .two-column .right-column .buttonContainer .buttonGrid3 input:hover,
+          .two-column .right-column .buttonContainer .buttonGrid4 input:hover {
+            cursor: pointer; }
     .two-column .right-column .specialWrapper {
       width: 100%;
       -webkit-box-orient: horizontal;
@@ -494,6 +501,8 @@
   .two-column .right-column .portfolioRow {
     -ms-flex-pack: distribute;
         justify-content: space-around; }
+  .two-column .right-column .buttonContainer {
+    height: 800px; }
   .two-column .right-column .specialWrapper {
     -ms-flex-pack: distribute;
         justify-content: space-around; }
@@ -517,6 +526,8 @@
     text-align: justify; } }
 
 @media (min-width: 1px) and (max-width: 768px) {
+  .two-column .right-column .buttonContainer {
+    height: 1000px; }
   .two-column .right-column .specialWrapper {
     -webkit-box-align: center;
         -ms-flex-align: center;

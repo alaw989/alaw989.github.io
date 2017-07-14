@@ -114,6 +114,7 @@
          margin: 0;
          letter-spacing: 1.5px;
          color: $colorHeading;
+         
          &:after {
             content: url('/images/hr.svg');
             width: 7%;
@@ -138,24 +139,22 @@
          letter-spacing: 1.5px;
          color: $colorHeading;
          text-align: center;
+         padding: $spacingBase 0 $spacingSm 0;
+         @include font-size(40px);
       }
       p {
          margin: 0;
          padding: 0;
-         text-align: justify;
+         text-align: center;
       }
       .portfolioRow {
-         display: -webkit-box;
-         display: -ms-flexbox;
          display: flex;
-         -webkit-box-orient: horizontal;
-         -webkit-box-direction: normal;
-         -ms-flex-direction: row;
          flex-direction: row;
-         -webkit-box-pack: justify;
-         -ms-flex-pack: justify;
-         justify-content: space-between;
+         justify-content: space-around;
          flex-wrap: wrap;
+         background-color: silver;
+         /*border-radius: 5px 5px 0 0;*/
+         padding: $spacingSm 0 0 0;
          .image {
             margin: .90% .2%;
             position: relative;
@@ -163,18 +162,11 @@
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
             justify-content: center;
-            -webkit-transition: all .2s ease-out;
             transition: all .2s ease-out;
-            -webkit-transition: -webkit-transform .4s ease-out;
-            transition: -webkit-transform .4s ease-out;
             transition: transform .4s ease-out;
-            transition: transform .4s ease-out, -webkit-transform .4s ease-out;
-            -webkit-transform: scale(1, 1);
             transform: scale(1, 1);
-            
+            border: 1px solid white;
             &:hover {
                cursor: pointer;
             }
@@ -198,8 +190,10 @@
                background-color: rgba(0, 0, 0, .5);
             }
             &:hover {
+               border: 1px solid black;
                &:after {
                   background-color: rgba(0, 0, 0, .1);
+
                }
             }
             img {
@@ -220,50 +214,45 @@
       .buttonContainer {
          position: relative;
          height: 600px;
+         background-color: silver;
+        /*border-radius: 0 0 5px 5px;*/
+         .buttonGrid1,
+         .buttonGrid2,
+         .buttonGrid3,
+         .buttonGrid4 {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: none;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+            padding: $spacingSm 0;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: center;
+            position: absolute;
+            width: 100%;
+            input {
+               flex: 0 1 25%;
+               margin: $spacingXSm $spacingXSm;
+               background: linear-gradient(to top, #F16529, #E44D26);
+               border-radius: 0px;
+               font-family: 'Roboto Condensed', sans-serif;
+               color: #ffffff;
+               font-size: 20px;
+               padding: 10px 20px 10px 20px;
+               text-decoration: none;
+               border: none;
+               box-shadow: 3px 3px 3px #888888;
+               border-radius: 5px;
+               min-width: 260px;
+               &:hover {
+                  cursor: pointer;
+               }
+            }
+         }
       }
-      .buttonGrid1,
-      .buttonGrid2,
-      .buttonGrid3,
-      .buttonGrid4 {
-         display: -webkit-box;
-         display: -ms-flexbox;
-         display: none;
-         -webkit-box-orient: horizontal;
-         -webkit-box-direction: normal;
-         -ms-flex-flow: row wrap;
-         flex-flow: row wrap;
-         padding: $spacingSm 0;
-         -webkit-box-pack: justify;
-         -ms-flex-pack: justify;
-         justify-content: center;
-         position: absolute;
-         width: 100%;
-        input {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 1 30%;
-    flex: 0 1 25%;
-    margin: $spacingXSm $spacingXSm;
-    background: #3498db;
-    background: #E44D26;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top, #F16529, #E44D26);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top, #F16529, #E44D26);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    border-radius: 0px;
-    font-family: Arial;
-    color: #ffffff;
-    font-size: 20px;
-    padding: 10px 20px 10px 20px;
-    text-decoration: none;
-    border: none;
-    box-shadow: 3px 3px 3px #888888;
-    border-radius: 5px;
-    &:hover {
-       cursor: pointer;
-    }
- }
-}
 
       /*.buttonGrid1, .buttonGrid2, .buttonGrid3, .buttonGrid4 {
                      display: none;
@@ -455,6 +444,9 @@
          .portfolioRow {
             justify-content: space-around;
          }
+         .buttonContainer { 
+            height: 800px;
+         }
          .specialWrapper {
             justify-content: space-around;
             .hoverWrap {
@@ -487,6 +479,9 @@
 @include phone {
    .two-column {
       .right-column {
+         .buttonContainer { 
+            height: 1000px;
+         }
          .specialWrapper {
             align-items: center;
             flex-direction: column;

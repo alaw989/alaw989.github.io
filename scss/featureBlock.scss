@@ -8,36 +8,6 @@
 @import url('https://fonts.googleapis.com/css?family=Ropa+Sans');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
 
-.cl-effect-16 a {
-    color: black;
-    text-shadow: 0 0 1px rgba(111,134,134,0.3);
-    @include font-size(16px);
-}
-
-.cl-effect-16 a::before {
-    color: black;
-    content: attr(data-hover);
-    position: absolute;
-    opacity: 0;
-    text-shadow: 0 0 1px rgba(255,255,255,0.3);
-    -webkit-transform: scale(1.1) translateX(10px) translateY(-10px) rotate(4deg);
-    transform: scale(1.1) translateX(10px) translateY(-10px) rotate(4deg);
-    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
-    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
-    transition: opacity 0.3s, -webkit-transform 0.3s;
-    transition: transform 0.3s, opacity 0.3s;
-    transition: transform 0.3s, opacity 0.3s, -webkit-transform 0.3s;
-    pointer-events: none;
-    @include font-size(16px);
-}
-
-.cl-effect-16 a:hover::before,
-.cl-effect-16 a:focus::before {
-    -webkit-transform: scale(1) translateX(0px) translateY(0px) rotate(0deg);
-    transform: scale(1) translateX(0px) translateY(0px) rotate(0deg);
-    opacity: 1;
-     @include font-size(16px);
-}
 
 .featureBlock-Heading {
    padding: $spacingLg 0 $spacingBase 0;
@@ -79,6 +49,11 @@
       .hiddenText {
         -webkit-transition: all 1s ease-out;
         transition: all 1s ease-out;
+        ul {
+          li {
+            font-family: 'Roboto Condensed', sans-serif;
+          }
+        }
       }
       &:hover {
         figcaption {
@@ -110,6 +85,8 @@
          }
          p {
           color: white;
+          font-family: 'Roboto Condensed', sans-serif;
+          text-align: left;
          }
       }
    }
