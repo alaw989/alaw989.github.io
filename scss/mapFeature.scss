@@ -40,50 +40,9 @@
    background: url(/images/bg.gif);
    .mapwrapper {
       width: 50%;
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      iframe {
-         pointer-events: none;
-         position: relative;
+      #map {
          width: 100%;
-         &.clicked {
-            pointer-events: auto;
-         }
-      }
-      .mapoverlay {
-         position: absolute;
-         top: 5%;
-         left: 70%;
-         background-color: white;
-         width: 25%;
-         min-width: 175px;
-         h2 {
-            margin-left: $spacingSm;
-            font-family: 'Roboto Condensed', sans-serif;
-            color: rgb(63, 68, 74);
-         }
-         h5 {
-            @include font-size(18px);
-            background-color: $colorBrandPrimary;
-            color: $colorWhite;
-            margin: 0 0 $spacingSm $spacingSm;
-            max-width: 20%;
-            padding: $spacingXSm;
-            min-width: 75px;
-            font-family: 'Roboto Condensed', sans-serif;
-            text-align: center;
-         }
-         p {
-            margin: 0 0 $spacingSm $spacingSm;
-            font-family: 'Roboto Condensed', sans-serif;
-         }
-         figure {
-            margin: 0 0 $spacingSm $spacingSm;
-            img {
-               width: 50%;
-            }
-         }
+         height: 600px;
       }
    }
    .map-note {
@@ -91,27 +50,46 @@
       margin: 0 auto;
       h3 {
          @include font-size(50px);
-                 color: $colorBrandPrimaryDarker;
+         color: $colorBrandPrimaryDarker;
       }
    }
 }
 
- @include tablet {
-    .content-wrap {
-       -webkit-box-orient: vertical;
-       -webkit-box-direction: normal;
-       -ms-flex-direction: column;
-       flex-direction: column-reverse;
-       .mapwrapper {
-          width: 100%;
-       }
-    }
-    .map-note {
-       display: none;
-       h3 {
 
-       }
+
+@include tablet {
+   .content-wrap {
+      flex-direction: column-reverse;
+      #map {
+         width: 100%;
+      }
+      .mapwrapper {
+         width: 100%;
+      }
+   }
+   .map-note {
+      h3 {}
+      p {
+        text-align: center;
+      }
+   }
+}
+
+
+ @include phone {
+  .content-wrap {
+    #map {
+      width: 100%;
     }
+  }
+   .map-note {
+      h3 {
+        padding: $spacingLg 0 0 0; 
+      }
+      p {
+        text-align: center;
+      }
+   }
  }
 
 

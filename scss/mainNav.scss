@@ -186,6 +186,11 @@
     transition: margin-left .5s;
 }
 
+@include phone {
+  .spacer {
+    height: 0;
+  }
+}
 
 @include tablet {
    #header {

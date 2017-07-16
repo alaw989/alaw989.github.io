@@ -56,42 +56,42 @@ $(function() {
 
 <div class="content-wrap">
    <div class="mapwrapper">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112784.2050385947!2d-82.50427228125808!3d27.94777327637866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2c4fe5141b569%3A0x5422074a6bbf560b!2sV+P+%26+Associates+Inc!5e0!3m2!1sen!2sus!4v1495387301283" height="650" frameborder="1" style="border:0" allowfullscreen>
-      </iframe>
-      <!--<div class="mapoverlay">
-			      <h2>VP & ASSOCIATES</h2>
-			      <figure>
-			         <img src="/images/vpbuilding.png" alt="" />
-			      </figure>
-			      <h5>Address</h5>
-			      <p> 202 S 22nd St #209
-			         <br> Tampa, FL 33605
-			         <br> USA</p>
-			      <h5> Contacts</h5>
-			      <p>813.247.3835
-			         <br> Fax 813.247.4305</p>
-			   </div>-->
+      <div id="map"></div>
    </div>
-   <script>
-   $('.mapwrapper')
-      .click(function() {
-         $(this).find('iframe').addClass('clicked')
-      })
-      .mouseleave(function() {
-         $(this).find('iframe').removeClass('clicked')
-      });
-   </script>
    <div class="map-note wow fadeInRight">
       <h3>OUR LOCATION</h3>
       <hr>
       <p> 202 S 22nd St #209
          <br> Tampa, FL 33605
          <br> USA</p>
-      
       <p>813.247.3835
          <br> Fax 813.247.4305</p>
    </div>
 </div>
+
+
+
+
+<script>
+var map;
+
+function initMap() {
+  
+   var myLatLng = {lat:  27.9477658, lng: -82.43428089999998};
+   var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 14,
+          center: myLatLng
+        });
+
+     var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: 'VP & Associates'
+        });
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkLxqil8di3wdCZA0dSQzjKnzaxrL6R0E&callback=initMap"
+    async defer></script>
 
 
 

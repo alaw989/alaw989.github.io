@@ -7,8 +7,8 @@ function init() {
          mainNav = document.getElementById("mainNav"),
          logo2 = document.getElementById("logo-image2");
 
-      console.log($("#logo-image").css("width"));
-      console.log($("#mainNav").css("padding"));
+      /*console.log($("#logo-image").css("width"));
+      console.log($("#mainNav").css("padding"));*/
 
       if (distanceY > shrinkOn) {
          $('#logo-image').fadeTo(1, 0);

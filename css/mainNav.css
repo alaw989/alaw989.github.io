@@ -256,6 +256,10 @@
   -webkit-transition: margin-left .5s;
   transition: margin-left .5s; }
 
+@media (min-width: 1px) and (max-width: 768px) {
+  .spacer {
+    height: 0; } }
+
 @media (min-width: 1px) and (max-width: 1250px) {
   #header {
     padding: 6px 0; }

@@ -166,19 +166,19 @@
         line-height: 1.26316;
         margin-right: 20%; }
   .two-column .right-column {
-    -webkit-box-flex: 2;
     -ms-flex: 2 2 75%;
-    flex: 2 2 75%;
+    -webkit-box-flex: 2;
+            flex: 2 2 75%;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 100%;
     /*.buttonGrid1, .buttonGrid2, .buttonGrid3, .buttonGrid4 {
                      display: none;
@@ -192,13 +192,6 @@
       margin: 0;
       letter-spacing: 1.5px;
       color: #3f444a; }
-      .two-column .right-column h2:after {
-        content: url("/images/hr.svg");
-        width: 7%;
-        display: block;
-        margin: 0 auto;
-        padding: 6px 0;
-        min-width: 68px; }
     .two-column .right-column hr {
       width: 10%;
       border-top: 3px double #4096ee; }
