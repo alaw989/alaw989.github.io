@@ -160,10 +160,8 @@
         position: absolute;
         padding-left: 3px;
         top: 2.5px; }
-    #mainNav .container .level1 a {
-      font-size: 24px;
-      font-size: 1.5rem;
-      line-height: 1; }
+    #mainNav .container .level1 li a {
+      /*@include font-size(24px);*/ }
     #mainNav .container ul {
       display: block;
       float: right;
@@ -204,7 +202,6 @@
         #mainNav .container ul ul.level2 li {
           width: 100%; }
           #mainNav .container ul ul.level2 li a {
-            font-family: 'Poppins', sans-serif;
             font-size: 16px;
             font-weight: 400;
             color: #000;

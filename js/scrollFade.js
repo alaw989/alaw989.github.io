@@ -11,7 +11,7 @@ function init() {
         /*console.log($("#logo-image").css("width"));
         console.log($("#mainNav").css("padding"));*/
 
-        if (distanceY > shrinkOn && width > 768) {
+        if (distanceY > shrinkOn && width > 1124) {
             $('#logo-image').fadeTo(1, 0);
             /* $('#logo-image').css('width', '90%'); */
             $('#mainNav').css('padding-top', '10px');
