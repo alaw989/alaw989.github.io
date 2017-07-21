@@ -361,6 +361,12 @@
         -webkit-transform: scale(1, 1);
         transform: scale(1, 1);
         width: 100%; }
+        @media (min-width: 1px) and (max-width: 768px) {
+          .two-column .right-column .specialWrapper .specialImage1 {
+            padding: 20px 0; } }
+        @media (min-width: 1px) and (max-width: 1250px) {
+          .two-column .right-column .specialWrapper .specialImage1 {
+            padding: 20px 0; } }
         .two-column .right-column .specialWrapper .specialImage1 h5 {
           visibility: visible;
           opacity: 1;
@@ -391,7 +397,8 @@
           position: relative;
           margin: 0 auto;
           bottom: 100px;
-          margin-left: 12px; }
+          margin-left: 12px;
+          list-style-image: url(/images/check.png); }
         @media (min-width: 1250px) {
           .two-column .right-column .specialWrapper .specialImage1:hover {
             -webkit-transform: scale(1.1, 1.1);
@@ -414,7 +421,13 @@
         -webkit-transform: scale(1, 1);
         transform: scale(1, 1);
         width: 100%;
-        padding-bottom: 80px; }
+        padding-bottom: 70px; }
+        @media (min-width: 1px) and (max-width: 768px) {
+          .two-column .right-column .specialWrapper .specialImage2 {
+            padding: 20px 0; } }
+        @media (min-width: 1px) and (max-width: 1250px) {
+          .two-column .right-column .specialWrapper .specialImage2 {
+            padding: 20px 0; } }
         .two-column .right-column .specialWrapper .specialImage2 p {
           color: #fff; }
         .two-column .right-column .specialWrapper .specialImage2 h5 {
@@ -447,7 +460,8 @@
           position: relative;
           bottom: 50px;
           margin: 0 auto;
-          margin-left: 12px; }
+          margin-left: 12px;
+          list-style-image: url(/images/check.png); }
         @media (min-width: 1250px) {
           .two-column .right-column .specialWrapper .specialImage2:hover {
             -webkit-transform: scale(1.1, 1.1);
@@ -466,9 +480,9 @@
       .two-column .right-column ul li {
         font-family: 'Roboto Condensed', sans-serif;
         letting-spacing: normal;
-        font-size: 16px;
-        font-size: 1rem;
-        line-height: 1.5;
+        font-size: 15px;
+        font-size: 0.9375rem;
+        line-height: 1.6;
         color: #fff; }
     .two-column .right-column p {
       line-height: 1.7 !important;
@@ -508,10 +522,11 @@
         bottom: 0;
         margin: 0; }
     .two-column .right-column .specialWrapper .specialImage1 {
+      padding-bottom: 200px;
       background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.5))), url("/images/2guys.jpg") no-repeat;
       background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("/images/2guys.jpg") no-repeat; }
     .two-column .right-column .specialWrapper .specialImage2 {
-      padding-bottom: 92px;
+      padding-bottom: 200px;
       background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.5))), url("/images/3guys.jpg") no-repeat;
       background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("/images/3guys.jpg") no-repeat; }
   .two-column .right-column p {

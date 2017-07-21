@@ -132,8 +132,10 @@
     .featureBlock figure .hiddenText {
       -webkit-transition: all 1s ease-out;
       transition: all 1s ease-out; }
-      .featureBlock figure .hiddenText ul li {
-        font-family: 'Roboto Condensed', sans-serif; }
+      .featureBlock figure .hiddenText ul {
+        list-style-image: url(/images/check.png); }
+        .featureBlock figure .hiddenText ul li {
+          font-family: 'Roboto Condensed', sans-serif; }
     .featureBlock figure:hover figcaption {
       height: 100%; }
     .featureBlock figure:hover .hiddenText {

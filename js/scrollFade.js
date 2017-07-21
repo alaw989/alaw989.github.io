@@ -17,9 +17,9 @@ function init() {
             $('#mainNav').css('padding-top', '10px');
             $('#mainNav').css('padding-bottom', '20px');
             /*$('#logo-image').css('visibility', 'hidden');*/
-
-            $('#logo-image2').css('width', '60%');
             $('#logo-image2').css('visibility', 'visible');
+            $('#logo-image2').css('width', '55%');
+
             /* $('#logo-image2').replaceWith( $( "#logo-image2" ) );*/
         } else if (distanceY < shrinkOn) {
             /* $('#logo-image').css('width', '100%'); */
@@ -31,4 +31,5 @@ function init() {
         }
     });
 }
+
 window.onload = init();

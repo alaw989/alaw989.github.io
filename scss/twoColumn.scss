@@ -275,6 +275,12 @@
             -webkit-transform: scale(1, 1);
             transform: scale(1, 1);
             width: 100%;
+            @include phone {
+               padding: 20px 0;
+            }
+            @include tablet {
+               padding: 20px 0;
+            }
             h5 {
                visibility: visible;
                opacity: 1;
@@ -306,6 +312,7 @@
                margin: 0 auto;
                bottom: 100px;
                margin-left: $spacingSm;
+               list-style-image: url(/images/check.png);
             }
             @include desktop {
                &:hover {
@@ -334,7 +341,15 @@
             -webkit-transform: scale(1, 1);
             transform: scale(1, 1);
             width: 100%;
-            padding-bottom: 80px;
+            padding-bottom: 70px;
+            @include phone {
+               padding: 20px 0;
+               
+            }
+            @include tablet {
+               padding: 20px 0;
+
+            }
             p {
                color: $colorWhite;
             }
@@ -369,6 +384,7 @@
                bottom: 50px;
                margin: 0 auto;
                margin-left: $spacingSm;
+               list-style-image: url(/images/check.png);
             }
             @include desktop {
                &:hover {
@@ -394,7 +410,7 @@
          li {
             font-family: 'Roboto Condensed', sans-serif;
             letting-spacing: normal;
-            @include font-size(16px);
+            @include font-size(15px);
             color: $colorWhite;
          }
       }
@@ -446,10 +462,11 @@
                }
             }
             .specialImage1 {
+               padding-bottom: 200px;
                background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('/images/2guys.jpg') no-repeat;
             }
             .specialImage2 {
-               padding-bottom: 92px;
+               padding-bottom: 200px;
                background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('/images/3guys.jpg') no-repeat;
             }
          }

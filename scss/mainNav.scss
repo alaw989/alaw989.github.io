@@ -222,10 +222,9 @@
       align-items: center;
       padding: $spacingLg $spacingSm;
       img {
-         min-width: 60px;
+         min-width: 30px;
          max-width: 56px;
-         border: 2px solid $colorBrandPrimary;
-         border-radius: 5px;
+
          &:hover {
             cursor: pointer;
          }
@@ -260,12 +259,11 @@
       display: flex;
       justify-content: flex-end;
       align-items: center;
-      padding: $spacingBase $spacingSm;
+      padding: $spacingLg $spacingSm;
       img {
-         min-width: 60px;
+         min-width: 30px;
          max-width: 56px;
-         border: 2px solid $colorBrandPrimary;
-         border-radius: 5px;
+
          &:hover {
             cursor: pointer;
          }
