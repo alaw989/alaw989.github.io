@@ -1,0 +1,86 @@
+@import "spacingUnits";
+@import "colors";
+@import "fontSize";
+@import "mediaQueries";
+
+
+.container {
+    .portfolio-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .portfolio-text {
+            text-align: left;
+            width: 100%;
+            padding: 0 $spacingBase;
+            p {
+                margin: 0 auto;
+            }
+        }
+
+        .portfolio-container {
+            width: 100%;
+            padding: 0 $spacingBase;
+            p {
+                font-weight: 700;
+                text-align: center;
+
+            }
+            .portfolio-row {
+                width: 100%;
+                color: white;
+                text-align: left;
+                padding: $spacingSm 0 $spacingSm $spacingSm;
+                outline: none;
+                border: none;
+                cursor: pointer;
+                background-color: $colorBrandPrimary;
+                transition: 0.4s;
+                border-bottom: 1px solid white;
+                &:hover,
+                &:active {
+                    background-color: #ddd;
+                    color: $colorBrandPrimary;
+                }
+                &:after {
+                    content: '\002B';
+                    color: white;
+                    float: right;
+                    padding-right: $spacingSm;
+                }
+                &:active:after {
+                    content: "\2212";
+                }
+            }
+            .panel {
+                padding: 0 $spacingLg;
+                background-color: white;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.2s ease-out;
+                ul {
+                    display: flex;
+                    flex-direction: row;
+                    padding: $spacingBase 0;
+                    flex-wrap: wrap;
+                    justify-content: flex-start;
+
+
+                    li {
+                        margin: 0 $spacingLg 0 0;
+                        padding: $spacingSm 0;
+                        list-style-type: circle;
+                        &:hover {
+                            color: $colorOrange;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');

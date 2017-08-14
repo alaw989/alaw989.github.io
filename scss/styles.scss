@@ -9,6 +9,8 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 /*general styles and resets*/
 /*border box*/
@@ -26,12 +28,6 @@
   content: "";
   display: block;
   clear: both;
-}
-
-
-ul li {
-   margin: 0;
-   padding: 0;
 }
 
 html, body {
@@ -60,8 +56,6 @@ body {
 
 h1 h2 h3 h4 h5 {
    line-height: 1.2;
-   margin-bottom: 12px;
-   padding: 0;
 }
 
 h1 {
@@ -69,27 +63,63 @@ h1 {
 }
 
 h2 {
-  font-size: 30px;
+  font-size: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  color: #2a3a3f;
+  padding: $spacingLg 0 0 0;
+  margin: 0;
 }
 
 h3 {
   font-size: 28px;
   margin: 0;
-  font-family: 'Roboto Condensed', sans-serif;
-  color: $colorHeading;
+  font-family: 'Raleway', sans-serif;
+  color: white;
 }
 
 h4 {
   font-size: 25px;
+  font-family: 'Raleway', sans-serif;
 }
 
 h5 {
   font-size: 22px;
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+ 
 }
 
 p {
   color: $colorParagraph;
-  font-family: 'Fira Sans', sans-serif;
+  font-family: 'Raleway', sans-serif;
+  font-size: .86rem;
+  line-height: 1.6rem;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  
+}
+
+li {
+  font-family: 'Raleway', sans-serif;
+  color: $colorParagraph;
+  font-size: 1rem;
+}
+
+hr {
+    display: block;
+    height: 6px;
+    border: 0;
+    border-top: 2px solid $colorBrandPrimary;
+    margin: 40px auto; 
+    width: 70px;
+}
+
+.button {
+  font-family: 'Raleway', sans-serif;
 }
 
 #site_wrap {
@@ -104,36 +134,68 @@ p {
  .container {
       max-width: 1200px;
       margin: 0 auto;
+      h2 {
+        text-align: center;
+      }
    }
 
-.containerbg {
-   /* background: linear-gradient(0deg,rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url('/images/sunset.jpg') center fixed;*/
-   background: $colorBrandPrimary;
-   background-repeat: no-repeat;
-   margin-bottom: 0;
-   background-size: cover;
-   h3 {
-      color: $colorWhite;
-      text-align: center;
-      @include font-size(35px);
-      font-family: 'Roboto Condensed', sans-serif;
-      letter-spacing: 2px;
-      padding: $spacingLg 0 0 0;
-   }
-   &:after {
-      content: '';
-      display: block;
-      position: relative;
-      overflow: hidden;
-      border-top: 40px solid $colorBrandPrimary;
-      border-left: 40px solid transparent;
-      border-right: 40px solid transparent;
-      margin: -1px auto 0 auto;
-      z-index: 20 !important;
-      width: 0;
-      bottom: -40;
-   }
+
+
+.slider-wrapper {
+    max-height: 100vh;
+    overflow: hidden;
+    position: relative;
+    .mySlides {
+        width: 100%;
+        height: 100vh;
+    }
+    .slider-text {
+        position: absolute;
+        top: 35%;
+        bottom: 40%;
+        width: 100%;
+        h2 {
+            color: white;
+            font-size: 3rem;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.5);
+            padding-bottom: $spacingLg;
+        }
+    }
+    .logo-center {
+        position: absolute;
+        top: 20%;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.0);
+        padding: $spacingLg 0;
+        img {
+          margin: auto;
+          display: block;
+        }
+    }
 }
+
+.parallax-wrapper {
+    padding: 100px 0 50px 0;
+    background-color: white;
+
+    .background-wrapper {
+        background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.5)), url('/images/crane.jpg') no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+
+        h2 {
+            padding: 100px 0;
+            text-align: center;
+            color: white;
+            font-weight: 100;
+            span {
+                font-weight: bold;
+            }
+        }
+    }
+}
+
 
 .headingwrapper {
    background-size: cover;
@@ -216,25 +278,7 @@ p {
          
          
       }
-      .paralax-heading {
-         h3 {
-            letter-spacing: 2px;
-            padding: 20px;
-            @include font-size(80px);
-            font-weight: 700;
-            color: #fff;
-            text-align: center;
-            font-family: 'Roboto Condensed', sans-serif;
-            position: absolute;
-            top: 30%;
-            left: 0;
-            right: 0;
-            @include tablet {
-               font-size: 50px;
-               min-width: 240px;
-            }
-         }
-      }
+
       .slider {
          display: none;
       }
@@ -254,38 +298,7 @@ p {
 
 
 
-.interiorparalax {
-   height: 30vh;
-   display: -webkit-box;
-   display: -ms-flexbox;
-   display: flex;
-   -webkit-box-align: center;
-       -ms-flex-align: center;
-           align-items: center;
-   .container {
-      margin: 5% 0 auto 20%;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: start;
-          -ms-flex-pack: start;
-              justify-content: flex-start;
-      .paralax-heading {  
-         h3 {
-            background-color: rgba(7, 12, 15, 0.3);
-            padding: 20px;
-            font-size: 50px;
-            font-weight: 700;
-            color: #fff;
-            text-shadow: 2px 2px 2px rgba(150, 150, 150, 1);
-            @include tablet {
-               font-size: 24px;
-               min-width: 240px;
-            }
-         }
-      }
-   }
-}
+
 
 
 
@@ -329,23 +342,6 @@ p {
    }
 }
 
-/*paralax2 features*/
-#paralax2 {
-   background: url("images/banner04.jpg") transparent no-repeat center top fixed;
-   padding: 50px 0;
-   h3 {
-      font-size: 30px;
-      font-weight: 700;
-      color: #fff;
-      text-align: center;
-   }
-   h4 {
-      font-size: 20px;
-      font-weight: 700;
-      color: #fff;
-      text-align: center;
-   }
-}
 
 
 
@@ -361,27 +357,7 @@ p {
 
 
 
-.paralax-text {
-   display: inline-block;
-   width: 50%;
-   vertical-align: middle;
-   background: url("images/orange-60.png");
-   padding: 5px;
-   p {
-      margin: 0px;
-      color: white;
-      text-align: left;
-      font-size: 13px;
-   }
-}
 
-
-
-#paralax2 img {
-   display: inline-block;
-   vertical-align: middle;
-   max-width: 90%;
-}
 
 
 /*services*/
@@ -453,9 +429,3 @@ p {
    }
 }
 
-/* paralax3*/
-
-#paralax3 {
-   background: url("images/const_05.jpeg") transparent no-repeat center top fixed;
-   padding: 50px 0;
-}

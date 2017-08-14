@@ -87,6 +87,8 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 @import url("https://fonts.googleapis.com/css?family=Fira+Sans");
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
 /*general styles and resets*/
 /*border box*/
 * {
@@ -99,10 +101,6 @@
   content: "";
   display: block;
   clear: both; }
-
-ul li {
-  margin: 0;
-  padding: 0; }
 
 html, body {
   max-width: 100%; }
@@ -122,31 +120,59 @@ body {
   color: #5c6873; }
 
 h1 h2 h3 h4 h5 {
-  line-height: 1.2;
-  margin-bottom: 12px;
-  padding: 0; }
+  line-height: 1.2; }
 
 h1 {
   font-size: 35px; }
 
 h2 {
-  font-size: 30px; }
+  font-size: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  color: #2a3a3f;
+  padding: 48px 0 0 0;
+  margin: 0; }
 
 h3 {
   font-size: 28px;
   margin: 0;
-  font-family: 'Roboto Condensed', sans-serif;
-  color: #3f444a; }
+  font-family: 'Raleway', sans-serif;
+  color: white; }
 
 h4 {
-  font-size: 25px; }
+  font-size: 25px;
+  font-family: 'Raleway', sans-serif; }
 
 h5 {
-  font-size: 22px; }
+  font-size: 22px;
+  font-family: 'Raleway', sans-serif;
+  margin: 0; }
 
 p {
   color: #5c6873;
-  font-family: 'Fira Sans', sans-serif; }
+  font-family: 'Raleway', sans-serif;
+  font-size: .86rem;
+  line-height: 1.6rem; }
+
+ul {
+  padding: 0;
+  margin: 0;
+  font-family: 'Raleway', sans-serif; }
+
+li {
+  font-family: 'Raleway', sans-serif;
+  color: #5c6873;
+  font-size: 1rem; }
+
+hr {
+  display: block;
+  height: 6px;
+  border: 0;
+  border-top: 2px solid #6699cc;
+  margin: 40px auto;
+  width: 70px; }
+
+.button {
+  font-family: 'Raleway', sans-serif; }
 
 #site_wrap {
   width: 100%;
@@ -158,34 +184,52 @@ p {
 .container {
   max-width: 1200px;
   margin: 0 auto; }
+  .container h2 {
+    text-align: center; }
 
-.containerbg {
-  /* background: linear-gradient(0deg,rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url('/images/sunset.jpg') center fixed;*/
-  background: #6699cc;
-  background-repeat: no-repeat;
-  margin-bottom: 0;
-  background-size: cover; }
-  .containerbg h3 {
-    color: #fff;
-    text-align: center;
-    font-size: 35px;
-    font-size: 2.1875rem;
-    line-height: 1.37143;
-    font-family: 'Roboto Condensed', sans-serif;
-    letter-spacing: 2px;
-    padding: 48px 0 0 0; }
-  .containerbg:after {
-    content: '';
-    display: block;
-    position: relative;
-    overflow: hidden;
-    border-top: 40px solid #6699cc;
-    border-left: 40px solid transparent;
-    border-right: 40px solid transparent;
-    margin: -1px auto 0 auto;
-    z-index: 20 !important;
-    width: 0;
-    bottom: -40; }
+.slider-wrapper {
+  max-height: 100vh;
+  overflow: hidden;
+  position: relative; }
+  .slider-wrapper .mySlides {
+    width: 100%;
+    height: 100vh; }
+  .slider-wrapper .slider-text {
+    position: absolute;
+    top: 35%;
+    bottom: 40%;
+    width: 100%; }
+    .slider-wrapper .slider-text h2 {
+      color: white;
+      font-size: 3rem;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.5);
+      padding-bottom: 48px; }
+  .slider-wrapper .logo-center {
+    position: absolute;
+    top: 20%;
+    width: 100%;
+    background: transparent;
+    padding: 48px 0; }
+    .slider-wrapper .logo-center img {
+      margin: auto;
+      display: block; }
+
+.parallax-wrapper {
+  padding: 100px 0 50px 0;
+  background-color: white; }
+  .parallax-wrapper .background-wrapper {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.45)), to(rgba(0, 0, 0, 0.5))), url("/images/crane.jpg") no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.5)), url("/images/crane.jpg") no-repeat;
+    background-size: cover;
+    background-attachment: fixed; }
+    .parallax-wrapper .background-wrapper h2 {
+      padding: 100px 0;
+      text-align: center;
+      color: white;
+      font-weight: 100; }
+      .parallax-wrapper .background-wrapper h2 span {
+        font-weight: bold; }
 
 .headingwrapper {
   background-size: cover;
@@ -255,25 +299,6 @@ p {
 .bxslider img {
   width: 100%; }
 
-.bxslider .paralax-heading h3 {
-  letter-spacing: 2px;
-  padding: 20px;
-  font-size: 80px;
-  font-size: 5rem;
-  line-height: 1.2;
-  font-weight: 700;
-  color: #fff;
-  text-align: center;
-  font-family: 'Roboto Condensed', sans-serif;
-  position: absolute;
-  top: 30%;
-  left: 0;
-  right: 0; }
-  @media (min-width: 1px) and (max-width: 1250px) {
-    .bxslider .paralax-heading h3 {
-      font-size: 50px;
-      min-width: 240px; } }
-
 .bxslider .slider {
   display: none; }
 
@@ -292,34 +317,6 @@ p {
     opacity: 0; }
   to {
     opacity: 1; } }
-
-.interiorparalax {
-  height: 30vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
-  .interiorparalax .container {
-    margin: 5% 0 auto 20%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: flex-start; }
-    .interiorparalax .container .paralax-heading h3 {
-      background-color: rgba(7, 12, 15, 0.3);
-      padding: 20px;
-      font-size: 50px;
-      font-weight: 700;
-      color: #fff;
-      text-shadow: 2px 2px 2px #969696; }
-      @media (min-width: 1px) and (max-width: 1250px) {
-        .interiorparalax .container .paralax-heading h3 {
-          font-size: 24px;
-          min-width: 240px; } }
 
 .hiddenText {
   display: none;
@@ -349,21 +346,6 @@ p {
   .feature-block h4 {
     padding-bottom: 100px; }
 
-/*paralax2 features*/
-#paralax2 {
-  background: url("images/banner04.jpg") transparent no-repeat center top fixed;
-  padding: 50px 0; }
-  #paralax2 h3 {
-    font-size: 30px;
-    font-weight: 700;
-    color: #fff;
-    text-align: center; }
-  #paralax2 h4 {
-    font-size: 20px;
-    font-weight: 700;
-    color: #fff;
-    text-align: center; }
-
 .inner-container {
   text-align: center;
   padding-top: 50px; }
@@ -371,23 +353,6 @@ p {
     content: ' ';
     display: inline-block;
     vertical-align: middle; }
-
-.paralax-text {
-  display: inline-block;
-  width: 50%;
-  vertical-align: middle;
-  background: url("images/orange-60.png");
-  padding: 5px; }
-  .paralax-text p {
-    margin: 0px;
-    color: white;
-    text-align: left;
-    font-size: 13px; }
-
-#paralax2 img {
-  display: inline-block;
-  vertical-align: middle;
-  max-width: 90%; }
 
 /*services*/
 #services {
@@ -440,8 +405,3 @@ p {
     text-align: left;
     margin: 0;
     padding-bottom: 10px; }
-
-/* paralax3*/
-#paralax3 {
-  background: url("images/const_05.jpeg") transparent no-repeat center top fixed;
-  padding: 50px 0; }

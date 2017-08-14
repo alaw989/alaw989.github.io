@@ -19,14 +19,14 @@
         width: 15%;
         min-width: 225px;
         background: transparent;
-        border: 4px solid $colorBrandPrimary;
-        border-radius: 5px;
+        border: 1px solid $colorBrandPrimary;
+        border-radius: 50px;
         margin-top: $spacingLg;
         transition: background-color .5s ease-out;
         color: $colorBrandPrimary;
         letter-spacing: 2px;
-        font-family: 'Roboto Condensed', sans-serif;
-        @include font-size(30px);
+        
+        
         font-weight: bold;
         margin: $spacingXSm 0;
         margin: 0 auto;

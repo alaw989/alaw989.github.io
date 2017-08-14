@@ -1,3 +1,4 @@
+
 <html>
 
 <head>
@@ -23,7 +24,6 @@
    <link rel="stylesheet" type="text/css" href="css/normalize.css">
    <link rel="stylesheet" href="css/jquery-ui.min.css">
    <link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css">
-   <script src="https://use.fontawesome.com/08aec3b1f2.js"></script>
 
    <script type="text/javascript" src="js/scrollFade.js"></script>
    <script type="text/javascript" src="js/iescrollJump.js"></script>
@@ -45,12 +45,61 @@
 
 <body>
 
-<!--<script>
+<script>
 $(document).ready(function(){
   $('.bxslider').bxSlider();
 });
-</script>-->
-
+</script>
+<script>
+$("#home").click(function() {
+    $('html,body').animate({
+            scrollTop: $(".container-bg").offset().top
+        },
+        'slow');
+});
+$("#tools").click(function() {
+    $('html,body').animate({
+            scrollTop: $(".featureBlock-darker").offset().top
+        },
+        'slow');
+});
+$("#work").click(function() {
+    $('html,body').animate({
+            scrollTop: $(".spotLight-wrapper").offset().top
+        },
+        'slow');
+});
+$("#contact").click(function() {
+    $('html,body').animate({
+            scrollTop: $(".contact-wrapper").offset().top
+        },
+        'slow');
+});
+$(".expertise").click(function() {
+    $('html,body').animate({
+            scrollTop: $(".featureBlock-wrapper").offset().top
+        },
+        'slow');
+});
+$(".tools").click(function() {
+    $('html,body').animate({
+            scrollTop: $(".featureBlock-darker").offset().top
+        },
+        'slow');
+});
+$(".work").click(function() {
+    $('html,body').animate({
+            scrollTop: $(".spotLight-wrapper").offset().top
+        },
+        'slow');
+});
+$(".contact").click(function() {
+    $('html,body').animate({
+            scrollTop: $(".contact-wrapper").offset().top
+        },
+        'slow');
+});
+</script>
 
 
 
@@ -58,69 +107,16 @@ $(document).ready(function(){
 	<div id="site_wrap">
     	<div id="site_inner">
     	<div id="header"></div>
-    	<!--<div class="spacer"></div>-->
-
-
-<div class="slider-wrapper">
-    <div class="mySlides animated fadeIn">
-        <img src="/images/3488FFF9.jpg">
-        <div class="slider-text">
-            <h2>Structural Engineering & Steel Detailing</h2>
-        </div>
-    </div>
-    <div class="mySlides animated fadeIn">
-        <img src="/images/buildconstruct.jpg">
-        <div class="slider-text">
-            <h2>Employing the Latest CAD Software</h2>
-        </div>
-    </div>
-    <div class="mySlides animated fadeIn">
-        <img src="/images/steelbeams.jpg">
-        <div class="slider-text">
-            <h2>Building Information Model (BIM)</h2>
-        </div>
-    </div>
-    <div class="mySlides animated fadeIn">
-        <img src="/images/steelframe.jpg">
-        <div class="slider-text">
-            <h2>Quick Response</h2></div>
-    </div>
-    <div class="logo-center">
-        <img src="/images/vplogowhite.png">
-    </div>
-</div>
-
-<script>
-var myIndex = 0;
-var myIndex1 = 0;
-carousel();
-
-function carousel() {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-
-
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-    }
-    myIndex++;
-    if (myIndex > x.length) { myIndex = 1 }
-    x[myIndex - 1].style.display = "block";
-    setTimeout(carousel, 9000); // Change image every 9 seconds
-  }
-</script>
-
-<!--spacing element between navbar and paralax -->
-	<!--	<div class="slide-combo">
+    	<div class="spacer"></div>
+		<!--spacing element between navbar and paralax -->
+		<div class="slide-combo">
 		   <ul class="bxslider">
 		      <li><img src="/compressed-images/redbeamstext.jpg" /></li>
 		      <li><img src="/compressed-images/scaffoldtext.jpg" /></li>
 		      <li><img src="/compressed-images/bluearchtext.jpg" /></li>
 		      <li><img src="/compressed-images/sunsetbeamstext.jpg" /></li>
 		   </ul>
-		   </div>-->
-
-
+		   </div>
 		  <!-- <div class="featureBlock-container">
 			   <div class="container">
 			      <h3 class="featureBlock-Heading"> NEED TITLE HERE </h3>
@@ -181,30 +177,25 @@ function carousel() {
 
 
 			
-<div class="containerbg">
-    <div class="container">
-        <h2 id="experts">The Engineering Experts</h2>
-        <hr>
-        <div class="textblock-wrapper">
-            <div class="textblock-column">
-                <img src="/images/steelshape.jpg">
-            </div>
-            <div class="textblock-column">
-                <h5>Who We Are</h5><hr>
-                <p>VP & Associates, Inc. provide a full range of structural engineering, steel detailing services and inspection services. Our engineers and steel detailers have over 30 years of experience. We have experience in all facets of structural engineering and steel detailing including, but not limited to, developing plans and specifications for construction of new and existing buildings/tanks, as well as providing inspection services.
-                </p>
-                <h5>What We Do</h5><hr>
-                <p>
-                    We provide services to corporate industrial contractors, commercial architects and steel fabricators, utilizing the most current 3-D computer analysis systems available, ACAD drafting, SDS2 steel detailing, and coordinating available research materials. Our engineers and detailers have initiated, engineered, and completed many multi-faceted design and construction projects which have met goals to reduce construction cost and time.
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
+			
+			<div class="containerbg">
+			   <div class="container">
+			         <h2>The Engineering Experts</h2>
+			         <hr>
+			      <div class="textblock">
+			         <p>VP & Associates, Inc. provide a full range of structural engineering, steel detailing services and inspection services. Our engineers and steel detailers have over 30 years of experience. We have experience in all facets of structural engineering and steel detailing including, but not limited to, developing plans and specifications for construction of new and existing buildings/tanks, as well as providing inspection services.
+			            </br>
+			            </br>
+			            We provide services to corporate industrial contractors, commercial architects and steel fabricators, utilizing the most current 3-D computer analysis systems available, ACAD drafting, SDS2 steel detailing, and coordinating available research materials. Our engineers and detailers have initiated, engineered, and completed many multi-faceted design and construction projects which have met goals to reduce construction cost and time.
+			         </p>
+			         <!--<a href="http://placehold.it"><img src="/images/portfolio.jpg"></a>-->
+			      </div>
+			   </div>
+			</div>
 
 
 
-<!--<div class="services-wrapper">
+<div class="services-wrapper">
     <div class="container">
         <h2>Services</h2>
         <hr>
@@ -231,6 +222,7 @@ function carousel() {
             
                 <div class="specialImage wow fadeIn float-right" data-wow-duration="2s" data-wow-delay=".75s">
                     <h5 id="second">Capabilities</h5>
+                    <!--<p>Well versed in the following building materials:</p> -->
                     <ul>
                         <li> Structural steel per AISC </li>
                         <li> Steel tank per ASME </li>
@@ -253,7 +245,7 @@ function carousel() {
             </p>
         </div>
     </div>
-</div> -->
+</div>
 
 
 		<!--	<div class="container">
@@ -266,161 +258,108 @@ function carousel() {
 
 
 
-
-<div class="services-wrapper">
-    <div class="container">
-        <h2 id="services-header">Services</h2>
-        <hr>
-        <div class="column-wrapper">
-            <div class="services-column">
-               <!-- <i class="fa fa-cogs" aria-hidden="true"></i>-->
-                <h5> Areas of Specialization</h5>
-                <ul>
-                    <li> Deep foundation and shallow foundation design</li>
-                    <li> Seawall design </li>
-                    <li> Low-rise and multi-story building design </li>
-                    <li> CAD drawing </li>
-                    <li> Steel connection design </li>
-                    <li> Create lifting plans </li>
-                    <li> Provide inspection services </li>
-                    <li> Develop specification </li>
-                    <li> Steel detailing buildings and bridges per AISC standard using latest 3D software, SDS2 </li>
-                    <li> 3D Modeling BIM </li>
-                </ul>
-                
-                   <!-- <i class="fa fa-wrench" aria-hidden="true"></i>-->
-                    <h5 id="capa">Capabilities</h5>
-                    <ul>
-                        <li> Structural steel per AISC </li>
-                        <li> Steel tank per ASME </li>
-                        <li> Cold formed steel per LGSEA </li>
-                        <li> Reinforced concrete per ACI </li>
-                        <li> Masonry per ACI 530 </li>
-                        <li> Wood per NDS </li>
-                        <li> Aluminum per AA </li>
-                    </ul>
-                
-            </div>
-            <div class="services-column">
-                <p> We also sign and seal shop drawings including miscellaneous metals. Just within the last two and a half years we've designed connections for more than 7000 tons of steel. Some structures reach over 300 ft. in height. The connection design themselves involved all level of complexities, anything from braced frame to simple shear and moment connections. Because VP & Associates, Inc. also designs building envelopers, we understand the design intent of the structure. Therefore, we are able to communicate with the Engineer of Record to resolve any loading conditions that may adversely affect the main structure, its members, and/or connections.
-                </p>
-
-                 <p>
-                 Our communication to the Engineer of Record and to the detailer is very concise and expedient. Once we've completed the connection design, we will send the detailer sketches depicting all relevant information for detailing. We use 3-D and in-house software to create the calculation which we will sign, seal and submit to the Engineer of Record. If the detailing is done in SDS2 by other detailers, we can accept an SDS2 model.</p><p> Once we've received the SDS2 model from the detailer by e-mail, we will complete the connection design in SDS2 and e-mail the detailer back the model with the completed connection design and model. The detailer does not have to model the connection. The calculation is then extracted from SDS2 and printed out by VP & Associates, Inc. We will then send to the fabricator the signed and sealed calculation.</p>
-                
-                <p> We are licensed in the states of Florida, Kentucky, Maryland, Michigan, Pennsylvania, Tennessee, and Virginia. In addition, we are capable of obtaining licenses in other states.
-                
-            </p>
-            <p>
-                 VP & Associates, Inc. also has the capability of generating 3-D model structural analysis which would design and size the individual members for over-all building enveloper. The same model could easily be imported directly into SDS2 for detailing. This would cut down the detailer modeling time and, therefore, speed-ip the detailing process.</p>
-            </p>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-
-
-
-<div class="container">
-    <h2 id="portfolio-header">Our Work</h2>
-    <hr>
-    <div class="portfolio-wrapper">
-       
-        <div class="portfolio-container">
-            
-            <button class="portfolio-row">Industrial</button>
-            <div class="panel">
-                <ul>
-                    <li>ISOhd.pdf</li>
-                    <li>RMS E2.pdf</li>
-                    <li>E101_1_Redacted.pdf</li>
-                    <li>E401.pdf</li>
-                    <li>RMS D7.pdf</li>
-                    <li>RMS E12.pdf</li>
-                    <li>RMS D74.pdf</li>
-                    <li>RMS ISO.pdf</li>
-                    <li>E306.pdf</li>
-                    <li>Morten Salt elev E5-Rev0.pdf</li>
-                    <li>02109.pdf</li>
-                    <li>01309.pdf</li>
-                    <li>Bechtel Stacks E1 iso.pdf</li>
-                    <li>Morten Salt ISO_Rev-0.pdf</li>
-                    <li>1401.pdf</li>
-                    <li>1308.pdf</li>
-                    <li>02305.pdf</li>
-                    <li>Morten Salt Col 20D2_Rev-0.pdf</li>
-                </ul>
-            </div>
-            <button class="portfolio-row">Bridges</button>
-            <div class="panel">
-                <ul>
-                    <li>I 95 E1.pdf</li>
-                    <li>I 95 E3.pdf</li>
-                    <li>isohdp1.pdf</li>
-                    <li>Parker Bridge E1.pdf</li>
-                    <li>I 95 E2.pdf</li>
-                    <li>I 105 E3_Rev0.pdf</li>
-                    <li>Camber layout WC1 012811.pdf</li>
-                    <li>I 95 D1.pdf</li>
-                    <li>I 105 E1_Rev0.pdf</li>
-                    <li>Grade layout 012811.pdf</li>
-                    <li>isohd.pdf</li>
-                </ul>
-            </div>
-            <button class="portfolio-row">Commercial</button>
-            <div class="panel">
-                <ul>
-                    <li>1119.pdf</li>
-                    <li>E2.pdf</li>
-                    <li>IAAreaD-ISO3.pdf</li>
-                    <li>AB1.pdf</li>
-                    <li>1122.pdf</li>
-                    <li>Dave and Buster's.pdf</li>
-                    <li>1111.pdf</li>
-                    <li>I 95 D1.pdf</li>
-                    <li>I 105 E1_Rev0.pdf</li>
-                    <li>Dave and Buster's.pdf</li>
-                    <li>189.pdf</li>
-                    <li>C8.pdf</li>
-                    <li>B66.pdf</li>
-                    <li>B65.pdf</li>
-                    <li>B64.pdf</li>
-                    <li>199.pdf</li>
-                    <li>C6.pdf</li>
-                    <li>B68.pdf</li>
-                    <li>E2m.pdf</li>
-                    <li>1118.pdf</li>
-                </ul>
-            </div>
-            <button class="portfolio-row">Misc.</button>
-            <div class="panel">
-                <ul>
-                    <li>5GD-1.pdf</li>
-                    <li>5GD-4a.pdf</li>
-                    <li>ISO-Copy.pdf</li>
-                    <li>E3-01.pdf</li>
-                    <li>5GC-1a.pdf</li>
-                    <li>Misc/066-hanrail.pdf</li>
-                    <li>Misc/038-Stringer.pdf</li>
-                    <li>D104-B.pdf</li>
-                    <li>E2-02.pdf</li>
-                    <li>5GD-4.pdf</li>
-                    <li>DuctISO.pdf</li>
-                    <li>Metso ISO.pdf</li>
-                </ul>
+			<!--<div class="headingwrapper">
+			   <div class="container">
+			      <div class="spotLight-Heading">
+			         <h3>CONTACT US</h3>
+			         <p>Location & Contact Info</p>
+			      </div>
+			   </div>
+			</div> -->
+			                          <div class="container">
+			                          <h2>Our Work</h2>
+			                          <hr>
+                <div class="portfolio-text">
+                    <p>Our team has successfully detailed a variety of steel structures from 10 tons to 1,500 tons using the latest 3D modeling software, SDS2. We detail per AISC standard and provide all CNC data including ABM, DXF, and KISS files required for fabrication.</p><br>
+                    <p>We have also detailed bridges. Included with the bridge detail drawings are the camber diagram, blocking diagram, and grade diagram.</p>
+                </div>
+                <div class="portfolio-container">
+                <p class="category-text">Please choose a category</p>
+                    <button class="portfolio-row">Industrial</button>
+                    <div class="panel">
+                        <ul>
+                        	<li>ISOhd.pdf</li>
+                        	<li>RMS E2.pdf</li>
+                        	<li>E101_1_Redacted.pdf</li>
+                        	<li>E401.pdf</li>
+                        	<li>RMS D7.pdf</li>
+                        	<li>RMS E12.pdf</li>
+                        	<li>RMS D74.pdf</li>
+                        	<li>RMS ISO.pdf</li>
+                        	<li>E306.pdf</li>
+                        	<li>Morten Salt elev E5-Rev0.pdf</li>
+                        	<li>02109.pdf</li>
+                        	<li>01309.pdf</li>
+                        	<li>Bechtel Stacks E1 iso.pdf</li>
+                        	<li>Morten Salt ISO_Rev-0.pdf</li>
+                        	<li>1401.pdf</li>
+                        	<li>1308.pdf</li>
+                        	<li>02305.pdf</li>
+                        	<li>Morten Salt Col 20D2_Rev-0.pdf</li>
+                        </ul>
+                    </div>
+                    <button class="portfolio-row">Bridges</button>
+                    <div class="panel">
+                         <ul>
+                        	<li>I 95 E1.pdf</li>
+                        	<li>I 95 E3.pdf</li>
+                        	<li>isohdp1.pdf</li>
+                        	<li>Parker Bridge E1.pdf</li>
+                        	<li>I 95 E2.pdf</li>
+                        	<li>I 105 E3_Rev0.pdf</li>
+                        	<li>Camber layout WC1 012811.pdf</li>
+                        	<li>I 95 D1.pdf</li>
+                        	<li>I 105 E1_Rev0.pdf</li>
+                        	<li>Grade layout 012811.pdf</li>
+                        	<li>isohd.pdf</li>
+                        </ul>
+                    </div>
+                    <button class="portfolio-row">Commercial</button>
+                    <div class="panel">
+                          <ul>
+                        	<li>1119.pdf</li>
+                        	<li>E2.pdf</li>
+                        	<li>IAAreaD-ISO3.pdf</li>
+                        	<li>AB1.pdf</li>
+                        	<li>1122.pdf</li>
+                        	<li>Dave and Buster's.pdf</li>
+                        	<li>1111.pdf</li>
+                        	<li>I 95 D1.pdf</li>
+                        	<li>I 105 E1_Rev0.pdf</li>
+                        	<li>Dave and Buster's.pdf</li>
+                        	<li>189.pdf</li>
+                            <li>C8.pdf</li>
+                        	<li>B66.pdf</li>
+                        	<li>B65.pdf</li>
+                        	<li>B64.pdf</li>
+                        	<li>199.pdf</li>
+                        	<li>C6.pdf</li>
+                        	<li>B68.pdf</li>
+                        	<li>E2m.pdf</li>
+                        	<li>1118.pdf</li>
+                        </ul>
+                    </div>
+                    <button class="portfolio-row">Misc.</button>
+                    <div class="panel">
+                          <ul>
+                        	<li>5GD-1.pdf</li>
+                        	<li>5GD-4a.pdf</li>
+                        	<li>ISO-Copy.pdf</li>
+                        	<li>E3-01.pdf</li>
+                        	<li>5GC-1a.pdf</li>
+                        	<li>Misc/066-hanrail.pdf</li>
+                        	<li>Misc/038-Stringer.pdf</li>
+                        	<li>D104-B.pdf</li>
+                        	<li>E2-02.pdf</li>
+                        	<li>5GD-4.pdf</li>
+                        	<li>DuctISO.pdf</li>
+                        	<li>Metso ISO.pdf</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
 
-        </div>
-         <div class="portfolio-text">
-            <p>Our team has successfully detailed a variety of steel structures from 10 tons to 1,500 tons using the latest 3D modeling software, SDS2. We detail per AISC standard and provide all CNC data including ABM, DXF, and KISS files required for fabrication.</p>
-            <br>
-            <p>We have also detailed bridges. Included with the bridge detail drawings are the camber diagram, blocking diagram, and grade diagram.</p>
-        </div>
-    </div>
-</div>
+
 
 
 

@@ -1,4 +1,7 @@
 <html>
+<head>
+  <script type="text/javascript" src="js/scrollFade.js"></script>   
+</head>
 <div id="mySidenav" class="sidenav">
    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
    <a href="/portfolio.html">Portfolio</a>
@@ -6,6 +9,7 @@
    <a href="/services.html">Services</a>
    <a href="/contactus.html">Contact</a>
 </div>
+
 
 <script>
    /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
@@ -21,49 +25,59 @@ function closeNav() {
 }
 </script>
 
+<script>
+$("#about").click(function() {
+    $('html,body').animate({
+            scrollTop: $("#experts").offset().top
+        },
+        'slow');
+});
+$("#services").click(function() {
+
+    $('html,body').animate({
+            scrollTop: $("#services-header").offset().top
+        },
+        'slow');
+});
+$("#portfolio").click(function() {
+
+    $('html,body').animate({
+            scrollTop: $("#portfolio-header").offset().top
+        },
+        'slow');
+});
+
+</script>
+
 <div id="main">
-   <div id="header" class="clearfix">
-      <div class="container">
-         <div id="logo">
-            <a href="/index.html"> <img id="logo-image" src="/images/vplogo.png" alt="" /></a>
-            <a href="/index.html"> <img id="logo-image2" src="/images/vplogo2.png" alt="" /></a>
-         </div>
-         <!--logo-->
-         <div class="hamburger" onclick="openNav()">
-            <img src="/images/hamburger.svg">
-         </div>
-         <div id="mainNav">
-            <div class="container">
-               <ul class="level0">
-                  <li><a href="#">FTP LOGIN</a></li>
-               </ul>
-               <ul class="level1">
-                  <li><a href="/index.html">home</a> <span>+</span></li>
-                  <li><a href="/portfolio.html">portfolio</a></li> <span>+</span>
-                  <!--<ul class="level2">
-                  
-                     <li><a href="#">Industrial</a></li>
-                     <li><a href="#">Bridges</a></li>
-                     <li><a href="#">Commercial</a></li>
-                     <li><a href="#">Misc.</a></li>
-                  </ul>
-                  -->
-                  <!--end level2-->
-                  </li>
-                  <!-- end portfolio-->
-                  <li><a href="/careers.html">careers</a> <span>+</span></li>
-                  <li><a href="/services.html">services</a></li> <span>+</span>
-                  <li><a href="/contactus.html">contact us</a></li>
-               </ul>
-               <!--end level1-->
+    <div id="header" class="clearfix">
+        <div class="container">
+            <div id="logo">
+                <h3>VP & Associates, Inc.</h3></a>
             </div>
-            <!--utility container-->
-         </div>
-         <!--mainNav-->
-      </div>
-      <!--header container-->
-   </div>
-   <!--header-->
+            <!--logo-->
+            <div class="hamburger" onclick="openNav()">
+                <img src="/images/hamburger.svg">
+            </div>
+            <div id="mainNav">
+                <div class="container">
+                    <ul class="level1">
+                        <li class="li-hook" id="about">About</li>
+                        <li class="li-hook" id="services">Services</li>
+                        <li class="li-hook" id="portfolio">Portfolio</li>
+                        <li class="li-hook" id="careers">Careers</li>
+                        <li class="li-hook" id="contact">Contact us</li>
+                        <li class="li-hook" id="ftp">FTP Login</li>
+                    </ul>
+                    <!--end level1-->
+                </div>
+                <!--utility container-->
+            </div>
+            <!--mainNav-->
+        </div>
+        <!--header container-->
+    </div>
+    <!--header-->
 </div>
 
 </html>

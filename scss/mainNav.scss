@@ -5,190 +5,165 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
 
 #header {
-   background: url(/images/bg.gif);
-   background-repeat: repeat;
-   background-position: right, left;
-   position: fixed; 
-   top: 0;
-   width: 100%;
-   z-index: 99;
-   
-#logo {
-      padding: 0;
-      width: 30%;
-      position: relative;
-      float: left;
-      padding: 15px 0 0 0;
-      font-size: 30px;
-      font-family: 'Ropa Sans', sans-serif;
-      
-      #logo-image {
-         visibility:  visible;
-         transition: all .5s;
-         position: absolute;
-         padding: 0;
-      }
-      #logo-image2 {
-        visibility: hidden;
-        transition: all .5s;
-        position: absolute;
-      }
-   }
+    background: rgba(0, 0, 0, 0.0);
+    background-repeat: repeat;
+    background-position: right, left;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+    transition: all .5s;
+    display: flex;
+    flex-direction: row;
+    #logo {
+        padding: 0;
+        width: 30%;
+        position: relative;
+        float: left;
+        padding: 15px 0 0 60px;
+        font-size: 30px;
+    }
 }
 
-.spacer {
-  width: 100%;
-  height: 154px;
-}
+
 
 @include phone {
-  .spacer {
-    height: 107px;
-  }
+    .spacer {
+        height: 107px;
+    }
 }
+
 
 
 
 /*mainNav*/
- #mainNav {
+
+#mainNav {
     width: 100%;
     display: flex;
-    padding-top: $spacingLg;
+    padding-top: 20px;
     justify-content: flex-end;
     transition: all .5s;
-    padding-bottom: 30px;
-    span {
-      color: orange;
-      top: 4px;
-      position: relative;
-    }
+    
+
+
     .container {
-      display: flex;
-      flex-direction: column;
-      margin: 0;
-      padding-left: 32%;
-       .level0 {
-        a {
-          @include font-size(18px);
-          background-color: $colorBrandPrimary;
-          color: $colorWhite;
-          padding: 3px $spacingBase 3px $spacingXSm;
-          border-radius: 3px;
-          &:after {
-            content: url('/images/login.svg');
-            width: 15%;
-            position: absolute;
-            padding-left: 3px;
-            top: 2.5px;
-          }
-        }
-       }
-       .level1 {
-        li {
-          
-          a {
-          /*@include font-size(24px);*/
-        }
-        }
-        
-       }
-       ul {
-          display: block;
-          float: right;
-          text-align: right;
-          margin: 0;
-          padding-top: $spacingSm;
-          & > li {
-             display: inline-block;
-             position: relative;
-             & > a {
-                font-family: 'Roboto Condensed', sans-serif;
-                @include font-size(20px);
-                color: $colorBrandPrimaryDark;
-                line-height: 1;
-                font-weight: 500;
-                text-decoration: none;
-                padding: 4px;
-                transition: all 0.15s ease-out;
-                border-radius: 3px;
-             }
-             &:hover > a {
-                background: #6699CC none;
+       
+        margin: 0;
+        padding-left: 32%;
+
+        .level0 {
+            a {
+                background-color: $colorBrandPrimary;
                 color: $colorWhite;
-             }
-          }
-          ul.level2 {
-             visibility: hidden;
-             min-width: 210px;
-             background: #fff none;
-             padding: 10px 0;
-             max-height: 0;
-             transition: max-height 0.15s ease-out;
-             position: absolute;
-             top: 100%;
-             border-top: 3px solid #6699CC;
-             /* box-shadow: 10px 10px 5px #888888;*/
-             li {
-                width: 100%;
-                a {
-                   
-                   font-size: 16px;
-                   font-weight: 400;
-                   color: #000;
-                   padding: 3px 15px;
-                   display: block;
-                   transition: all 0.15s ease-out;
-                   background: transparent none;
-                   width: 100%;
-                   text-align: left;
-                   &:hover {
-                      background: #0069AC none;
-                      color: #fff;
-                   }
+                padding: 3px $spacingBase 3px $spacingXSm;
+                border-radius: 3px;
+                &:after {
+                    content: url('/images/login.svg');
+                    width: 15%;
+                    position: absolute;
+                    padding-left: 3px;
                 }
-             }
-          }
-          & > li:hover > ul.level2 {
-             visibility: visible;
-             max-height: none;
-          }
-       }
+            }
+        }
+
+        ul {
+            display: block;
+            float: right;
+            text-align: right;
+            margin: 0;
+            padding-bottom: $spacingSm;
+            margin-top: 5px;
+            &>li {
+                display: inline-block;
+                position: relative;
+                & {
+                    color: white;
+                    line-height: 1;
+                    font-weight: 500;
+                    text-decoration: none;
+                    padding: 4px 14px;
+                    transition: all 0.15s ease-out;
+                    border-radius: 3px;
+                    cursor: pointer;
+                    &:hover {
+                        color: orange;
+                        
+                    }
+                }
+            }
+            ul.level2 {
+                visibility: hidden;
+                min-width: 210px;
+                background: #fff none;
+                padding: 10px 0;
+                max-height: 0;
+                transition: max-height 0.15s ease-out;
+                position: absolute;
+                top: 100%;
+                border-top: 3px solid #6699CC;
+                /* box-shadow: 10px 10px 5px #888888;*/
+                li {
+                    width: 100%;
+                    a {
+
+                        font-size: 16px;
+                        font-weight: 400;
+                        color: #000;
+                        padding: 3px 15px;
+                        display: block;
+                        transition: all 0.15s ease-out;
+                        background: transparent none;
+                        width: 100%;
+                        text-align: left;
+                        &:hover {
+                            background: #0069AC none;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+            &>li:hover>ul.level2 {
+                visibility: visible;
+                max-height: none;
+            }
+        }
     }
- }
+}
 
 .hamburger {
-   display: none;
+    display: none;
 }
 
 .sidenav {
-   height: 100%;
-   /* 100% Full-height */
-   width: 0;
-   /* 0 width - change this with JavaScript */
-   position: fixed;
-   /* Stay in place */
-   z-index: 1;
-   /* Stay on top */
-   top: 0;
-   left: 0;
-   background-color: #111;
-   /* Black*/
-   overflow-x: hidden;
-   /* Disable horizontal scroll */
-   padding-top: 60px;
-   /* Place content 60px from the top */
-   transition: 0.5s;
-   /* 0.5 second transition effect to slide in the sidenav */
-   a {
-      padding: 8px 8px 8px 32px;
-      text-decoration: none;
-      font-size: 25px;
-      color: #818181;
-      display: block;
-      transition: 0.3s &:hover {
-         color: #f1f1f1;
-      }
-   }
+    height: 100%;
+    /* 100% Full-height */
+    width: 0;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #111;
+    /* Black*/
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    padding-top: 60px;
+    /* Place content 60px from the top */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidenav */
+    a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s &:hover {
+            color: #f1f1f1;
+        }
+    }
 }
 
 #main {
@@ -198,78 +173,76 @@
 
 
 @include tablet {
-   #header {
-     
-      #logo {
-         padding-left: $spacingSm;
-         #logo-image {
-            width: 100%;
-            padding-top: $spacingSm;
-            min-width: 287px;
-            opacity: 1;
-         }
-         #logo-image2 {
-            width: 100%;
-            padding-top: $spacingSm;
-            display: none;
-            min-width: 105px;
-         }
-      }
-   }
-   .hamburger {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      padding: $spacingLg $spacingSm;
-      img {
-         min-width: 30px;
-         max-width: 56px;
+    #header {
 
-         &:hover {
-            cursor: pointer;
-         }
-      }
-   }
-   #mainNav {
-      display: none;
-   }
+        #logo {
+            padding-left: $spacingSm;
+            #logo-image {
+                width: 100%;
+                padding-top: $spacingSm;
+                min-width: 287px;
+                opacity: 1;
+            }
+            #logo-image2 {
+                width: 10%;
+                padding-top: 15px;
+
+                min-width: 105px;
+            }
+        }
+    }
+    .hamburger {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: $spacingLg $spacingSm;
+        img {
+            min-width: 30px;
+            max-width: 56px;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+    #mainNav {
+        display: none;
+    }
 }
 
 
 @include phone {
-   #header {
-     
-      #logo {
-         padding-left: $spacingSm;
-         #logo-image {
-            width: 100%;
-            padding-top: $spacingSm;
-            min-width: 225px;
-            opacity: 1;
-         }
-         #logo-image2 {
-            width: 100%;
-            padding-top: $spacingSm;
-            display: none;
-            min-width: 105px;
-         }
-      }
-   }
-   .hamburger {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      padding: $spacingLg $spacingSm;
-      img {
-         min-width: 30px;
-         max-width: 56px;
+    #header {
 
-         &:hover {
-            cursor: pointer;
-         }
-      }
-   }
-   #mainNav {
-      display: none;
-   }
+        #logo {
+            padding-left: $spacingSm;
+            #logo-image {
+                width: 100%;
+
+                min-width: 225px;
+                opacity: 1;
+            }
+            #logo-image2 {
+                width: 10%;
+                padding: 0;
+            }
+        }
+    }
+    .hamburger {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: $spacingBase $spacingSm;
+        img {
+            min-width: 30px;
+            max-width: 56px;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+    #mainNav {
+        display: none;
+    }
 }

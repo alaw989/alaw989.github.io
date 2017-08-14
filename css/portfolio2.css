@@ -82,68 +82,78 @@
  * in the style you are creating, this mixin will create one that matches the
  * line-height applied to the body.
  */
-/*fonts*/
-@import url("https://fonts.googleapis.com/css?family=Ropa+Sans");
 @import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
-@import url("https://fonts.googleapis.com/css?family=Fira+Sans");
-.contactFeature {
-  padding: 150px 0;
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+.container .portfolio-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
-  .contactFeature .button {
-    width: 15%;
-    min-width: 225px;
-    background: transparent;
-    border: 1px solid #6699cc;
-    border-radius: 50px;
-    margin-top: 48px;
-    -webkit-transition: background-color .5s ease-out;
-    transition: background-color .5s ease-out;
-    color: #6699cc;
-    letter-spacing: 2px;
-    font-weight: bold;
-    margin: 6px 0;
-    margin: 0 auto;
-    text-align: center;
-    text-decoration: none; }
-    .contactFeature .button:hover {
-      background: #6699cc;
-      color: #fff;
-      cursor: pointer; }
-      .contactFeature .button:hover a {
-        color: white; }
-  .contactFeature h2 {
-    text-align: center;
-    font-family: 'Ropa Sans', sans-serif;
-    color: #121212;
-    font-weight: 600px;
-    margin: 0;
-    font-size: 50px;
-    font-size: 3.125rem;
-    line-height: 1.44; }
-  .contactFeature h2:nth-child(2) {
-    padding-bottom: 24px; }
-
-@media (min-width: 1px) and (max-width: 1250px) {
-  .contactFeature h2 {
-    font-size: 28px;
-    font-size: 1.75rem;
-    line-height: 1.71429; }
-  .contactFeature input {
-    font-size: 24px;
-    font-size: 1.5rem;
-    line-height: 1;
-    width: 15%;
-    min-width: 225px;
-    letter-spacing: none;
-    padding: 6px 0;
-    color: white;
-    background-color: #6699cc; } }
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .container .portfolio-wrapper .portfolio-text {
+    text-align: left;
+    width: 100%;
+    padding: 0 24px; }
+    .container .portfolio-wrapper .portfolio-text p {
+      margin: 0 auto; }
+  .container .portfolio-wrapper .portfolio-container {
+    width: 100%;
+    padding: 0 24px; }
+    .container .portfolio-wrapper .portfolio-container p {
+      font-weight: 700;
+      text-align: center; }
+    .container .portfolio-wrapper .portfolio-container .portfolio-row {
+      width: 100%;
+      color: white;
+      text-align: left;
+      padding: 12px 0 12px 12px;
+      outline: none;
+      border: none;
+      cursor: pointer;
+      background-color: #6699cc;
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
+      border-bottom: 1px solid white; }
+      .container .portfolio-wrapper .portfolio-container .portfolio-row:hover, .container .portfolio-wrapper .portfolio-container .portfolio-row:active {
+        background-color: #ddd;
+        color: #6699cc; }
+      .container .portfolio-wrapper .portfolio-container .portfolio-row:after {
+        content: '\002B';
+        color: white;
+        float: right;
+        padding-right: 12px; }
+      .container .portfolio-wrapper .portfolio-container .portfolio-row:active:after {
+        content: "\2212"; }
+    .container .portfolio-wrapper .portfolio-container .panel {
+      padding: 0 48px;
+      background-color: white;
+      max-height: 0;
+      overflow: hidden;
+      -webkit-transition: max-height 0.2s ease-out;
+      transition: max-height 0.2s ease-out; }
+      .container .portfolio-wrapper .portfolio-container .panel ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        padding: 24px 0;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start; }
+        .container .portfolio-wrapper .portfolio-container .panel ul li {
+          margin: 0 48px 0 0;
+          padding: 12px 0;
+          list-style-type: circle; }
+          .container .portfolio-wrapper .portfolio-container .panel ul li:hover {
+            color: #f48c58;
+            cursor: pointer; }
