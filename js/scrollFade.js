@@ -12,7 +12,7 @@ function init() {
         /*console.log($("#logo-image").css("width"));
         console.log($("#mainNav").css("padding"));*/
 
-        if (distanceY > shrinkOn && width > 1124) {
+        if (distanceY > shrinkOn /*&& width > 1124*/) {
             /*$('#logo-image').fadeTo(1, 0);*/
             /* $('#logo-image').css('width', '90%'); */
            
@@ -26,7 +26,7 @@ function init() {
             /* $('#logo-image2').replaceWith( $( "#logo-image2" ) );*/
         } else if (distanceY < shrinkOn) {
             /* $('#logo-image').css('width', '100%'); */
-            $('#mainNav').css({'padding-top': '20px', 'padding-bottom': '20px'});
+           
             $('.clearfix').css('background', 'rgba(0,0,0,0)');
            
             $('#logo-image1').css('visibility', 'hidden');

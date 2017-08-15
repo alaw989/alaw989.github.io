@@ -225,9 +225,6 @@
       margin: 0 auto;
       text-align: center;
       padding: 0 24px; }
-      .services-wrapper .container .column-wrapper .services-column i {
-        font-size: 5rem;
-        color: #f48c58; }
       .services-wrapper .container .column-wrapper .services-column h5 {
         text-align: right;
         padding: 12px 0;
@@ -239,11 +236,37 @@
         margin-top: 48px; }
       .services-wrapper .container .column-wrapper .services-column ul {
         margin: 0 24px; }
-      .services-wrapper .container .column-wrapper .services-column li {
-        text-align: right;
-        list-style-type: circle;
-        line-height: 1.7rem;
-        direction: rtl; }
+        .services-wrapper .container .column-wrapper .services-column ul li {
+          text-align: right;
+          list-style-type: circle;
+          line-height: 1.7rem;
+          direction: rtl; }
       .services-wrapper .container .column-wrapper .services-column p {
         text-align: left;
         margin-top: 0; }
+
+@media (min-width: 1px) and (max-width: 768px) {
+  .services-wrapper .container .column-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .services-wrapper .container .column-wrapper .services-column {
+      padding-bottom: 48px;
+      width: 100%; }
+      .services-wrapper .container .column-wrapper .services-column:nth-child(1) {
+        padding-bottom: 24px; }
+      .services-wrapper .container .column-wrapper .services-column h5 {
+        text-align: left;
+        padding-left: 12px; }
+      .services-wrapper .container .column-wrapper .services-column ul li {
+        text-align: left;
+        direction: ltr; }
+      .services-wrapper .container .column-wrapper .services-column p {
+        text-align: justify; } }

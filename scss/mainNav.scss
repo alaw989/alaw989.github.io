@@ -4,136 +4,44 @@
 @import "mediaQueries";
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
 
+
 #header {
     background: rgba(0, 0, 0, 0.0);
-    background-repeat: repeat;
-    background-position: right, left;
     position: fixed;
-    top: 0;
     width: 100%;
     z-index: 99;
     transition: all .5s;
-    display: flex;
-    flex-direction: row;
-    #logo {
-        padding: 0;
-        width: 30%;
-        position: relative;
-        float: left;
-        padding: 15px 0 0 60px;
-        font-size: 30px;
-    }
-}
-
-
-
-@include phone {
-    .spacer {
-        height: 107px;
-    }
-}
-
-
-
-
-/*mainNav*/
-
-#mainNav {
-    width: 100%;
-    display: flex;
-    padding-top: 20px;
-    justify-content: flex-end;
-    transition: all .5s;
-    
-
-
     .container {
-       
-        margin: 0;
-        padding-left: 32%;
-
-        .level0 {
-            a {
-                background-color: $colorBrandPrimary;
-                color: $colorWhite;
-                padding: 3px $spacingBase 3px $spacingXSm;
-                border-radius: 3px;
-                &:after {
-                    content: url('/images/login.svg');
-                    width: 15%;
-                    position: absolute;
-                    padding-left: 3px;
-                }
+        .headerMain {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 $spacingSm;
+            align-items: center;
+            #logo {
+                padding: 0 $spacingXSm;
             }
-        }
-
-        ul {
-            display: block;
-            float: right;
-            text-align: right;
-            margin: 0;
-            padding-bottom: $spacingSm;
-            margin-top: 5px;
-            &>li {
-                display: inline-block;
-                position: relative;
-                & {
-                    color: white;
-                    line-height: 1;
-                    font-weight: 500;
-                    text-decoration: none;
-                    padding: 4px 14px;
-                    transition: all 0.15s ease-out;
-                    border-radius: 3px;
-                    cursor: pointer;
-                    &:hover {
-                        color: orange;
-                        
-                    }
-                }
-            }
-            ul.level2 {
-                visibility: hidden;
-                min-width: 210px;
-                background: #fff none;
-                padding: 10px 0;
-                max-height: 0;
-                transition: max-height 0.15s ease-out;
-                position: absolute;
-                top: 100%;
-                border-top: 3px solid #6699CC;
-                /* box-shadow: 10px 10px 5px #888888;*/
-                li {
-                    width: 100%;
-                    a {
-
-                        font-size: 16px;
-                        font-weight: 400;
-                        color: #000;
-                        padding: 3px 15px;
-                        display: block;
-                        transition: all 0.15s ease-out;
-                        background: transparent none;
-                        width: 100%;
-                        text-align: left;
+            #mainNav {
+                .level1 {
+                    display: inline-flex;
+                    li {
+                        padding: 35px 20px;
+                        transition: all .5s;
+                        list-style-type: none;
+                        cursor: pointer;
                         &:hover {
-                            background: #0069AC none;
-                            color: #fff;
+                            color: orange !important;
                         }
                     }
                 }
             }
-            &>li:hover>ul.level2 {
-                visibility: visible;
-                max-height: none;
+            .hamburger {
+                display: none;
             }
         }
     }
 }
 
-.hamburger {
-    display: none;
-}
+
 
 .sidenav {
     height: 100%;
@@ -154,95 +62,113 @@
     /* Place content 60px from the top */
     transition: 0.5s;
     /* 0.5 second transition effect to slide in the sidenav */
-    a {
-        padding: 8px 8px 8px 32px;
-        text-decoration: none;
+    .li-hook {
+        padding: 8px 8px 8px 32px !important;
+        list-style-type: none;
         font-size: 25px;
         color: #818181;
         display: block;
+        font-family: 'Raleway', sans-serif;
+        cursor: pointer;
+        transition: 0.3s &:hover {
+            color: #f1f1f1;
+        }
+    }
+    a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        font-family: 'Raleway', sans-serif;
         transition: 0.3s &:hover {
             color: #f1f1f1;
         }
     }
 }
 
-#main {
-    transition: margin-left .5s;
-}
 
 
 
 @include tablet {
     #header {
+        .container {
+            .headerMain {
+              #logo {
+                h3 {
+                  font-size: 1.6rem;
+                }
+              }
+                #mainNav {
+                    .level1 {
+                        display: inline-flex;
+                        li {
+                            padding: 35px 10px;
+                            color: white;
+                            transition: all 1s;
+                            list-style-type: none;
+                            font-size: .9rem;
+                            &:hover {
+                                color: orange;
+                            }
+                        }
+                    }
+                }
+                .hamburger {
+                    display: none;
+                    justify-content: flex-end;
+                    align-items: center;
+                    padding: $spacingLg $spacingSm;
+                    img {
+                        min-width: 30px;
+                        max-width: 30px;
 
-        #logo {
-            padding-left: $spacingSm;
-            #logo-image {
-                width: 100%;
-                padding-top: $spacingSm;
-                min-width: 287px;
-                opacity: 1;
-            }
-            #logo-image2 {
-                width: 10%;
-                padding-top: 15px;
-
-                min-width: 105px;
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+                }
             }
         }
-    }
-    .hamburger {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        padding: $spacingLg $spacingSm;
-        img {
-            min-width: 30px;
-            max-width: 56px;
-
-            &:hover {
-                cursor: pointer;
-            }
-        }
-    }
-    #mainNav {
-        display: none;
     }
 }
 
 
 @include phone {
     #header {
+        .container {
+            .headerMain {
+                #mainNav {
+                  display: none;
+                    .level1 {
+                        display: inline-flex;
+                        li {
+                            padding: 35px 15px;
+                            color: white;
+                            transition: all 1s;
+                            list-style-type: none;
+                            &:hover {
+                                color: orange;
+                            }
+                        }
+                    }
+                }
+                .hamburger {
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    padding: $spacingBase $spacingSm;
+                    img {
+                        min-width: 30px;
+                        max-width: 30px;
 
-        #logo {
-            padding-left: $spacingSm;
-            #logo-image {
-                width: 100%;
-
-                min-width: 225px;
-                opacity: 1;
-            }
-            #logo-image2 {
-                width: 10%;
-                padding: 0;
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+                }
             }
         }
-    }
-    .hamburger {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        padding: $spacingBase $spacingSm;
-        img {
-            min-width: 30px;
-            max-width: 56px;
-
-            &:hover {
-                cursor: pointer;
-            }
-        }
-    }
-    #mainNav {
-        display: none;
     }
 }

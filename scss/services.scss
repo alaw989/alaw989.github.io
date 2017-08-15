@@ -122,7 +122,7 @@
 */
 
 .services-wrapper {
-    background: rgb(241,241,241);
+    background: rgb(241, 241, 241);
     padding: 50px 0;
     .container {
         .column-wrapper {
@@ -137,11 +137,6 @@
                 margin: 0 auto;
                 text-align: center;
                 padding: 0 $spacingBase;
-
-                i {
-                    font-size: 5rem;
-                    color: $colorOrange;
-                }
                 h5 {
                     text-align: right;
                     padding: $spacingSm 0;
@@ -154,20 +149,54 @@
                     margin-top: $spacingLg;
                 }
                 ul {
-                      margin: 0 $spacingBase;
-                     
+                    margin: 0 $spacingBase;
+                    li {
+                        text-align: right;
+                        list-style-type: circle;
+                        line-height: 1.7rem;
+                        direction: rtl;
+                    }
                 }
 
-                li {
-                    text-align: right;
-                    list-style-type: circle;
-                    line-height: 1.7rem;
-                    direction:rtl;
-                    
-                }
+
                 p {
                     text-align: left;
                     margin-top: 0;
+                }
+            }
+        }
+    }
+}
+
+@include phone {
+    .services-wrapper {
+
+        .container {
+            .column-wrapper {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                .services-column {
+                    padding-bottom: $spacingLg;
+                    
+                    width: 100%;
+                    &:nth-child(1) {
+                        padding-bottom: $spacingBase;
+                    }
+                    h5 {
+                        text-align: left;
+                        padding-left: $spacingSm;
+                    }
+                    ul {
+                        li {
+                            text-align: left;
+                            direction: ltr;
+                        }
+                    }
+
+                    p {
+                        text-align: justify;
+                    }
                 }
             }
         }

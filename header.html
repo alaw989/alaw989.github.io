@@ -3,11 +3,12 @@
   <script type="text/javascript" src="js/scrollFade.js"></script>   
 </head>
 <div id="mySidenav" class="sidenav">
-   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-   <a href="/portfolio.html">Portfolio</a>
-   <a href="/careers.html">Careers</a>
-   <a href="/services.html">Services</a>
-   <a href="/contactus.html">Contact</a>
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <li class="li-hook" id="about">About</li>
+    <li class="li-hook" id="services">Services</li>
+    <li class="li-hook" id="portfolio">Portfolio</li>
+    <li class="li-hook" id="contact">Contact us</li>
+    <li class="li-hook" id="ftp">FTP Login</li>
 </div>
 
 
@@ -48,36 +49,31 @@ $("#portfolio").click(function() {
 });
 
 </script>
-
 <div id="main">
     <div id="header" class="clearfix">
         <div class="container">
-            <div id="logo">
-                <h3>VP & Associates, Inc.</h3></a>
-            </div>
-            <!--logo-->
-            <div class="hamburger" onclick="openNav()">
-                <img src="/images/hamburger.svg">
-            </div>
-            <div id="mainNav">
-                <div class="container">
+            <div class="headerMain">
+                <div id="logo">
+                    <h3>VP & Associates, Inc.</h3></a>
+                </div>
+                <div id="mainNav">
                     <ul class="level1">
                         <li class="li-hook" id="about">About</li>
                         <li class="li-hook" id="services">Services</li>
                         <li class="li-hook" id="portfolio">Portfolio</li>
-                        <li class="li-hook" id="careers">Careers</li>
                         <li class="li-hook" id="contact">Contact us</li>
                         <li class="li-hook" id="ftp">FTP Login</li>
                     </ul>
-                    <!--end level1-->
                 </div>
-                <!--utility container-->
+                <div class="hamburger" onclick="openNav()">
+                    <img src="/images/hamburger.png">
+                </div>
             </div>
-            <!--mainNav-->
         </div>
-        <!--header container-->
+        <!--mainNav-->
     </div>
-    <!--header-->
+    <!--header container-->
 </div>
-
+<!--header-->
+</div>
 </html>

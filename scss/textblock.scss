@@ -20,17 +20,21 @@
             flex-direction: row;
             justify-content: space-around;
             .textblock-column {
-               hr {
-                  margin:  10px 0 0 0;
-               }
                 display: flex;
                 flex-direction: column;
                 width: 100%;
                 padding: 0 0 0 $spacingBase;
+                justify-content: center;
+
+                hr {
+                    margin: 10px 0 0 0;
+                }
                 img {
-                  padding: $spacingSm;
-                  box-shadow: 0 0 40px $colorBrandPrimary;
-                  margin: 0 $spacingBase 0 0 ;
+                    padding: $spacingSm;
+                    box-shadow: 0 0 40px $colorBrandPrimary;
+                    margin: 0 $spacingBase 0 0;
+                    
+
                 }
             }
         }
@@ -38,52 +42,34 @@
 }
 
 
-@include tablet {
-   .containerbg {
-         display: flex;
-         justify-content: center;
-         h2 {
-            padding: $spacingXSm;
-            align-self: center;
-            margin: 0;
-         }
-      .textblock {
-         flex-direction: column;
-         justify-content: center;
-         p {
-            font-size: 16px;
-            text-align: justify;
-            order: 2;
-            line-height: 24px;
-         }
-         img {
-            order: 1;
-         }
-      }
-   }
-}
 
-@include phone {
-   .containerbg {
-      width:100%;
-         display: flex;
-         justify-content: center;
-         h2 {
-            padding: $spacingXSm;
-            align-self: center;
-            margin: 0;
-         }
-      .textblock {
-         flex-direction: column;
-         justify-content: center;
-         p {
-            text-align: justify;
-            order: 2;
-            line-height: 24px;
-         }
-         img {
-            order: 1;
-         }
-      }
-   }
+
+@include tablet {
+    .containerbg {
+        .container {
+            .textblock-wrapper {
+                display: flex;
+                flex-direction: column;
+                .textblock-column {
+                  width: 100%;
+                  margin: 0 auto;
+                  padding: 0;
+                  h5 {
+                    text-align: center;
+                    padding: $spacingBase 0;
+                  }
+                  hr {
+                    margin: 0 auto;
+                  }
+                  p {
+                    text-align: justify;
+                  }
+                  img {
+                    width: 80%;
+                    margin: 0 auto;
+                  }
+                }
+            }
+        }
+    }
 }
