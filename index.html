@@ -45,16 +45,6 @@
 
 <body>
 
-<!--<script>
-$(document).ready(function(){
-  $('.bxslider').bxSlider();
-});
-</script>-->
-
-
-
-
-
 	<div id="site_wrap">
     	<div id="site_inner">
     	<div id="header"></div>
@@ -328,9 +318,7 @@ function carousel() {
     <h2 id="portfolio-header" class="animated fadeInDown">Our Work</h2>
     <hr>
     <div class="portfolio-wrapper">
-       
         <div class="portfolio-container">
-            
             <button class="portfolio-row">Industrial</button>
             <div class="panel">
                 <ul>
@@ -412,7 +400,6 @@ function carousel() {
                     <li>Metso ISO.pdf</li>
                 </ul>
             </div>
-
         </div>
          <div class="portfolio-text">
             <p>Our team has successfully detailed a variety of steel structures from 10 tons to 1,500 tons using the latest 3D modeling software, SDS2. We detail per AISC standard and provide all CNC data including ABM, DXF, and KISS files required for fabrication.</p>
@@ -438,6 +425,33 @@ function carousel() {
         <h2>Let's Work Together. Call <span style="font-weight: bold;">813.247.3835</span></h2>
     </div>
 </div>
+
+
+<div class="form-wrapper">
+    <div class="container">
+        <h2 id="portfolio-header" class="animated fadeInDown">Contact Us</h2>
+        <hr>
+        <form method="post" name="myemailform" action="form-to-email.php">
+            <p>
+                <label for='name'>Enter Name: </label>
+                <br>
+                <input type="text" name="name">
+            </p>
+            <p>
+                <label for='email'>Enter Email Address:</label>
+                <br>
+                <input type="text" name="email">
+            </p>
+            <p>
+                <label for='message'>Enter Message:</label>
+                <br>
+                <textarea name="message"></textarea>
+            </p>
+            <input type="submit" name='submit' value="submit">
+        </form>
+    </div>
+</div>
+
 
 
 <!--
@@ -571,5 +585,4 @@ window.onload = init();
 
 
 
-</html>
-
+    </html>

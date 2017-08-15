@@ -181,7 +181,15 @@
             -ms-flex-order: 1;
                 order: 1; }
       .container .portfolio-wrapper .portfolio-container .portfolio-row {
-        width: 80%; }
+        width: 80%; } }
+      @media (min-width: 1px) and (max-width: 1250px) and (min-width: 1px) and (max-width: 768px) {
+        .container .portfolio-wrapper .portfolio-container .portfolio-row {
+          width: 100%; } }
+
+@media (min-width: 1px) and (max-width: 1250px) {
       .container .portfolio-wrapper .portfolio-container .panel ul {
         width: 80%;
         margin: 0 auto; } }
+      @media (min-width: 1px) and (max-width: 1250px) and (min-width: 1px) and (max-width: 1250px) {
+        .container .portfolio-wrapper .portfolio-container .panel ul {
+          width: 100%; } }

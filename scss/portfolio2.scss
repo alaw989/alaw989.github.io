@@ -103,6 +103,9 @@
                 }
                 .portfolio-row {
                     width: 80%;
+                    @include phone {
+                        width: 100%;
+                    }
 
                 }
                 .panel {
@@ -110,6 +113,9 @@
                     ul {
                         width: 80%;
                         margin: 0 auto;
+                        @include tablet {
+                            width: 100%;
+                        }
                     }
                 }
             }
