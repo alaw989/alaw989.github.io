@@ -1,0 +1,124 @@
+@import "spacingUnits";
+@import "colors";
+@import "fontSize";
+@import "mediaQueries";
+
+
+.container {
+    .portfolio-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: white;
+        .portfolio-text {
+            text-align: left;
+            width: 100%;
+            padding: 0 $spacingBase;
+            p {
+                margin: 0 auto;
+            }
+        }
+
+        .portfolio-container {
+            width: 100%;
+            padding: 0 $spacingBase;
+            p {
+                font-weight: 700;
+                text-align: center;
+
+            }
+            .portfolio-row {
+                width: 100%;
+                color: white;
+                text-align: left;
+                padding: $spacingSm 0 $spacingSm $spacingSm;
+                outline: none;
+                border: none;
+                cursor: pointer;
+                background-color: $colorBrandPrimary;
+                transition: 0.4s;
+                border-bottom: 1px solid white;
+                &:hover,
+                &:active {
+                    background-color: #ddd;
+                    color: $colorBrandPrimary;
+                }
+                &:after {
+                    content: '\002B';
+                    color: white;
+                    float: right;
+                    padding-right: $spacingSm;
+                }
+                &:active:after {
+                    content: "\2212";
+                }
+            }
+            .panel {
+                padding: 0 $spacingLg;
+                background-color: white;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.2s ease-out;
+                ul {
+                    display: flex;
+                    flex-direction: row;
+                    padding: $spacingBase 0;
+                    flex-wrap: wrap;
+                    justify-content: flex-start;
+
+
+                    li {
+                        margin: 0 $spacingLg 0 0;
+                        padding: $spacingSm 0;
+                        list-style-type: circle;
+                        &:hover {
+                            color: $colorOrange;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include tablet {
+    .container {
+        .portfolio-wrapper {
+            display: flex;
+            flex-direction: column;
+            .portfolio-text {
+                width: 100%;
+                margin: 0 auto;
+            }
+            .portfolio-container {
+                text-align: center;
+                &:nth-child(1) {
+                    order: 2;
+                    padding-top: $spacingBase;
+                }
+                &:nth-child(2) {
+                    order: 1;
+                    
+                }
+                .portfolio-row {
+                    width: 80%;
+                    @include phone {
+                        width: 100%;
+                    }
+
+                }
+                .panel {
+                   
+                    ul {
+                        width: 80%;
+                        margin: 0 auto;
+                        @include tablet {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

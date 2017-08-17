@@ -1,0 +1,195 @@
+/* SPACING UNITS
+========================================================================== */
+/*
+* Try and use only these values to set typography spacing (margins) across site for consistency.
+*
+* $spacingBase is the same as default line height above. This value is then increased/decreased by halves.
+*
+* These values can be used in classes for tweaking spacing and are used in _base/helper-classes.scss
+* styles for one-off use cases where an entire new class is not necessary
+*/
+/*
+ * Headings sizes (in pixels).
+ */
+/*
+ * Ancillary sizes (in pixels).
+ */
+/* ============================================================================================== */
+/* ============================================================================================== */
+/*
+ * Monochrome colors
+ */
+/*
+ * Text elements
+ */
+/*
+ * Generic border color for consistency
+ */
+/* FONT-SIZE
+========================================================================== */
+/*
+ * Create a fully formed type style (sizing and vertical rhythm) by passing in a
+ * single value, e.g.:
+ *
+   `@include font-size(10px);`
+ *
+ * Thanks to @redclov3r for the `line-height` Sass:
+ * twitter.com/redclov3r/status/250301539321798657
+ *
+ * Basically what this does is add font size (in rems) and if no line-height is declared
+ * in the style you are creating, this mixin will create one that matches the
+ * line-height applied to the body.
+ */
+/* SPACING UNITS
+========================================================================== */
+/*
+* Try and use only these values to set typography spacing (margins) across site for consistency.
+*
+* $spacingBase is the same as default line height above. This value is then increased/decreased by halves.
+*
+* These values can be used in classes for tweaking spacing and are used in _base/helper-classes.scss
+* styles for one-off use cases where an entire new class is not necessary
+*/
+/*
+ * Headings sizes (in pixels).
+ */
+/*
+ * Ancillary sizes (in pixels).
+ */
+/* ============================================================================================== */
+/* ============================================================================================== */
+/*
+ * Monochrome colors
+ */
+/*
+ * Text elements
+ */
+/*
+ * Generic border color for consistency
+ */
+/* FONT-SIZE
+========================================================================== */
+/*
+ * Create a fully formed type style (sizing and vertical rhythm) by passing in a
+ * single value, e.g.:
+ *
+   `@include font-size(10px);`
+ *
+ * Thanks to @redclov3r for the `line-height` Sass:
+ * twitter.com/redclov3r/status/250301539321798657
+ *
+ * Basically what this does is add font size (in rems) and if no line-height is declared
+ * in the style you are creating, this mixin will create one that matches the
+ * line-height applied to the body.
+ */
+.container .portfolio-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: white; }
+  .container .portfolio-wrapper .portfolio-text {
+    text-align: left;
+    width: 100%;
+    padding: 0 24px; }
+    .container .portfolio-wrapper .portfolio-text p {
+      margin: 0 auto; }
+  .container .portfolio-wrapper .portfolio-container {
+    width: 100%;
+    padding: 0 24px; }
+    .container .portfolio-wrapper .portfolio-container p {
+      font-weight: 700;
+      text-align: center; }
+    .container .portfolio-wrapper .portfolio-container .portfolio-row {
+      width: 100%;
+      color: white;
+      text-align: left;
+      padding: 12px 0 12px 12px;
+      outline: none;
+      border: none;
+      cursor: pointer;
+      background-color: #6699cc;
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
+      border-bottom: 1px solid white; }
+      .container .portfolio-wrapper .portfolio-container .portfolio-row:hover, .container .portfolio-wrapper .portfolio-container .portfolio-row:active {
+        background-color: #ddd;
+        color: #6699cc; }
+      .container .portfolio-wrapper .portfolio-container .portfolio-row:after {
+        content: '\002B';
+        color: white;
+        float: right;
+        padding-right: 12px; }
+      .container .portfolio-wrapper .portfolio-container .portfolio-row:active:after {
+        content: "\2212"; }
+    .container .portfolio-wrapper .portfolio-container .panel {
+      padding: 0 48px;
+      background-color: white;
+      max-height: 0;
+      overflow: hidden;
+      -webkit-transition: max-height 0.2s ease-out;
+      transition: max-height 0.2s ease-out; }
+      .container .portfolio-wrapper .portfolio-container .panel ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        padding: 24px 0;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start; }
+        .container .portfolio-wrapper .portfolio-container .panel ul li {
+          margin: 0 48px 0 0;
+          padding: 12px 0;
+          list-style-type: circle; }
+          .container .portfolio-wrapper .portfolio-container .panel ul li:hover {
+            color: #f48c58;
+            cursor: pointer; }
+
+@media (min-width: 1px) and (max-width: 1250px) {
+  .container .portfolio-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .container .portfolio-wrapper .portfolio-text {
+      width: 100%;
+      margin: 0 auto; }
+    .container .portfolio-wrapper .portfolio-container {
+      text-align: center; }
+      .container .portfolio-wrapper .portfolio-container:nth-child(1) {
+        -webkit-box-ordinal-group: 3;
+            -ms-flex-order: 2;
+                order: 2;
+        padding-top: 24px; }
+      .container .portfolio-wrapper .portfolio-container:nth-child(2) {
+        -webkit-box-ordinal-group: 2;
+            -ms-flex-order: 1;
+                order: 1; }
+      .container .portfolio-wrapper .portfolio-container .portfolio-row {
+        width: 80%; } }
+      @media (min-width: 1px) and (max-width: 1250px) and (min-width: 1px) and (max-width: 768px) {
+        .container .portfolio-wrapper .portfolio-container .portfolio-row {
+          width: 100%; } }
+
+@media (min-width: 1px) and (max-width: 1250px) {
+      .container .portfolio-wrapper .portfolio-container .panel ul {
+        width: 80%;
+        margin: 0 auto; } }
+      @media (min-width: 1px) and (max-width: 1250px) and (min-width: 1px) and (max-width: 1250px) {
+        .container .portfolio-wrapper .portfolio-container .panel ul {
+          width: 100%; } }
