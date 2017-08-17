@@ -121,6 +121,10 @@
 }
 */
 
+
+/*----------------------------------------------------------------------------------------------------------------------*/
+/*
+
 .services-wrapper {
     background: rgb(241, 241, 241);
     padding: 50px 0;
@@ -155,6 +159,10 @@
                         list-style-type: circle;
                         line-height: 1.7rem;
                         direction: rtl;
+                        
+                      
+                       
+
                     }
                 }
 
@@ -197,6 +205,82 @@
                     p {
                         text-align: justify;
                     }
+                }
+            }
+        }
+    }
+}
+
+*/
+/*-----------------------------------------------------------------------------------------------------------------*/
+
+.services-wrapper {
+    background: rgb(241, 241, 241);
+    padding: 50px 0;
+    .container {
+        .services-header {
+
+        }
+        hr {
+            margin-bottom: $spacingSm; 
+        }
+        .special-p {
+            margin: 0;
+            text-align: center;
+            padding-bottom: $spacingLg;
+            font-size: 1.1rem;
+        }
+        .list-wrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            .inner {
+                display: flex;
+                flex-direction: column;
+
+                .heading-wrapper {
+                    h5 {
+                        text-align: left;
+                        background-color: $colorBrandPrimary;
+                        width: 100%;
+                        color: white;
+                        padding: $spacingSm 0 $spacingSm $spacingSm;
+                    }
+                }
+                .list {
+                    display: flex;
+                    flex-direction: row;
+                   
+
+                    ol {
+                        li {
+                            list-style-type: circle;
+                            line-height: 1.5rem;
+                        }
+                    }
+                }
+            }
+        }
+        .featureBlock-wrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            padding: $spacingBase 0;
+            align-items: flex-start;
+
+            .featureBlock {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                padding: 0;
+                figure {
+                    img {
+                        border-radius: 20px 20px 20px 0;
+                    }
+                }
+                p {
+                    text-align: left;
+                    padding: $spacingSm 40px 0 40px;
                 }
             }
         }

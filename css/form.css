@@ -82,68 +82,17 @@
  * in the style you are creating, this mixin will create one that matches the
  * line-height applied to the body.
  */
-.containerbg {
-  /* background: linear-gradient(0deg,rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url('/images/sunset.jpg') center fixed;*/
-  background: white;
-  background-repeat: no-repeat;
-  width: 100%;
-  padding: 48px 0; }
-  .containerbg .container .textblock-wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-pack: distribute;
-        justify-content: space-around; }
-    .containerbg .container .textblock-wrapper .textblock-column {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
-      width: 100%;
-      padding: 0 0 0 24px;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center; }
-      .containerbg .container .textblock-wrapper .textblock-column p {
-        font-size: 1rem;
-        line-height: 1.9rem; }
-      .containerbg .container .textblock-wrapper .textblock-column hr {
-        margin: 10px 0 0 0; }
-      .containerbg .container .textblock-wrapper .textblock-column img {
-        padding: 12px;
-        -webkit-box-shadow: 0 0 40px #6699cc;
-                box-shadow: 0 0 40px #6699cc;
-        margin: 0 24px 0 0; }
-
-@media (min-width: 1px) and (max-width: 1250px) {
-  .containerbg .container .textblock-wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column; }
-    .containerbg .container .textblock-wrapper .textblock-column {
-      width: 100%;
-      margin: 0 auto;
-      padding: 0 24px; }
-      .containerbg .container .textblock-wrapper .textblock-column h5 {
-        text-align: center;
-        padding: 24px 0; }
-        .containerbg .container .textblock-wrapper .textblock-column h5:nth-child(1) {
-          padding: 48px 0 24px 0; }
-      .containerbg .container .textblock-wrapper .textblock-column hr {
-        margin: 0 auto; }
-      .containerbg .container .textblock-wrapper .textblock-column p {
-        text-align: justify; }
-      .containerbg .container .textblock-wrapper .textblock-column img {
-        width: 80%;
-        margin: 0 auto; } }
+.form-wrapper {
+  background: #f1f1f1; }
+  .form-wrapper .container form {
+    text-align: center;
+    margin: 0;
+    padding-bottom: 48px; }
+    .form-wrapper .container form input {
+      padding: 6px 150px 6px 12px; }
+    .form-wrapper .container form textarea {
+      padding: 48px 200px; }
+    .form-wrapper .container form input[type="submit"] {
+      padding: 6px;
+      background: none;
+      border: 1px solid black; }
