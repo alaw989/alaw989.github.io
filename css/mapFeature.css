@@ -300,6 +300,22 @@ hr {
     .slider-wrapper .logo-center img {
       margin: auto;
       display: block; }
+  .slider-wrapper .info-button {
+    position: absolute;
+    top: 60%;
+    width: 100%; }
+    .slider-wrapper .info-button input {
+      margin: auto;
+      display: block;
+      background: rgba(0, 0, 0, 0.4);
+      color: white;
+      border: 1px solid white;
+      padding: 12px;
+      -webkit-transition: all 0.5s;
+      transition: all 0.5s;
+      cursor: pointer; }
+      .slider-wrapper .info-button input:hover {
+        background: rgba(0, 0, 0, 0.6); }
 
 .parallax-wrapper {
   padding: 100px 0 50px 0;
