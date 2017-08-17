@@ -1,0 +1,367 @@
+@import "spacingUnits";
+@import "colors";
+@import "fontSize";
+@import "mediaQueries";
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+
+
+.two-column {
+
+
+   .left-column {
+      -webkit-box-flex: 2;
+      -ms-flex: 2 2 25%;
+      flex: 2 2 25%;
+      padding-right: $spacingBase;
+      h5 {
+         font-family: 'Roboto Condensed', sans-serif;
+         letting-spacing: normal;
+         margin: 0;
+         color: $colorHeading;
+      }
+      p {
+         font-family: 'Open Sans', sans-serif;
+         letting-spacing: normal;
+         @include font-size(18px);
+         color: $colorParagraph;
+         text-align: justify;
+      }
+      ul {
+         line-height: 1.42857143;
+         li {
+            font-family: 'Roboto Condensed', sans-serif;
+            letting-spacing: normal;
+            @include font-size(18px);
+            color: #5c6873;
+         }
+      }
+      .questionBox {
+         background: url('/images/question_mark.png') no-repeat;
+         background-position: right bottom;
+         background-size: cover;
+         display: -webkit-box;
+         display: -ms-flexbox;
+         display: flex;
+         -webkit-box-orient: vertical;
+         -webkit-box-direction: normal;
+         -ms-flex-direction: column;
+         flex-direction: column;
+         padding: $spacingBase $spacingSm;
+         hr {
+            width: 10%;
+            margin-left: 0;
+            border-top: 3px solid $colorOrange;
+            margin: $spacingBase 0;
+         }
+         h5 {}
+         button {
+            width: 50%;
+            background: -webkit-gradient(linear, left top, right top, from(rgba(122, 188, 255, 1)), color-stop(44%, rgba(96, 171, 248, 1)), to(rgba(64, 150, 238, 1)));
+            background: linear-gradient(to right, rgba(122, 188, 255, 1) 0%, rgba(96, 171, 248, 1) 44%, rgba(64, 150, 238, 1) 100%);
+            border: none;
+            min-width: 174px;
+            border-radius: 3px;
+            box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+            &:hover {
+               box-shadow: 4px;
+            }
+            a {
+               text-decoration: none;
+            }
+            p {
+               font-family: 'Roboto Condensed', sans-serif;
+               @include font-size(19px);
+               text-align: center;
+
+               color: $colorWhite;
+               margin: $spacingXSm 0;
+            }
+         }
+         p {
+            font-family: 'Roboto Condensed', sans-serif;
+            @include font-size(19px);
+            margin-right: 20%;
+         }
+      }
+   }
+   .right-column {
+ 
+      h2 {
+         text-align: center;
+         position: relative;
+         z-index: -1;
+         padding: 0;
+         font-family: 'Roboto Condensed', sans-serif;
+         margin: 0;
+         letter-spacing: 1.5px;
+         color: $colorHeading;
+      }
+      hr {
+         width: 10%;
+         border-top: 3px double rgba(64, 150, 238, 1);
+      }
+      h5 {
+         font-family: 'Roboto Condensed', sans-serif;
+         margin: $spacingSm 0;
+         color: $colorWhite;
+         visibility: hidden;
+      }
+      h3 {
+         font-family: 'Roboto Condensed', sans-serif;
+         letter-spacing: 1.5px;
+         color: $colorHeading;
+         text-align: center;
+         padding: $spacingBase 0 $spacingSm 0;
+         @include font-size(40px);
+      }
+      p {
+         margin: 0;
+         padding: 0;
+         text-align: center;
+      }
+
+   
+
+      /*.buttonGrid1, .buttonGrid2, .buttonGrid3, .buttonGrid4 {
+                     display: none;
+                    }*/
+      .specialWrapper {
+         width: 100%;
+         flex-direction: row;
+         display: flex;
+         justify-content: center;
+         flex: 0 1 auto;
+         overflow: hidden;
+
+         .hoverWrap {
+            width: 45%;
+            max-width: 400px; 
+            overflow: hidden;
+            max-height: 320px;
+            margin: 0 $spacingLg;
+         }
+         .specialImage1 {
+            background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.5)), url('/images/2guys.jpg') no-repeat;
+            transition: transform .4s ease-out;
+            transform: scale(1, 1);
+            width: 100%;
+            @include phone {
+               padding: 20px 0;
+            }
+            @include tablet {
+               padding: 20px 0;
+            }
+            h5 {
+               visibility: visible;
+               opacity: 1;
+               transition: opacity .25s ease-in-out;
+               align-self: center;
+               text-align: center;
+               position: relative;
+               top: 150px;
+               @include font-size(30px);
+               margin: 0;
+               &:after {
+                  content: url('/images/plus.svg');
+                  position: relative;
+                  bottom: 110px;
+                  width: 20%;
+                  display: block;
+                  margin: 0 auto;
+               }
+            }
+            ul {
+               visibility: visible;
+               opacity: 0;
+               transition: opacity .25s ease-in-out;
+               text-align: left;
+               position: relative;
+               margin: 0 auto;
+               bottom: 100px;
+               margin-left: $spacingSm;
+               list-style-image: url(/images/check.png);
+               padding-left: 40px;
+            }
+            @include desktop {
+               &:hover {
+                  transform: scale(1.1, 1.1);
+                  overflow: hidden;
+                  background: -webkit-gradient(linear, left top, left bottom, from(rgba($colorBrandPrimaryDark, 0.7)), to(rgba($colorBrandPrimaryDark, 0.7))), url('/images/2guys.jpg') no-repeat;
+                  background: linear-gradient(rgba($colorBrandPrimaryDark, 0.7), rgba($colorBrandPrimaryDark, 0.7)), url('/images/2guys.jpg') no-repeat;
+                  h5 {
+                     visibility: hidden;
+                     opacity: 0;
+                  }
+                  ul {
+                     opacity: 1;
+                  }
+               }
+            }
+         }
+         .specialImage2 {
+            background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.45)), to(rgba(0, 0, 0, 0.5))), url('/images/3guys.jpg') no-repeat;
+            background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.5)), url('/images/3guys.jpg') no-repeat;
+            -webkit-transition: -webkit-transform .4s ease-out;
+            transition: -webkit-transform .4s ease-out;
+            transition: transform .4s ease-out;
+            transition: transform .4s ease-out, -webkit-transform .4s ease-out;
+            -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+            width: 100%;
+            padding-bottom: 70px;
+            @include phone {
+               padding: 20px 0;
+               
+            }
+            @include tablet {
+               padding: 20px 0;
+
+            }
+            p {
+               color: $colorWhite;
+            }
+            h5 {
+               visibility: visible;
+               opacity: 1;
+               -webkit-transition: opacity .25s ease-in-out;
+               transition: opacity .25s ease-in-out;
+               align-self: center;
+               text-align: center;
+               position: relative;
+               top: 150px;
+               @include font-size(30px);
+               margin: 0;
+               &:after {
+                  content: url('/images/plus.svg');
+                  position: relative;
+                  bottom: 110px;
+                  width: 20%;
+                  display: block;
+                  margin: 0 auto;
+               }
+            }
+            ul {
+               visibility: visible;
+               opacity: 0;
+               -webkit-transition: opacity .25s ease-in-out;
+               transition: opacity .25s ease-in-out;
+               text-align: left;
+               position: relative;
+               bottom: 50px;
+               margin: 0 auto;
+               margin-left: $spacingSm;
+               list-style-image: url(/images/check.png);
+               padding-left: 40px;
+            }
+            @include desktop {
+               &:hover {
+                  -webkit-transform: scale(1.1, 1.1);
+                  transform: scale(1.1, 1.1);
+                  overflow: hidden;
+                  background: -webkit-gradient(linear, left top, left bottom, from(rgba($colorBrandPrimaryDark, 0.7)), to(rgba($colorBrandPrimaryDark, 0.7))), url('/images/3guys.jpg') no-repeat;
+                  background: linear-gradient(rgba($colorBrandPrimaryDark, 0.7), rgba($colorBrandPrimaryDark, 0.7)), url('/images/3guys.jpg') no-repeat;
+                  h5 {
+                     visibility: hidden;
+                     opacity: 0;
+                  }
+                  ul {
+                     opacity: 1;
+                  }
+               }
+            }
+         }
+      }
+      ul {
+         line-height: 1.42857143;
+         visibility: hidden;
+         li {
+            font-family: 'Roboto Condensed', sans-serif;
+            letting-spacing: normal;
+            @include font-size(15px);
+            color: $colorWhite;
+         }
+      }
+      p {
+         margin: 0 auto;
+         text-align: justify;
+      }
+      figure {
+         width: 100%;
+         padding: $spacingBase 0;
+         margin: 0;
+         img {
+            width: 100%;
+            max-height: 380px;
+         }
+      }
+   }
+}
+
+
+@include tablet {
+   .two-column {
+      .left-column {
+         display: none;
+      }
+      .right-column {
+         .portfolioRow {
+            justify-content: space-around;
+         }
+         .buttonContainer { 
+            height: 800px;
+         }
+         .specialWrapper {
+            justify-content: space-around;
+            .hoverWrap {
+               min-width: 347px;
+               h5 {
+                  display: none;
+               }
+               ul {
+                  opacity: 1;
+                  bottom: 0;
+                  margin: 0;
+               }
+            }
+            .specialImage1 {
+               padding-bottom: 200px;
+               background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('/images/2guys.jpg') no-repeat;
+            }
+            .specialImage2 {
+               padding-bottom: 200px;
+               background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('/images/3guys.jpg') no-repeat;
+            }
+         }
+         p {
+            padding: $spacingBase $spacingLg;
+            text-align: justify;
+         }
+      }
+   }
+}
+
+@include phone {
+   .two-column {
+      .right-column {
+         .buttonContainer { 
+            height: 1000px;
+         }
+         .specialWrapper {
+            align-items: center;
+            flex-direction: column;
+            .hoverWrap {
+               min-width: 347px;
+               margin: $spacingSm;
+            }
+         }
+         p {
+            text-align: justify;
+            padding: $spacingBase $spacingLg;
+         }
+      }
+   }
+}
+
+
