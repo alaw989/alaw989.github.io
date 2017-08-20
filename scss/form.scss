@@ -10,17 +10,55 @@
             text-align: center;
             margin: 0;
             padding-bottom: $spacingLg;
+           @include phone {
+            p {
+                margin: 0 0;
+            }
+           }
             input {
-            	padding: $spacingXSm 150px $spacingXSm $spacingSm;
+                padding: 8px 250px 8px $spacingSm;
+                border: 1px solid #d6e1e5;
+                font-size: 1rem;
+                color: #808080;
+                margin: 0 $spacingSm;
+               @include phone {
+                    margin: $spacingXSm 0;
+               }
             }
             textarea {
-                padding: $spacingLg 200px;
+                padding: $spacingLg 0;
+                border: 1px solid #d6e1e5;
+                width: 79%;
             }
             input[type="submit"] {
-            	padding: $spacingXSm;
-            	background: none;
-            	border: 1px solid black;
-            	} 
+                padding: $spacingSm;
+                background: orange;
+                color: white;
+                border: none;
+                border-radius: 3px;
+                cursor: pointer;
+                transition: background-color .5s;
+                margin: $spacingBase 0 0 0;
+                &:hover {
+                    background-color: #FF8C00;
+                }
+            }
+        }
+        .contact-wrapper {
+            display: flex;
+            flex-direction: row;
+            padding: 0 0 70px 0;
+            .contact-block {
+                text-align: center;
+                padding: 0 30px;
+                flex: 1 1 100%;
+                hr {
+                    margin: $spacingSm auto;
+                }
+                p {
+                    margin: 0;
+                }
+            }
         }
     }
 }

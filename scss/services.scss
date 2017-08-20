@@ -216,7 +216,7 @@
 
 .services-wrapper {
     background: rgb(241, 241, 241);
-    padding: 50px 0;
+    padding: 0 0 50px 0;
     .container {
         .services-header {
 
@@ -234,6 +234,9 @@
             display: flex;
             flex-direction: row;
             justify-content: space-around;
+            @include phone {
+                flex-direction: column;
+            }
             .inner {
                 display: flex;
                 flex-direction: column;
@@ -250,12 +253,20 @@
                 .list {
                     display: flex;
                     flex-direction: row;
-                   
-
+                   @include phone {
+                    flex-direction: column;
+                    padding: $spacingSm 0;
+                   }
                     ol {
+                        @include phone {
+                            margin: 0;
+                        }
                         li {
                             list-style-type: circle;
                             line-height: 1.5rem;
+                            @include phone {
+                                font-size: .9rem;
+                            }
                         }
                     }
                 }
@@ -267,20 +278,37 @@
             justify-content: center;
             padding: $spacingBase 0;
             align-items: flex-start;
-
+            width: 100%;
+            @include phone {
+                flex-direction: column;
+            }
             .featureBlock {
                 display: flex;
                 flex-direction: column;
                 text-align: center;
                 padding: 0;
+                width: 100%;
                 figure {
+                    @include phone {
+                        display: block;
+                        margin: 0 auto;
+                        width: 100%;
+                    }
                     img {
-                        border-radius: 20px 20px 20px 0;
+                        border-radius: 20px 20px 20px 0;  
+                        width: 100%;
+                        @include phone {
+                            width: 75%;
+                        }
                     }
                 }
                 p {
                     text-align: left;
                     padding: $spacingSm 40px 0 40px;
+                    @include phone {
+                         
+                        padding: $spacingSm 80px $spacingBase 80px;
+                    }
                 }
             }
         }

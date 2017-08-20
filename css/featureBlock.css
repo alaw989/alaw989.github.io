@@ -82,105 +82,116 @@
  * in the style you are creating, this mixin will create one that matches the
  * line-height applied to the body.
  */
-@import url("https://fonts.googleapis.com/css?family=Ropa+Sans");
-@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
+/*
+@import url('https://fonts.googleapis.com/css?family=Ropa+Sans');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+
+
 .featureBlock-Heading {
-  padding: 48px 0 24px 0;
-  text-align: center;
-  color: #334d66;
-  font-size: 35px;
-  font-size: 2.1875rem;
-  line-height: 1.37143;
-  font-family: 'Roboto Condensed', sans-serif;
-  letter-spacing: 2px; }
+   padding: $spacingLg 0 $spacingBase 0;
+   text-align: center;
+   color: $colorBrandPrimaryDarker;
+   @include font-size(35px);
+   font-family: 'Roboto Condensed', sans-serif;
+   letter-spacing: 2px;
+}
 
 .featureBlock-container {
-  padding: 12px 0; }
+  padding: $spacingSm 0;
+}
 
-.featureBlock {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 0 0 48px 0;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-flex: 1;
-      -ms-flex: auto auto auto;
-          flex: auto auto auto;
-  -ms-flex-line-pack: stretch;
-      align-content: stretch;
-  width: 100%; }
-  .featureBlock figure {
-    max-width: 370px;
-    margin: 0 12px;
-    position: relative;
-    overflow: hidden;
-    -ms-flex-preferred-size: auto;
-        flex-basis: auto;
-    -ms-flex-negative: 1;
-        flex-shrink: 1;
-    max-height: 250px; }
-    .featureBlock figure figcaption {
-      height: 20%;
-      -webkit-transition: all .5s  ease-out;
-      transition: all .5s  ease-out; }
-    .featureBlock figure .hiddenText {
-      -webkit-transition: all 1s ease-out;
-      transition: all 1s ease-out; }
-      .featureBlock figure .hiddenText ul {
-        list-style-image: url(/images/check.png); }
-        .featureBlock figure .hiddenText ul li {
-          font-family: 'Roboto Condensed', sans-serif; }
-    .featureBlock figure:hover figcaption {
-      height: 100%; }
-    .featureBlock figure:hover .hiddenText {
-      display: block; }
-    .featureBlock figure figcaption {
-      padding: 12px 0 12px 0;
-      background-color: rgba(47, 102, 151, 0.8);
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 100%;
-      max-width: 370px; }
-      .featureBlock figure figcaption h3 {
-        margin-top: 0;
-        font-size: 24px;
-        font-size: 1.5rem;
-        line-height: 1;
-        color: #fff;
-        margin-bottom: 0;
-        text-align: left;
-        padding-left: 12px;
-        font-family: 'Roboto Condensed', sans-serif;
-        letter-spacing: 1.5px; }
-      .featureBlock figure figcaption p {
-        color: white;
-        font-family: 'Roboto Condensed', sans-serif;
-        text-align: left; }
-  .featureBlock img {
-    /*border-top: 10px solid $colorBrandPrimary;*/ }
-  .featureBlock a {
-    text-decoration: none; }
 
-@media (min-width: 1px) and (max-width: 1250px) {
-  .featureBlock-Heading {
-    text-align: center; }
-  .featureBlock {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    max-width: 43%;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    margin: 0 auto;
-    min-width: 300px; }
-    .featureBlock figure {
-      margin-bottom: 12px; } }
+   .featureBlock {
+       display: flex;
+       justify-content: center;
+       padding: 0 0 $spacingLg 0;
+       flex-direction: row;
+       flex: auto auto auto;
+       align-content: stretch;
+       width: 100%;
+
+   figure {
+      max-width: 370px;
+      margin: 0 $spacingSm;
+      position: relative;
+      overflow: hidden;
+          flex-basis: auto;
+          flex-shrink: 1;
+          max-height: 250px;
+      
+      figcaption {
+        height: 20%;
+        -webkit-transition: all .5s  ease-out;
+        transition: all .5s  ease-out;
+      }
+      .hiddenText {
+        -webkit-transition: all 1s ease-out;
+        transition: all 1s ease-out;
+        ul {
+          list-style-image: url(/images/check.png);
+          li {
+            font-family: 'Roboto Condensed', sans-serif;
+          }
+        }
+      }
+      &:hover {
+        figcaption {
+          height: 100%;
+        }
+        .hiddenText {
+          display: block;
+        }
+      }
+      figcaption {
+         padding: $spacingSm 0 $spacingSm 0;
+         background-color: rgba(47, 102, 151, .8);
+         position: absolute;
+         bottom: 0;
+         right: 0;
+         width: 100%;
+         max-width: 370px;
+
+         h3 {
+            margin-top: 0;
+            @include font-size(24px);
+            color: $colorWhite;;
+            margin-bottom: 0;
+            text-align: left;
+            padding-left: $spacingSm;
+            font-family: 'Roboto Condensed', sans-serif;
+            letter-spacing: 1.5px;
+         }
+         p {
+          color: white;
+          font-family: 'Roboto Condensed', sans-serif;
+          text-align: left;
+         }
+      }
+   }
+
+   a {
+      text-decoration: none;
+   }
+}
+
+ @include tablet {
+    .featureBlock-Heading {
+       text-align: center;
+    }
+    .featureBlock {
+       -webkit-box-orient: vertical;
+       -webkit-box-direction: normal;
+           -ms-flex-direction: column;
+               flex-direction: column;
+       max-width: 43%;
+       -webkit-box-pack: justify;
+           -ms-flex-pack: justify;
+               justify-content: space-between;
+       margin: 0 auto;
+       min-width: 300px;
+       figure {
+          margin-bottom: $spacingSm;
+       }
+    }
+ }
+ */

@@ -25,7 +25,6 @@
    <link rel="stylesheet" href="css/jquery-ui.min.css">
    <link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css">
    <script src="https://use.fontawesome.com/08aec3b1f2.js"></script>
-
    <script type="text/javascript" src="js/scrollFade.js"></script>
    <script type="text/javascript" src="js/iescrollJump.js"></script>
    <script src="js/wow.min.js"></script>
@@ -50,7 +49,7 @@
     	<div id="site_inner">
     	<div id="header"></div>
     	<!--<div class="spacer"></div>-->
-<div class="fake-class"></div>
+
 
 <div class="slider-wrapper">
     <div class="mySlides animated fadeIn">
@@ -76,33 +75,17 @@
         <div class="slider-text">
             <h2>Quick Response</h2></div>
     </div>
-    <div class="logo-center">
-        <img class="animated fadeInDown" src="/images/vplogowhite.png">
-    </div>
-    <div class="info-button">
-    <input type="button" value="MORE INFO">
-    </div>
+   
+        <div class="logo-center">
+            <img class="animated fadeInDown" src="/images/vplogowhite.png">
+        </div>
+        <div class="info-button">
+            <input type="button" value="MORE INFO">
+        </div>
+    
 </div>
 
-<script>
-var myIndex = 0;
-var myIndex1 = 0;
-carousel();
 
-function carousel() {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-
-
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-    }
-    myIndex++;
-    if (myIndex > x.length) { myIndex = 1 }
-    x[myIndex - 1].style.display = "block";
-    setTimeout(carousel, 9000); // Change image every 9 seconds
-  }
-</script>
 
 <!--spacing element between navbar and paralax -->
 	<!--	<div class="slide-combo">
@@ -471,7 +454,7 @@ function carousel() {
                     <li>1118.pdf</li>
                 </ul>
             </div>
-            <button class="portfolio-row">Misc.</button>
+            <button class="portfolio-row">Misc</button>
             <div class="panel">
                 <ul>
                     <li>5GD-1.pdf</li>
@@ -524,17 +507,37 @@ function carousel() {
                 <input type="text" name="name" value="Name">
                 <input type="text" name="email" value="Email">
             </p>
-                        <p>
+            <p>
                 <input type="text" name="company" value="Company">
                 <input type="text" name="position" value="Position">
+            </p>
+            <p>
+                <input type="text" name="businessphone" value="Business Phone">
+                <input type="text" name="cellphone" value="Cell Phone">
             </p>
             <p>
                 <label for='message'>Enter Message:</label>
                 <br>
                 <textarea name="message" value="Message"></textarea>
             </p>
-            <input type="submit" name='submit' value="submit">
+            <input type="submit" name='submit' value="SEND MESSAGE">
         </form>
+        <div class="contact-wrapper">
+            <div class="contact-block">
+                <h5> Address</h5>
+                <hr>
+                <p>202 S. 22nd Street</p>
+                <p>Suite 209</p>
+                <p>Tampa, Fl 33605</p>
+            </div>
+            <div class="contact-block">
+                <h5> Contact Info</h5>
+                <hr>
+                <p>Phone: 813.247.3835</p>
+                <p>Fax: 813.247.4305</p>
+                <p>Email: vphan@vp-associates.com</p>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -626,17 +629,34 @@ var acc = document.getElementsByClassName("portfolio-row");
 
 for (i = 0; i < acc.length; i++) {
     acc[i].onclick = function() {
-        
-
-        var panel = this.nextElementSibling; 
+        var panel = this.nextElementSibling;
         if (panel.style.maxHeight) {
             panel.style.maxHeight = null;
-        }
-        else {
+        } else {
             panel.style.maxHeight = panel.scrollHeight + "px";
         }
     }
 }
+</script>
+
+<script>
+var myIndex = 0;
+var myIndex1 = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+
+
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) { myIndex = 1 }
+    x[myIndex - 1].style.display = "block";
+    setTimeout(carousel, 9000); // Change image every 9 seconds
+  }
 </script>
 
 
@@ -646,6 +666,7 @@ for (i = 0; i < acc.length; i++) {
 	</div><!-- site wrap-->
 
 <script>
+
 new WOW().init();
 function init() {
 

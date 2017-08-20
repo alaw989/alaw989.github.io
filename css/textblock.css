@@ -112,7 +112,7 @@
           -ms-flex-pack: center;
               justify-content: center; }
       .containerbg .container .textblock-wrapper .textblock-column p {
-        font-size: 1rem;
+        font-size: .9rem;
         line-height: 1.9rem; }
       .containerbg .container .textblock-wrapper .textblock-column hr {
         margin: 10px 0 0 0; }
